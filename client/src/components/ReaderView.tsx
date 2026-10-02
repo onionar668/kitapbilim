@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Book, Language, ReaderTheme, ReaderFontSize, ReaderFontFamily } from '../types';
+import { syncReadingProgress } from '../api/books';
+import { Book, Language, ReaderTheme, ReaderFontSize, ReaderFontFamily, User } from '../types';
 import { translations } from '../utils/translations';
 import {
   ArrowLeft,
@@ -16,6 +17,7 @@ import {
 interface ReaderViewProps {
   book: Book;
   currentLang: Language;
+  currentUser?: User | null;
   onBackToLibrary: () => void;
   onFinishAndTakeQuiz: () => void;
 }
@@ -23,6 +25,7 @@ interface ReaderViewProps {
 export const ReaderView: React.FC<ReaderViewProps> = ({
   book,
   currentLang,
+  currentUser,
   onBackToLibrary,
   onFinishAndTakeQuiz,
 }) => {
@@ -65,6 +68,25 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [currentChapterIndex]);
+
+  useEffect(() => {
+    if (!currentUser) return;
+
+    const overall = Math.round(
+      ((currentChapterIndex + scrollProgress / 100) / Math.max(chapters.length, 1)) * 100
+    );
+
+    const timer = window.setTimeout(() => {
+      syncReadingProgress({
+        bookId: book.id,
+        status: 'reading',
+        chapterIndex: currentChapterIndex,
+        progressPercent: Math.min(100, overall),
+      }).catch(() => undefined);
+    }, 800);
+
+    return () => window.clearTimeout(timer);
+  }, [book.id, chapters.length, currentChapterIndex, currentUser, scrollProgress]);
 
   // Handle Text-To-Speech with Web Speech API
   useEffect(() => {

@@ -1,17 +1,18 @@
 import React from 'react';
-import { BookOpen, Award, PlusCircle, Globe, LogIn, User as UserIcon } from 'lucide-react';
+import { BookOpen, Award, PlusCircle, Globe, LogIn, Shield } from 'lucide-react';
 import { Language, User } from '../types';
 import { translations } from '../utils/translations';
 
 interface HeaderProps {
   currentLang: Language;
   onSelectLang: (lang: Language) => void;
-  activeTab: 'library' | 'reader' | 'quiz' | 'stats' | 'add';
-  onSelectTab: (tab: 'library' | 'reader' | 'quiz' | 'stats' | 'add') => void;
+  activeTab: 'library' | 'reader' | 'quiz' | 'stats' | 'add' | 'admin';
+  onSelectTab: (tab: 'library' | 'reader' | 'quiz' | 'stats' | 'add' | 'admin') => void;
   hasActiveBook: boolean;
   currentUser: User | null;
   onOpenAuth: () => void;
   onOpenProfile: () => void;
+  showAdminTab?: boolean;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -23,6 +24,7 @@ export const Header: React.FC<HeaderProps> = ({
   currentUser,
   onOpenAuth,
   onOpenProfile,
+  showAdminTab,
 }) => {
   const t = translations[currentLang];
 
@@ -104,6 +106,20 @@ export const Header: React.FC<HeaderProps> = ({
             <PlusCircle className="w-4 h-4 text-stone-400" />
             <span>{t.navAddBook}</span>
           </button>
+
+          {showAdminTab && (
+            <button
+              onClick={() => onSelectTab('admin')}
+              className={`flex items-center gap-1.5 hover:text-stone-900 transition-colors py-1 cursor-pointer ${
+                activeTab === 'admin'
+                  ? 'text-stone-950 font-semibold border-b-2 border-stone-900'
+                  : ''
+              }`}
+            >
+              <Shield className="w-4 h-4 text-amber-600" />
+              <span>{currentLang === 'kk' ? 'Әкімші' : currentLang === 'ru' ? 'Админ' : 'Admin'}</span>
+            </button>
+          )}
         </nav>
 
         {/* Zone 3: User Auth Button & Language Switcher */}

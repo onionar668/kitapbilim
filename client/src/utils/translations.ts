@@ -118,6 +118,53 @@ export interface UIStrings {
   authConfirmDeleteBook: string;
   categoryMyBooks: string;
   signInPrompt: string;
+  adminTitle: string;
+  adminDescription: string;
+  adminAccessDenied: string;
+  adminUsers: string;
+  adminReaders: string;
+  adminCategories: string;
+  adminBooks: string;
+  adminRefresh: string;
+  adminSearch: string;
+  adminNoResults: string;
+  adminJoined: string;
+  adminRoleAdmin: string;
+  adminRoleUser: string;
+  adminReadings: string;
+  adminCurrentBook: string;
+  adminNoCurrentBook: string;
+  adminReading: string;
+  adminCompleted: string;
+  adminLastRead: string;
+  adminStarted: string;
+  adminProgress: string;
+  adminChapter: string;
+  adminCategoryDescription: string;
+  adminAddCategory: string;
+  adminEditCategory: string;
+  adminCategoryName: string;
+  adminSlug: string;
+  adminCancel: string;
+  adminSave: string;
+  adminDelete: string;
+  adminConfirmDeleteCategory: string;
+  adminBookDescription: string;
+  adminAddBook: string;
+  adminEditBook: string;
+  adminBookTitle: string;
+  adminBookAuthor: string;
+  adminBookGenre: string;
+  adminBookContent: string;
+  adminCatalog: string;
+  adminPublished: string;
+  adminPrivate: string;
+  adminCreateBook: string;
+  adminConfirmDeleteBook: string;
+  adminRequiredFields: string;
+  adminLoadError: string;
+  adminActionError: string;
+  adminAccessDeniedDescription: string;
 }
 
 export const translations: Record<Language, UIStrings> = {
@@ -239,6 +286,53 @@ export const translations: Record<Language, UIStrings> = {
     authConfirmDeleteBook: "Бұл кітапты кітапханадан біржола өшіргіңіз келетініне сенімдісіз бе?",
     categoryMyBooks: "Менің кітаптарым",
     signInPrompt: "Кіру / Тіркелу",
+    adminTitle: "Әкімші панелі",
+    adminDescription: "Кітаптарды, санаттарды және оқырмандар белсенділігін басқарыңыз.",
+    adminAccessDenied: "Қолжетімділікке рұқсат жоқ",
+    adminUsers: "Пайдаланушылар",
+    adminReaders: "Оқу барысы",
+    adminCategories: "Санаттар",
+    adminBooks: "Кітаптар",
+    adminRefresh: "Жаңарту",
+    adminSearch: "Іздеу...",
+    adminNoResults: "Ештеңе табылмады.",
+    adminJoined: "Тіркелген күні",
+    adminRoleAdmin: "Әкімші",
+    adminRoleUser: "Оқырман",
+    adminReadings: "Оқылған кітаптар",
+    adminCurrentBook: "Соңғы кітап",
+    adminNoCurrentBook: "Әзірге кітап оқымаған",
+    adminReading: "Оқып жатыр",
+    adminCompleted: "Аяқтады",
+    adminLastRead: "Соңғы оқу",
+    adminStarted: "Басталды",
+    adminProgress: "Орындалуы",
+    adminChapter: "Бөлім",
+    adminCategoryDescription: "Үш тілдегі кітап санаттарын басқарыңыз.",
+    adminAddCategory: "Санат қосу",
+    adminEditCategory: "Санатты өңдеу",
+    adminCategoryName: "Санат атауы",
+    adminSlug: "Сілтеме (slug)",
+    adminCancel: "Болдырмау",
+    adminSave: "Сақтау",
+    adminDelete: "Жою",
+    adminConfirmDeleteCategory: "Осы санатты жойғыңыз келетініне сенімдісіз бе?",
+    adminBookDescription: "Каталогтағы және пайдаланушылар қосқан кітаптарды басқарыңыз.",
+    adminAddBook: "Кітап қосу",
+    adminEditBook: "Кітапты өңдеу",
+    adminBookTitle: "Кітап атауы",
+    adminBookAuthor: "Автор",
+    adminBookGenre: "Жанр",
+    adminBookContent: "Мәтін",
+    adminCatalog: "Жалпы каталогта жариялау",
+    adminPublished: "Каталогта",
+    adminPrivate: "Жеке",
+    adminCreateBook: "Кітапты жасау",
+    adminConfirmDeleteBook: "Бұл кітапты біржола жойғыңыз келетініне сенімдісіз бе?",
+    adminRequiredFields: "Барлық міндетті өрістерді толтырыңыз.",
+    adminLoadError: "Әкімші деректерін жүктеу сәтсіз аяқталды. Қайталап көріңіз.",
+    adminActionError: "Әрекетті орындау сәтсіз аяқталды. Қайталап көріңіз.",
+    adminAccessDeniedDescription: "Бұл бетке тек әкімшілер кіре алады.",
   },
   ru: {
     brand: "KitapBilim",
@@ -358,6 +452,53 @@ export const translations: Record<Language, UIStrings> = {
     authConfirmDeleteBook: "Вы уверены, что хотите удалить эту добавленную книгу?",
     categoryMyBooks: "Мои книги",
     signInPrompt: "Войти / Регистрация",
+    adminTitle: "Панель администратора",
+    adminDescription: "Управляйте книгами, категориями и активностью читателей.",
+    adminAccessDenied: "Доступ запрещён",
+    adminUsers: "Пользователи",
+    adminReaders: "Чтение",
+    adminCategories: "Категории",
+    adminBooks: "Книги",
+    adminRefresh: "Обновить",
+    adminSearch: "Поиск...",
+    adminNoResults: "Ничего не найдено.",
+    adminJoined: "Дата регистрации",
+    adminRoleAdmin: "Администратор",
+    adminRoleUser: "Читатель",
+    adminReadings: "Книг прочитано",
+    adminCurrentBook: "Последняя книга",
+    adminNoCurrentBook: "Пока не читал книги",
+    adminReading: "Читает",
+    adminCompleted: "Завершено",
+    adminLastRead: "Последнее чтение",
+    adminStarted: "Начато",
+    adminProgress: "Прогресс",
+    adminChapter: "Глава",
+    adminCategoryDescription: "Управляйте категориями книг на трёх языках.",
+    adminAddCategory: "Добавить категорию",
+    adminEditCategory: "Редактировать категорию",
+    adminCategoryName: "Название категории",
+    adminSlug: "Ссылка (slug)",
+    adminCancel: "Отмена",
+    adminSave: "Сохранить",
+    adminDelete: "Удалить",
+    adminConfirmDeleteCategory: "Вы уверены, что хотите удалить эту категорию?",
+    adminBookDescription: "Управляйте книгами каталога и книгами пользователей.",
+    adminAddBook: "Добавить книгу",
+    adminEditBook: "Редактировать книгу",
+    adminBookTitle: "Название книги",
+    adminBookAuthor: "Автор",
+    adminBookGenre: "Жанр",
+    adminBookContent: "Текст",
+    adminCatalog: "Опубликовать в общем каталоге",
+    adminPublished: "В каталоге",
+    adminPrivate: "Личная",
+    adminCreateBook: "Создать книгу",
+    adminConfirmDeleteBook: "Вы уверены, что хотите удалить эту книгу навсегда?",
+    adminRequiredFields: "Заполните все обязательные поля.",
+    adminLoadError: "Не удалось загрузить данные администратора. Попробуйте ещё раз.",
+    adminActionError: "Не удалось выполнить действие. Попробуйте ещё раз.",
+    adminAccessDeniedDescription: "Эта страница доступна только администраторам.",
   },
   en: {
     brand: "KitapBilim",
@@ -477,5 +618,52 @@ export const translations: Record<Language, UIStrings> = {
     authConfirmDeleteBook: "Are you sure you want to remove this book from your library?",
     categoryMyBooks: "My Books",
     signInPrompt: "Log In / Sign Up",
+    adminTitle: "Admin dashboard",
+    adminDescription: "Manage books, categories, and reader activity.",
+    adminAccessDenied: "Access denied",
+    adminUsers: "Users",
+    adminReaders: "Reading activity",
+    adminCategories: "Categories",
+    adminBooks: "Books",
+    adminRefresh: "Refresh",
+    adminSearch: "Search...",
+    adminNoResults: "No results found.",
+    adminJoined: "Joined",
+    adminRoleAdmin: "Administrator",
+    adminRoleUser: "Reader",
+    adminReadings: "Books read",
+    adminCurrentBook: "Latest book",
+    adminNoCurrentBook: "No reading activity yet",
+    adminReading: "Reading",
+    adminCompleted: "Completed",
+    adminLastRead: "Last read",
+    adminStarted: "Started",
+    adminProgress: "Progress",
+    adminChapter: "Chapter",
+    adminCategoryDescription: "Manage book categories in all three languages.",
+    adminAddCategory: "Add category",
+    adminEditCategory: "Edit category",
+    adminCategoryName: "Category name",
+    adminSlug: "Slug",
+    adminCancel: "Cancel",
+    adminSave: "Save",
+    adminDelete: "Delete",
+    adminConfirmDeleteCategory: "Are you sure you want to delete this category?",
+    adminBookDescription: "Manage catalog books and books added by users.",
+    adminAddBook: "Add book",
+    adminEditBook: "Edit book",
+    adminBookTitle: "Book title",
+    adminBookAuthor: "Author",
+    adminBookGenre: "Genre",
+    adminBookContent: "Text",
+    adminCatalog: "Publish to public catalog",
+    adminPublished: "In catalog",
+    adminPrivate: "Private",
+    adminCreateBook: "Create book",
+    adminConfirmDeleteBook: "Are you sure you want to permanently delete this book?",
+    adminRequiredFields: "Please fill in all required fields.",
+    adminLoadError: "Could not load admin data. Please try again.",
+    adminActionError: "The action failed. Please try again.",
+    adminAccessDeniedDescription: "This page is available to administrators only.",
   }
 };

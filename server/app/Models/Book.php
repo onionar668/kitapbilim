@@ -56,6 +56,33 @@ class Book extends Model
         return $this->hasMany(ReadingProgress::class);
     }
 
+    public function scopeVisibleTo($query, ?User $user)
+    {
+        if ($user?->role === 'admin') {
+            return $query;
+        }
+
+        return $query->where(function ($inner) use ($user) {
+            $inner->where('is_catalog', true);
+            if ($user) {
+                $inner->orWhere('created_by', $user->id);
+            }
+        });
+    }
+
+    public function isVisibleTo(?User $user): bool
+    {
+        if ($this->is_catalog) {
+            return true;
+        }
+
+        if ($user?->role === 'admin') {
+            return true;
+        }
+
+        return $user !== null && (int) $this->created_by === (int) $user->id;
+    }
+
     /** @param  array<string, mixed>  $payload */
     public static function fromClientPayload(array $payload, ?int $createdBy, bool $isCatalog): array
     {
@@ -103,6 +130,7 @@ class Book extends Model
             'createdByUserName' => $this->creator?->name,
             'createdAt' => $this->created_at?->toIso8601String(),
             'quizzes' => $this->quizzes,
+            'isCatalog' => $this->is_catalog,
         ];
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { User, Book, Language, UserStats } from '../types';
 import { translations } from '../utils/translations';
-import { X, LogOut, BookOpen, Trash2, Plus, Award, UserCheck, Calendar } from 'lucide-react';
+import { X, LogOut, BookOpen, Trash2, Plus, Award, UserCheck, Calendar, Shield } from 'lucide-react';
 
 interface UserProfileModalProps {
   isOpen: boolean;
@@ -14,6 +14,7 @@ interface UserProfileModalProps {
   onOpenBook: (book: Book) => void;
   onDeleteBook: (bookId: string) => void;
   onNavigateToAddBook: () => void;
+  onNavigateToAdmin?: () => void;
 }
 
 export const UserProfileModal: React.FC<UserProfileModalProps> = ({
@@ -27,6 +28,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   onOpenBook,
   onDeleteBook,
   onNavigateToAddBook,
+  onNavigateToAdmin,
 }) => {
   if (!isOpen) return null;
 
@@ -204,18 +206,33 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
         </div>
 
         {/* Footer with Logout */}
-        <div className="border-t border-stone-200 bg-stone-50 px-6 py-3 flex items-center justify-between">
+        <div className="border-t border-stone-200 bg-stone-50 px-6 py-3 flex items-center justify-between gap-2">
           <span className="text-xs text-stone-500">KitapBilim Auth</span>
-          <button
-            onClick={() => {
-              onLogout();
-              onClose();
-            }}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-rose-700 hover:text-rose-800 hover:bg-rose-50 rounded-lg transition-colors cursor-pointer"
-          >
-            <LogOut className="w-3.5 h-3.5" />
-            <span>{t.authLogoutBtn}</span>
-          </button>
+          <div className="flex items-center gap-2">
+            {onNavigateToAdmin && (
+              <button
+                type="button"
+                onClick={() => {
+                  onClose();
+                  onNavigateToAdmin();
+                }}
+                className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-amber-900 hover:bg-amber-50 rounded-lg transition-colors cursor-pointer"
+              >
+                <Shield className="w-3.5 h-3.5" />
+                <span>{currentLang === 'kk' ? 'Әкімші' : currentLang === 'ru' ? 'Админ' : 'Admin'}</span>
+              </button>
+            )}
+            <button
+              onClick={() => {
+                onLogout();
+                onClose();
+              }}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-rose-700 hover:text-rose-800 hover:bg-rose-50 rounded-lg transition-colors cursor-pointer"
+            >
+              <LogOut className="w-3.5 h-3.5" />
+              <span>{t.authLogoutBtn}</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

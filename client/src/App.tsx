@@ -5,16 +5,11 @@
 
 import React, { useState, useEffect } from 'react';
 import { api, setAuthToken } from './api/client';
+import { createBook, deleteBook, fetchBooks, syncReadingProgress } from './api/books';
 import { Book, Language, QuizAttempt, User, UserStats } from './types';
 import { initialBooks } from './data/booksData';
 import { translations } from './utils/translations';
-import {
-  getStoredStats,
-  saveStoredStats,
-  getStoredCustomBooks,
-  saveStoredCustomBooks,
-  deleteStoredCustomBook,
-} from './utils/storage';
+import { getStoredStats, saveStoredStats } from './utils/storage';
 import { Header } from './components/Header';
 import { LibraryView } from './components/LibraryView';
 import { ReaderView } from './components/ReaderView';
@@ -24,12 +19,15 @@ import { AddCustomBookView } from './components/AddCustomBookView';
 import { AuthModal } from './components/AuthModal';
 import { UserProfileModal } from './components/UserProfileModal';
 import { MobileBottomNav } from './components/MobileBottomNav';
+import { AdminView } from './components/AdminView';
+
+type AppTab = 'library' | 'reader' | 'quiz' | 'stats' | 'add' | 'admin';
 
 export default function App() {
   const [currentLang, setCurrentLang] = useState<Language>('kk');
-  const [activeTab, setActiveTab] = useState<'library' | 'reader' | 'quiz' | 'stats' | 'add'>('library');
-  const [selectedBook, setSelectedBook] = useState<Book | null>(initialBooks[0]);
-  const [customBooks, setCustomBooks] = useState<Book[]>([]);
+  const [activeTab, setActiveTab] = useState<AppTab>('library');
+  const [books, setBooks] = useState<Book[]>(initialBooks);
+  const [selectedBook, setSelectedBook] = useState<Book | null>(initialBooks[0] ?? null);
   const [userStats, setUserStats] = useState<UserStats>(getStoredStats());
   
   const [currentUser, setCurrentUser] = useState<User | null>(() => {
@@ -42,8 +40,19 @@ export default function App() {
   const [authReasonMessage, setAuthReasonMessage] = useState<string | undefined>();
 
   useEffect(() => {
-    const loadedBooks = getStoredCustomBooks();
-    setCustomBooks(loadedBooks);
+    const loadBooks = () =>
+      fetchBooks()
+        .then((loaded) => {
+          if (loaded.length > 0) {
+            setBooks(loaded);
+            setSelectedBook((prev) => prev ?? loaded[0]);
+          }
+        })
+        .catch(() => {
+          // Offline fallback to bundled catalog
+        });
+
+    loadBooks();
 
     const token = localStorage.getItem('auth_token');
     if (token) {
@@ -54,6 +63,7 @@ export default function App() {
         .then((response) => {
           setCurrentUser(response.data);
           localStorage.setItem('user', JSON.stringify(response.data));
+          return loadBooks();
         })
         .catch(() => {
           localStorage.removeItem('auth_token');
@@ -64,11 +74,11 @@ export default function App() {
     }
   }, []);
 
-  const allBooks = [...customBooks, ...initialBooks];
+  const allBooks = books;
   const t = translations[currentLang];
 
   const myBooks = currentUser
-    ? customBooks.filter((b) => String(b.createdByUserId) === String(currentUser.id))
+    ? books.filter((b) => String(b.createdByUserId) === String(currentUser.id))
     : [];
 
   const handleSelectBookForReading = (book: Book) => {
@@ -85,6 +95,14 @@ export default function App() {
 
   const handleFinishReadingAndTakeQuiz = () => {
     if (!selectedBook) return;
+
+    if (currentUser) {
+      syncReadingProgress({
+        bookId: selectedBook.id,
+        status: 'completed',
+        progressPercent: 100,
+      }).catch(() => undefined);
+    }
 
     setUserStats((prev) => {
       const alreadyCompleted = prev.completedBookIds.includes(selectedBook.id);
@@ -114,20 +132,46 @@ export default function App() {
     });
   };
 
-  const handleAddCustomBook = (newBook: Book) => {
-    const updated = [newBook, ...customBooks];
-    setCustomBooks(updated);
-    saveStoredCustomBooks(updated);
-    setSelectedBook(newBook);
-    setActiveTab('reader');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const handleAddCustomBook = async (newBook: Book) => {
+    try {
+      const saved = await createBook({
+        ...newBook,
+        publishToCatalog: currentUser?.role === 'admin',
+      });
+      const updated = [saved, ...books];
+      setBooks(updated);
+      setSelectedBook(saved);
+      setActiveTab('reader');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (e) {
+      console.error(e);
+      alert(
+        currentLang === 'kk'
+          ? 'Кітапты сақтау сәтсіз. Серверді тексеріңіз.'
+          : currentLang === 'ru'
+            ? 'Не удалось сохранить книгу. Проверьте сервер.'
+            : 'Failed to save the book. Check the server.'
+      );
+    }
   };
 
-  const handleDeleteCustomBook = (bookId: string) => {
-    const updated = deleteStoredCustomBook(bookId);
-    setCustomBooks(updated);
-    if (selectedBook && selectedBook.id === bookId) {
-      setSelectedBook(initialBooks[0]);
+  const handleDeleteCustomBook = async (bookId: string) => {
+    try {
+      await deleteBook(bookId);
+      const updated = books.filter((b) => b.id !== bookId);
+      setBooks(updated);
+      if (selectedBook && selectedBook.id === bookId) {
+        setSelectedBook(updated[0] ?? null);
+      }
+    } catch (e) {
+      console.error(e);
+      alert(
+        currentLang === 'kk'
+          ? 'Кітапты жою мүмкін емес'
+          : currentLang === 'ru'
+            ? 'Не удалось удалить книгу'
+            : 'Could not delete the book'
+      );
     }
   };
 
@@ -152,6 +196,13 @@ export default function App() {
       saveStoredStats(updated);
       return updated;
     });
+    fetchBooks()
+      .then((loaded) => {
+        if (loaded.length > 0) {
+          setBooks(loaded);
+        }
+      })
+      .catch(() => undefined);
   };
 
   const handleLogout = async () => {
@@ -187,6 +238,7 @@ export default function App() {
         currentUser={currentUser}
         onOpenAuth={() => openAuthWithReason()}
         onOpenProfile={() => setIsProfileModalOpen(true)}
+        showAdminTab={currentUser?.role === 'admin'}
       />
 
       <div className="flex-1 pb-16 md:pb-0">
@@ -211,8 +263,17 @@ export default function App() {
           <ReaderView
             book={selectedBook}
             currentLang={currentLang}
+            currentUser={currentUser}
             onBackToLibrary={() => setActiveTab('library')}
             onFinishAndTakeQuiz={handleFinishReadingAndTakeQuiz}
+          />
+        )}
+
+        {activeTab === 'admin' && currentUser && (
+          <AdminView
+            currentLang={currentLang}
+            currentUser={currentUser}
+            onBooksChanged={setBooks}
           />
         )}
 
@@ -275,6 +336,15 @@ export default function App() {
             setActiveTab('add');
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
+          onNavigateToAdmin={
+            currentUser.role === 'admin'
+              ? () => {
+                  setIsProfileModalOpen(false);
+                  setActiveTab('admin');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              : undefined
+          }
         />
       )}
 
@@ -303,6 +373,7 @@ export default function App() {
         }}
         hasActiveBook={!!selectedBook}
         currentLang={currentLang}
+        showAdminTab={currentUser?.role === 'admin'}
       />
     </div>
   );

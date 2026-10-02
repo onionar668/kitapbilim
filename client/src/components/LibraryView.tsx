@@ -41,7 +41,7 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
 
   const myBooksCount = useMemo(() => {
     if (!currentUser) return 0;
-    return books.filter((b) => b.createdByUserId === currentUser.id).length;
+    return books.filter((b) => String(b.createdByUserId) === String(currentUser.id)).length;
   }, [books, currentUser]);
 
   // Extract unique genres across books for current language
@@ -82,7 +82,7 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
         if (!currentUser) {
           matchesCategory = false;
         } else {
-          matchesCategory = book.createdByUserId === currentUser.id;
+          matchesCategory = String(book.createdByUserId) === String(currentUser.id);
         }
       }
 
@@ -392,7 +392,9 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
                 ) : null}
 
                 {/* Owner Delete Button */}
-                {currentUser && book.createdByUserId === currentUser.id && (
+                {currentUser &&
+                  (book.createdByUserId === currentUser.id || currentUser.role === 'admin') &&
+                  (!book.isCatalog || currentUser.role === 'admin') && (
                   <button
                     onClick={(e) => {
                       e.stopPropagation();

@@ -26,6 +26,7 @@ export interface User {
   id: string;
   name: string;
   email: string;
+  role?: 'user' | 'admin';
   password?: string;
   avatarColor?: string;
   joinedDate: string;
@@ -47,6 +48,7 @@ export interface Book {
   createdByUserId?: string;
   createdByUserName?: string;
   createdAt?: string;
+  isCatalog?: boolean;
   quizzes: {
     questions: QuizQuestion[];
     openQuestion: OpenQuestion;

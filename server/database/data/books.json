@@ -1,0 +1,2419 @@
+[
+  {
+    "id": "reading-nation",
+    "title": {
+      "kk": "Оқитын ұлт — Озатын ұлт (Президент үндеуі)",
+      "ru": "Читающая нация — Успешная нация (Обращение Президента)",
+      "en": "A Reading Nation is an Advanced Nation (Presidential Address)"
+    },
+    "author": {
+      "kk": "Қасым-Жомарт Тоқаев",
+      "ru": "Касым-Жомарт Токаев",
+      "en": "Kassym-Jomart Tokayev"
+    },
+    "year": 2024,
+    "genre": {
+      "kk": "Мемлекеттік бағдарлама, Публицистика",
+      "ru": "Государственное послание, Публицистика",
+      "en": "State Policy, Public Thought"
+    },
+    "level": "intermediate",
+    "coverImage": "/src/assets/images/book_reading_nation_1790150830681.jpg",
+    "estimatedReadMinutes": 7,
+    "tags": {
+      "kk": [
+        "Оқитын ұлт",
+        "Қасым-Жомарт Тоқаев",
+        "Ұлттық құрылтай",
+        "Кітапхана",
+        "Сапалы ұлт"
+      ],
+      "ru": [
+        "Читающая нация",
+        "Касым-Жомарт Токаев",
+        "Национальный курултай",
+        "Библиотеки",
+        "Качественная нация"
+      ],
+      "en": [
+        "Reading Nation",
+        "Presidential Address",
+        "National Kurultai",
+        "Libraries",
+        "Intellectual Capital"
+      ]
+    },
+    "synopsis": {
+      "kk": "Мемлекет басшысы Қасым-Жомарт Тоқаевтың «Кітап оқитын ұлт — озатын ұлт» тұжырымдамасы: кітапхана ісін жаңғырту, 23 сәуірді Ұлттық кітап күні ретінде бекіту және цифрлық дәуірде өскелең ұрпақтың когнитивтік ойлауын дамыту туралы бағдарламалық сөздері.",
+      "ru": "Программное обращение Президента Касым-Жомарта Токаева о формировании «Читающей нации»: возрождение библиотечного фонда, учреждение 23 апреля Национального дня книги и развитие критического мышления у молодежи в эпоху цифровизации.",
+      "en": "President Kassym-Jomart Tokayev’s strategic initiative on fostering a \"Reading Nation\": modernizing library networks, declaring April 23 National Book Day, and strengthening intellectual resilience in the digital era."
+    },
+    "chapters": [
+      {
+        "id": "rn_c1",
+        "title": {
+          "kk": "1-бөлім: «Кітап оқитын ұлт қана озады» (Интеллектуалды әлеует)",
+          "ru": "Глава 1: «Только читающая нация может быть по-настоящему успешной»",
+          "en": "Chapter 1: \"Only a Reading Nation Can Become Advanced\""
+        },
+        "content": {
+          "kk": "Қазіргі заманда мемлекеттер арасындағы бәсекелестік ең алдымен білім, ғылым және ақыл-ой майданында жүріп жатыр. Осыған байланысты Мемлекет басшысы Қасым-Жомарт Тоқаев Ұлттық құрылтай мінберінде және өз Жолдауларында кітап оқу мәдениетін жаңғыртуды мемлекеттік маңызы бар стратегиялық міндет ретінде бекітті:\n\n«Кітап оқитын ұлт — озатын ұлт. Біз жастарымыздың кітапқа деген құштарлығын оятуымыз керек. Тек кітап оқитын ұлт қана нағыз интеллектуалды әрі бәсекеге қабілетті елге айнала алады. Смартфон бала үшін кітаптың орнын баспауы керек», — деп қадап айтты Президент.\n\nМемлекет басшысы бүгінгі жастардың әлеуметтік желілердегі арзан әрі мағынасыз контентке шектен тыс әуестенуіне алаңдаушылық білдірді. Цифрлық технологиялардың пайдалы жақтарын игеру қажет, бірақ оның зиянды әсерінен сақтану маңызды. Тұрақты түрде кітап оқымаған адам терең талдау жасау қабілетінен айырылады.\n\nПрезидент өзінің сөзінде ескерткендей: «Үздіксіз кітап оқу қажет. Әйтпесе, уақыт өте келе адам мидың жоғары когнитивтік қабілеттерін жоғалтып алуы мүмкін. Кітап — адамның сыни ойлауын, жүйелі пайымын және шығармашылық қиялын ұштайтын баға жетпес құрал».",
+          "ru": "В современную эпоху глобальное соперничество между государствами разворачивается прежде всего на полях знаний, науки и интеллектуальной гибкости. Глава государства Касым-Жомарт Токаев на заседаниях Национального курултая и в программных выступлениях определил формирование читательской культуры как стратегический приоритет суверенного развития:\n\n«Только читающая нация может стать по-настоящему интеллектуальной и успешной. Мы обязаны привить подрастающему поколению любовь к чтению. Нельзя допустить, чтобы смартфон безраздельно заменил для ребенка книгу», — подчеркнул Президент.\n\nГлава государства выразил обоснованную тревогу по поводу негативного влияния бездумного увлечения соцсетями и поверхностным развлекательным контентом. Хотя современные технологии приносят очевидную пользу, их бесконтрольное потребление сужает кругозор и ослабляет аналитическое мышление.\n\nПрезидент также акцентировал внимание на важности сохранения ясности ума: «Надо читать книги постоянно. В противном случае, дойдя до зрелого возраста, можно утратить высшие мозговые, когнитивные способности. Книга была и остается незаменимым тренажером человеческого разума и глубины восприятия мира».",
+          "en": "In the modern era, global competition unfolds primarily in the realms of intellect, science, and critical thought. President Kassym-Jomart Tokayev, addressing the National Kurultai and outlining state priorities, designated reading culture as a cornerstone of national progress:\n\n\"A reading nation is an advanced nation. Only a nation of readers can become genuinely intellectual and resilient. We must cultivate a passion for books in our youth; a smartphone must never completely replace a book for a child.\"\n\nThe President expressed concern regarding the pervasive trap of superficial digital content and endless social media feeds, which diminish attention spans and cognitive stamina. While embracing digital advancements, society must safeguard the contemplative depth that only structured literature can nurture.\n\nAs the President cautioned: \"Continuous reading is indispensable. Otherwise, over time, individuals risk degrading their highest cognitive and analytical faculties. Books remain the paramount instrument for cultivating critical thinking, moral clarity, and creative intellect.\""
+        }
+      },
+      {
+        "id": "rn_c2",
+        "title": {
+          "kk": "2-бөлім: «Кітапхана — елдің басты жады» (Кітапхана ісін жаңғырту)",
+          "ru": "Глава 2: «Библиотека — главная память государства и нации»",
+          "en": "Chapter 2: \"Libraries are the Core Memory of the State and Nation\""
+        },
+        "content": {
+          "kk": "Президент өз сөзінде рухани мұраны сақтаушы басты мекеме — кітапханалардың орнына ерекше тоқталды:\n\n«Кітапхана – бұл мемлекеттің, тұтас ұлттың басты жады. Сондықтан кітапхана ісіне немқұрайлы қарауға мүлде болмайды. Кітап әрбір оқырманға қолжетімді болуы тиіс», — деді Қасым-Жомарт Тоқаев.\n\nМемлекет басшысы өтпелі кезеңдегі 1990-жылдардың қиындықтарына тоқталып, сол тұста елімізде мыңдаған кітапханалар жабылып, көптеген құнды кітап қорларынан айырылып қалғанымызды өкінішпен еске салды. Бұл тарихи қатені түзету — бүгінгі күннің парызы.\n\nОсы мақсатта Астана мен Алматы қалаларында әлемнің озық елдеріндегідей тәулік бойы (24/7) жұмыс істейтін заманауи көпфункционалды кітапханалар ғимаратын салу тапсырылды. Мұндай орталықтар жастар бас қосатын, ғылыми ізденіс жүргізетін, пікір алмасып, рухани толысатын нағыз интеллектуалдық хабқа айналуға тиіс.\n\nСонымен бірге, отандық кітап нарығындағы жағдайға да назар аударылды. Бүгінде дүкен сөрелеріндегі кітаптардың басым бөлігі шетелдік баспалардан келеді. Сондықтан ұлттық мүддемізге сай келетін сапалы қазақ әдебиетін, ғылыми-танымдық еңбектерді шығаруға, авторлар мен аудармашыларды мемлекеттік деңгейде қолдауға басымдық берілді.",
+          "ru": "Особое место в послании Президента отведено возрождению института библиотек как хранителей цивилизационного кода страны:\n\n«Библиотека – это главная память государства и нации. Поэтому к развитию библиотечного дела нельзя относиться равнодушно. Книга должна быть повсеместно доступна читателю», — заявил Касым-Жомарт Токаев на Национальном курултае в Атырау.\n\nГлава государства напомнил об уроках тяжелых 1990-х годов, когда в период кризиса библиотечное дело оказалось забыто, были закрыты тысячи библиотек, и страна лишилась многомиллионного фонда бесценной литературы. Восстановление этого фундамента — долг современного поколения.\n\nПрезидент поручил возвести в Астане и Алматы современные круглосуточные (24/7) библиотеки, соответствующие высочайшим международным стандартам. Это не просто книгохранилища, а живые культурно-интеллектуальные пространства для студентов, исследователей и молодежи.\n\nКроме того, был поднят вопрос импортозамещения в книжной сфере: поскольку до 90% художественной литературы на рынке составляла зарубежная продукция, поставлена задача всесторонне стимулировать казахстанских авторов, переводчиков и издателей выпускать литературу высокого содержания, отвечающую национальным интересам.",
+          "en": "The President devoted particular emphasis to modernizing libraries as guardians of civilizational memory:\n\n\"A library is the primary memory of the state and the entire nation. Indifference toward library development is unacceptable; books must remain accessible to every citizen across villages and cities.\"\n\nRecalling the austerity of the 1990s, when thousands of libraries were shuttered and invaluable archives vanished, the President emphasized the imperative of historic rectification and cultural reinvestment.\n\nTo realize this, directives were issued to construct state-of-the-art round-the-clock (24/7) libraries in Astana and Almaty, akin to world-class academic centers. These spaces serve not merely as book repositories, but as dynamic intellectual hubs for collaborative scholarship and civic discourse.\n\nFurthermore, domestic publishing received strategic prioritization to ensure that local authors, translators, and historians receive comprehensive backing, counterbalancing market reliance on foreign publications and enriching national cultural literacy."
+        }
+      },
+      {
+        "id": "rn_c3",
+        "title": {
+          "kk": "3-бөлім: «23 сәуір — Ұлттық кітап күні және «Сапалы ұлт» мұраты»",
+          "ru": "Глава 3: «23 апреля — Национальный день книги и идеал «Качественной нации»»",
+          "en": "Chapter 3: \"April 23 — National Book Day and the Quality Nation Ideal\""
+        },
+        "content": {
+          "kk": "Кітап оқу дәстүрін жалпыұлттық деңгейге көтеру үшін Мемлекет басшысының бастамасымен 23 сәуір ресми түрде «Ұлттық кітап күні» болып белгіленді:\n\n«Кітап оқыған ұрпақ озық ойлы болады. Сапалы ұлт осындай асыл құндылықтар арқылы қалыптасады. Ұлттық кітап күні жай ғана мереке болып қалмай, мазмұнды кітап көрмелерімен, фестивальдермен және нақты ағартушылық шаралармен айшықталуы керек», — деді Қасым-Жомарт Тоқаев.\n\nБұл бастама Президент ұсынған «Адал азамат» тұжырымдамасымен тығыз астасып жатыр. Адалдық, еңбекқорлық, заңға құрмет және кітап оқуға деген сүйіспеншілік — жаңа дәуірдегі қазақстандықтың басты қасиеттеріне айналуы тиіс.\n\nКітап оқу — жеке тұлғаның ғана емес, бүкіл қоғамның рухани қалқаны. Өз тарихын білетін, классикалық шығармаларды парақтаған, әлемдік ойдың жауһарларымен таныс азамат ешқашан жалған ұрандарға ермейді.\n\nМемлекет басшысының «Оқитын ұлт» бастамасы — әрбір шаңырақты, әрбір мектеп пен ұжымды күнделікті саналы оқуға шақыратын жасампаз бағдар. «Кітаппен дос болған адам ешқашан адаспайды», — деген ұлағатты қағида бүгінгі Қазақстанның басты ұраны болып қала бермек.",
+          "ru": "Чтобы возвести традицию в ранг общенационального движения, Президент поддержал и законодательно закрепил празднование 23 апреля как «Национального дня книги»:\n\n«Поколение, которое читает книги, всегда будет обладать передовым мышлением. Качественная нация («Сапалы ұлт») формируется именно через такие ценности. Этот день должен быть наполнен реальным смыслом: книжными фестивалями, презентациями новых авторов и читательскими дискуссиями», — подчеркнул Президент.\n\nЭта инициатива неразрывно связана с концепцией «Адал азамат» (Честный, ответственный гражданин). Чтение воспитывает фундаментальные гражданские добродетели: трудолюбие, честность, уважение к закону, культуру диалога и непрерывное стремление к самообразованию.\n\nКнига выступает интеллектуальным щитом нации. Человек, приученный к глубокому чтению, обладает внутренним иммунитетом против популизма, информационных манипуляций и ложных догм.\n\nИнициатива Президента «Читающая нация» призывает каждую семью, школу и университет возродить домашние библиотеки и сделать ежедневное чтение неотъемлемой привычкой. Народ, вооруженный книгой и знанием, уверенно смотрит в будущее.",
+          "en": "To elevate reading into an enduring civic culture, April 23 was designated Kazakhstan's official \"National Book Day\" following the Head of State's initiative:\n\n\"A generation that reads books will forever hold progressive, agile vision. A 'Quality Nation' takes shape through these intrinsic virtues. National Book Day must vibrate with genuine momentum: literary fairs, translation debuts, and dynamic community debates.\"\n\nThis vision harmonizes with the overarching concept of \"Adal Azamat\" (The Honest and Responsible Citizen). Deep reading cultivates vital civic habits: integrity, intellectual rigor, adherence to truth, and an appetite for lifelong inquiry.\n\nBooks serve as an intellectual shield for society. Citizens grounded in classic and contemporary literature possess natural cognitive resilience against misinformation, demagoguery, and sensationalism.\n\nThe \"Reading Nation\" directive invites every household, academy, and institution to revive personal libraries and cherish daily reading. A nation that reads is a nation that leads."
+        }
+      }
+    ],
+    "quizzes": {
+      "questions": [
+        {
+          "id": "rn_q1",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Мемлекет басшысы Қасым-Жомарт Тоқаевтың ұлттық деңгейде көтерген басты қанатты сөзі мен қағидасы қалай аталады?",
+            "ru": "Какой ключевой девиз и принцип был сформулирован Президентом Касым-Жомартом Токаевым касательно роли чтения?",
+            "en": "What key national maxim was articulated by President Kassym-Jomart Tokayev regarding reading culture?"
+          },
+          "options": {
+            "kk": [
+              "«Кітап оқитын ұлт — озатын ұлт»",
+              "«Технология бәрінен де жоғары тұруы керек»",
+              "«Кітап тек мектеп жасында ғана қажет»",
+              "«Кітапханалар енді қажет емес»"
+            ],
+            "ru": [
+              "«Китап оқитын ұлт — озатын ұлт» («Читающая нация — успешная нация»)",
+              "«Цифровизация должна полностью вытеснить печатные книги»",
+              "«Чтение книг актуально только для школьников»",
+              "«Библиотеки больше не имеют государственного значения»"
+            ],
+            "en": [
+              "\"A reading nation is an advanced, leading nation\"",
+              "\"Digital gadgets should completely displace physical books\"",
+              "\"Reading is only relevant during primary schooling\"",
+              "\"Libraries have lost their strategic public value\""
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Президент Ұлттық құрылтайда «Кітап оқитын ұлт — озатын ұлт» тұжырымдамасын негізгі ұлттық бағдар етіп бекітті.",
+            "ru": "Президент утвердил формулу «Кітап оқитын ұлт — озатын ұлт» как основу интеллектуального развития государства.",
+            "en": "The President established the doctrine \"A reading nation is an advanced nation\" as the bedrock of intellectual development."
+          }
+        },
+        {
+          "id": "rn_q2",
+          "type": "quote_memory",
+          "question": {
+            "kk": "Президент Қасым-Жомарт Тоқаев «мемлекеттің және тұтас ұлттың басты жады» деп қай мекемені атады?",
+            "ru": "Что Президент Касым-Жомарт Токаев охарактеризовал как «главную память государства и нации»?",
+            "en": "What institution did President Tokayev describe as the \"primary memory of the state and the entire nation\"?"
+          },
+          "options": {
+            "kk": [
+              "Кітапхананы",
+              "Сауда орталықтарын",
+              "Әлеуметтік желілерді",
+              "Қаржы биржаларын"
+            ],
+            "ru": [
+              "Библиотеку",
+              "Торгово-развлекательные центры",
+              "Ленты социальных сетей",
+              "Финансовые биржи"
+            ],
+            "en": [
+              "The Library",
+              "Commercial shopping malls",
+              "Social media feeds",
+              "Financial stock exchanges"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Мемлекет басшысы Атырауда өткен Ұлттық құрылтайда: «Кітапхана – бұл мемлекеттің, тұтас ұлттың басты жады. Сондықтан кітапхана ісіне немқұрайлы қарауға болмайды» деді.",
+            "ru": "В выступлении подчеркнуто: «Библиотека – это основная память государства и нации. К развитию библиотечного дела нельзя относиться равнодушно».",
+            "en": "The President declared: \"A library is the primary memory of the state and the entire nation; indifference toward library development is intolerable.\""
+          }
+        },
+        {
+          "id": "rn_q3",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Қазақстанда ресми түрде қай күн «Ұлттық кітап күні» болып бекітілді?",
+            "ru": "Какая дата была официально учреждена в Казахстане как «Национальный день книги»?",
+            "en": "Which date was officially declared as \"National Book Day\" in Kazakhstan?"
+          },
+          "options": {
+            "kk": [
+              "1 қыркүйек",
+              "23 сәуір",
+              "16 желтоқсан",
+              "25 қазан"
+            ],
+            "ru": [
+              "1 сентября",
+              "23 апреля",
+              "16 декабря",
+              "25 октября"
+            ],
+            "en": [
+              "September 1",
+              "April 23",
+              "December 16",
+              "October 25"
+            ]
+          },
+          "correctIndex": 1,
+          "explanation": {
+            "kk": "Президенттің қолдауымен 23 сәуір ресми түрде елімізде Ұлттық кітап күні болып жарияланды.",
+            "ru": "По инициативе и при поддержке Главы государства 23 апреля было официально объявлено Национальным днем книги.",
+            "en": "With presidential support, April 23 was officially instituted as Kazakhstan’s National Book Day."
+          }
+        },
+        {
+          "id": "rn_q4",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Қай екі қалада әлемдік үлгідегі тәулік бойы (24/7) жұмыс істейтін заманауи кітапханалар салу тапсырылды?",
+            "ru": "В каких городах Президент поручил построить современные круглосуточные (24/7) библиотеки?",
+            "en": "In which cities did the President mandate the creation of modern 24/7 libraries?"
+          },
+          "options": {
+            "kk": [
+              "Астана және Алматы қалаларында",
+              "Тек шетелдік қалаларда",
+              "Бұл бастама жоспарланған жоқ",
+              "Қарағанды мен Теміртауда ғана"
+            ],
+            "ru": [
+              "В Астане и Алматы",
+              "Только за рубежом",
+              "Такого поручения не давалось",
+              "Исключительно в Караганде и Темиртау"
+            ],
+            "en": [
+              "In Astana and Almaty",
+              "Only abroad",
+              "No such project was commissioned",
+              "Exclusively in industrial mining zones"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Мемлекет басшысы еліміздің қос бас қаласы — Астана мен Алматыда тәулік бойы жұмыс істейтін озық кітапханалар ғимаратын тұрғызуды тапсырды.",
+            "ru": "Президент дал конкретное поручение возвести здания для современных круглосуточных библиотек в Астане и Алматы.",
+            "en": "The President commissioned the construction of round-the-clock modern libraries in Astana and Almaty."
+          }
+        },
+        {
+          "id": "rn_q5",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Кітап оқымау және әлеуметтік желілердегі мағынасыз контентке байлану адамның қандай қабілетіне зиян келтіреді?",
+            "ru": "К какому риску, по предупреждению Президента, ведет отказ от чтения и чрезмерное увлечение соцсетями?",
+            "en": "What cognitive risk did the President caution against when reading is supplanted by superficial social feeds?"
+          },
+          "options": {
+            "kk": [
+              "Мидың жоғары когнитивтік қабілеттері мен сыни ойлауын жоғалтуға",
+              "Көру қабілетінің тек жақсаруына",
+              "Ешқандай әсері болмайды",
+              "Адамның бірден шешен болуына"
+            ],
+            "ru": [
+              "К утрате высших когнитивных способностей и критического мышления",
+              "Исключительно к ускорению речи",
+              "Никакого негативного влияния нет",
+              "К автоматическому расширению словарного запаса"
+            ],
+            "en": [
+              "Degradation of higher cognitive abilities and critical discernment",
+              "Spontaneous enhancement of concentration",
+              "No demonstrable cognitive impact",
+              "Immediate boost to vocabulary without effort"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Президент кітап оқымаған адам уақыт өте келе мидың жоғары когнитивтік, ойлау және талдау қабілеттерін жоғалтып алуы мүмкін екенін ескертті.",
+            "ru": "Президент предупредил, что без постоянного чтения человек рискует утратить высшие когнитивные способности мозга.",
+            "en": "The President cautioned that neglecting reading risks the erosion of higher cognitive and analytical capacities."
+          }
+        }
+      ],
+      "openQuestion": {
+        "id": "rn_open",
+        "prompt": {
+          "kk": "Мемлекет басшысының «Оқитын ұлт» тұжырымдамасы мен «Сапалы ұлт» мұраты туралы ой-толғауының басты мәні неде? Қазіргі цифрлық заманда кітап оқу неліктен ұлттық қауіпсіздік пен дамудың негізі болып табылады?",
+          "ru": "В чём заключается главная мысль президентской концепции «Читающая нация» и идеала «Качественной нации»? Почему в цифровую эпоху чтение книг является фундаментом суверенитета и прогресса?",
+          "en": "What is the core essence of the President's \"Reading Nation\" philosophy and the \"Quality Nation\" ideal? Why does deep reading remain vital for intellectual sovereignty in the digital age?"
+        },
+        "keyThemes": {
+          "kk": [
+            "оқитын ұлт",
+            "интеллект",
+            "кітапхана",
+            "когнитивті",
+            "сапалы ұлт",
+            "адал азамат",
+            "білім",
+            "бәсекеге қабілеттілік"
+          ],
+          "ru": [
+            "читающая нация",
+            "интеллект",
+            "библиотека",
+            "когнитивные способности",
+            "качественная нация",
+            "адал азамат",
+            "критическое мышление",
+            "прогресс"
+          ],
+          "en": [
+            "reading nation",
+            "intellect",
+            "libraries",
+            "cognitive abilities",
+            "quality nation",
+            "critical thinking",
+            "adal azamat",
+            "sovereignty"
+          ]
+        },
+        "sampleAnswer": {
+          "kk": "«Оқитын ұлт» бастамасы — елдің интеллектуалдық әлеуетін сақтау мен арттырудың кепілі. Кітап оқу сыни ойлауды, адалдық пен білімге құштарлықты қалыптастырып, қоғамды түрлі ақпараттық айла-шарғылардан қорғайды және елдің өркениет көшінен қалмауына жол ашады.",
+          "ru": "Концепция «Читающая нация» доказывает, что истинная сила страны измеряется её интеллектуальным потенциалом. Чтение книг развивает критическое мышление, оберегает когнитивные функции от деградации в потоке соцсетей и воспитывает ответственного гражданина («Адал азамат»), формируя конкурентоспособную нацию.",
+          "en": "The \"Reading Nation\" initiative affirms that national resilience rests on intellectual depth. Reading fosters independent reasoning, strengthens cognitive faculties against superficial digital noise, and cultivates responsible citizens capable of driving continuous innovation and cultural preservation."
+        }
+      }
+    }
+  },
+  {
+    "id": "abai-joly",
+    "title": {
+      "kk": "Абай жолы (Қайтқанда)",
+      "ru": "Путь Абая (Возвращение)",
+      "en": "The Path of Abai (Return)"
+    },
+    "author": {
+      "kk": "Мұхтар Әуезов",
+      "ru": "Мухтар Ауэзов",
+      "en": "Mukhtar Auezov"
+    },
+    "year": 1942,
+    "genre": {
+      "kk": "Тарихи роман, Эпопея",
+      "ru": "Исторический роман, Эпопея",
+      "en": "Historical Novel, Epic"
+    },
+    "level": "intermediate",
+    "coverImage": "/src/assets/images/book_abai_joly_1790149942172.jpg",
+    "estimatedReadMinutes": 9,
+    "tags": {
+      "kk": [
+        "Қазақ әдебиеті",
+        "Мұхтар Әуезов",
+        "Абай",
+        "Дала өмірі"
+      ],
+      "ru": [
+        "Казахская классика",
+        "Мухтар Ауэзов",
+        "Абай",
+        "Степь"
+      ],
+      "en": [
+        "Kazakh classic",
+        "Mukhtar Auezov",
+        "Abai",
+        "Steppe"
+      ]
+    },
+    "synopsis": {
+      "kk": "Қазақ әдебиетінің биік шыңы — ұлы ақын Абайдың жастық шағы, Семейдегі оқудан елге қайтуы және туған даласының күрделі тыныс-тіршілігіне араласуы баяндалатын әйгілі роман-эпопеяның алғашқы тарауы.",
+      "ru": "Вершина казахской прозы — эпопея о взрослении и духовном становлении Абая Кунанбаева, его возвращении из Семипалатинского медресе в родные кочевья и первых столкновениях со степными нравами.",
+      "en": "The pinnacle of Kazakh literature: Mukhtar Auezov’s epic tracing young Abai’s return from his studies in Semey to his ancestral nomadic steppes, confronting moral and societal crossroads."
+    },
+    "chapters": [
+      {
+        "id": "aj_c1",
+        "title": {
+          "kk": "1-бөлім: Қайтқанда (Семейден елге жол)",
+          "ru": "Глава 1: Возвращение (Дорога домой)",
+          "en": "Chapter 1: The Return (Road to the Steppe)"
+        },
+        "content": {
+          "kk": "Күздің қоңыр салқын таңы. Семей қаласынан шыққан төрт атты жолаушы көсілген кең далаға қарай бет алып келеді. Алдарында — Шыңғыс тауы, туған ауыл.\n\nАлдыңғы қатарда келе жатқан он үш жасар бала — Абай. Үш жыл бойы қаладағы Ахмет Риза медресесінде оқып, білім нәрімен сусындаған ол ауылын, аяулы анасы Ұлжанды, дана әжесі Зерені сағынып келеді. Балаң жүрегі сағыныштан лүпілдеп, даланың таза жусан иісін құныға жұтады.\n\nҚасындағы серіктері — әкесі Құнанбайдың сенімді кісілері: Байтас пен Жұмабай. Олар жас Абайды қаладан алып қайтуға арнайы жіберілген еді. Байтас алда келе жатып, жол-жөнекей әңгіме тиегін ағытады.\n\n— Абайжан, биыл даланың шөбі шүйгін, мал семіз, бірақ ел іші тыныш емес. Әкең Құнанбай мырза билік тізгінін қатты ұстап отыр. Ел басқару оңай дейсің бе, — деп күрсінді Байтас.\n\nАбай үндемеді. Оның ойында тек анасының мейірімді құшағы мен әжесінің ертегілері сайрап тұрды. Семейде өткен күндері көз алдынан тізіліп өтті. Медреседе парсы, араб, түркі шайырларының кітаптарын оқыды. Низами мен Науаи, Физули мен Сағдидің жырларын жаттап, қала кітапханасынан орыс классиктерінің сөз өнеріне де құлақ түрген еді.\n\nКүн көтеріле бастағанда, жолаушылар Қарауыл өзенінің бойына жақындады. Дала төсінде еркін жортқан киіктер көрінеді. Табиғаттың тылсым тыныштығы Абайдың бойына ерекше шабыт құйғандай болды. Ол өзінің ішкі толғанысын жыр жолдарымен өргісі келді.\n\n— Мына кең дала менің жаныма қандай жақын! Енді мен тек кітап оқып қана қоймай, өз халқымның мұң-мұқтажын тыңдаймын, — деп түйді жас ақын ішінен.\n\nКеш бата алыстан ауыл оттары жылтырап көрінді. Абай аттың басын іркіп, тебіне түсті. Алда үлкен өмір, ақындық ұлы жол күтіп тұрған еді.",
+          "ru": "Прохладное осеннее утро. Четверо всадников выехали из Семипалатинска и направились в сторону бескрайних чингизских степей. Впереди лежал путь в родной аул.\n\nВпереди на вороном коне скакал тринадцатилетний мальчик — Абай. После трех лет учения в медресе Ахмета Ризы он возвращался домой. Его юное сердце трепетало от радости и светлой тоски: он ехал к любимой матери Улжан и мудрой бабушке Зере, чьи сказки и напевы вскормили его душу.\n\nРядом с ним ехали посланцы его строгого отца, волостного правителя Кунанбая — Байтас и Жумабай. Байтас, опытный степняк, неторопливо вел беседу:\n— Абайжан, степь нынче тучная, травы высокие, но среди родов согласия мало. Твой отец Кунанбай держит власть железной рукой. Нелегко управлять людьми в такое время.\n\nАбай слушал молча, вдыхая горьковатый аромат полыни. Мысли его возвращались к годам учебы в городе. В медресе он открыл для себя сокровищницу восточной поэзии — строки Низами, Навои, Физули и Саади, а вечерами тайком приобщался к русской литературе и светским книгам.\n\nК полудню путники приблизились к изгибам реки Караул. Вдали мелькали вольные сайгаки. Величие степи наполнило душу мальчика предчувствием высокого призвания.\n— Эта бескрайняя земля — моя плоть и кровь. Я хочу не просто знать книги, но слышать дыхание своего народа, — размышлял юноша.\n\nВ сумерках впереди блеснули огни родного аула. Впереди Абая ждала великая и тернистая дорога поэта и мыслителя.",
+          "en": "A crisp autumn dawn. Four horsemen rode out from Semipalatinsk toward the boundless expanses of the Chingiz mountains. Ahead lay the return journey to their native settlement.\n\nLeading the group on his steed was thirteen-year-old Abai. After three years of intensive study at the Akhmet Riza madrassa, he was traveling home. His youthful heart swelled with tender longing for his loving mother Ulzhan and wise grandmother Zere, whose ancient parables had nourished his imagination.\n\nAccompanying him were trusted emissaries of his formidable father Qunanbai — Baitas and Zhumabai. Baitas rode alongside, remarking:\n\"Abai, the grasses are lush this season, yet peace among the clans remains fragile. Your father rules with an unwavering hand; governing these steppes is no gentle task.\"\n\nAbai remained thoughtful. In the city, he had immersed himself not only in scholastic theology but in the immortal poetry of Nizami, Navoi, Fuzuli, and Saadi, alongside glimpses of Russian secular letters. \n\nBy midday, nearing the Karaul River, herds of wild saiga antelopes dashed across the plains. The solemn beauty of the landscape crystallized his inner purpose: to understand and articulate the soul, struggles, and aspirations of his people.\n\nAs twilight descended, the welcoming hearth fires of his home encampment gleamed across the horizon, marking the commencement of an enduring literary and spiritual saga."
+        }
+      },
+      {
+        "id": "aj_c2",
+        "title": {
+          "kk": "2-бөлім: Ана құшағы мен әже тағылымы",
+          "ru": "Глава 2: Объятия матери и заветы бабушки",
+          "en": "Chapter 2: Maternal Embrace and Grandmother’s Wisdom"
+        },
+        "content": {
+          "kk": "Ауыл шетіне ілінгенде, алдан иттер шәуілдеп үріп, үйлерден адамдар шыға бастады. Абай атынан қарғып түсіп, үлкен ақ ордаға қарай асықты.\n\nЕсіктен кірген бойда алдынан мейірім төгілген анасы Ұлжан қарсы алды. Ол Абайын құшағына қысып, маңдайынан иіскеді.\n— Құлыным менің, ержетіп оралдың ба! Жүзіңнен айналайын, — деп көзіне жас алды.\n\nТөрдегі құс төсекте сүйікті әжесі Зере отыр еді. Көзі бұлдырап көрмей қалған қарт ана қолын созып, баланың бетін сипалады.\n— Бұл менің Телғарам ба? Кәне, жаныма жақындашы, ботам! Сен келді деп естігенде көңілім жадырап сала берді, — деп Абайдың басынан сипап, маңдайына ернін басты. Зере әжесі Абайды еркелетіп «Телғара» дейтін.\n\nАбай екі анасының ортасына отырып, қалада қалай оқығанын, қандай кітаптар парақтағанын баяндап берді. Зере әже немересінің сөзін ұйып тыңдап:\n— Балам, білім — көздің нұры. Бірақ білімді тек атақ пен мал үшін емес, әлсізге қорған, елге пайдалы болу үшін жұмса. Әкең Құнанбай қанша қатал болса да, сен әділдік пен рақымды ту ет, — деп ақылын айтты.\n\nКөп ұзамай шаңыраққа ауыл адамдары, ағайын-туған жиналды. Әкесі Құнанбай келіп, баласына байсалды көзбен қарап, қолын алды. Әке сыны қатал еді, бірақ Абайдың бойындағы парасат пен білімге деген құштарлық оның көзінен от болып жанып тұрды.",
+          "ru": "Едва всадники подъехали к аулу, навстречу залаяли собаки, и из юрт высыпали домочадцы. Абай соскочил с коня и поспешил к большой белой юрте.\n\nУ порога его встретила мать Улжан. Она прижала сына к груди и долго целовала его лоб:\n— Жеребеночек мой, вернулся взрослым джигитом! Свет очей моих!\n\nНа почетном месте юрты сидела бабушка Зере. Почти ослепшая от преклонных лет, она протянула дрожащие руки, нащупывая лицо внука:\n— Это мой Телгара? Подойди ближе, дитя мое! Услышав о твоем приезде, сердце мое согрелось, — приговаривала она, гладя Абая по плечам. Дома бабушка ласково звала его Телгарой.\n\nСев между матерью и бабушкой, Абай увлеченно рассказывал о книгах, восточных поэмах и мудрости, почерпнутой в медресе. Бабушка Зере наставляла его:\n— Знание, дитя мое — это свет разума. Но помни: ученость дана человеку не ради гордыни и чинов, а чтобы стать защитой слабым и опорой своему народу. Будь справедлив и милосерден сердцем.\n\nВскоре в юрту вошел сам Кунанбай. Сдержанно и строго он приветствовал сына за руку. Взгляд отца был пронзителен и суров, но в глазах юного Абая уже светилось собственное незыблемое достоинство.",
+          "en": "As they reached the settlement, welcoming calls and barking dogs echoed between the white yurts. Abai dismounted swiftly and strode into the central family pavilion.\n\nAt the entrance stood his mother Ulzhan, embracing her son warmly:\n\"My gentle foal, you have returned as a mature youth! Bless your bright face!\"\n\nSeated upon cushions at the place of honor was his grandmother Zere. With failing eyesight, the revered elder reached out her hands to trace his features:\n\"Is this my Telgara? Come closer to me, my child! My heart blossomed the moment your arrival was announced.\" (Telgara was her cherished nickname for him).\n\nSitting between them, Abai shared tales of his studies, the parchment manuscripts of Eastern poets, and the broader world outside the valley. Grandmother Zere imparted:\n\"Knowledge is the light of the eyes, Abai. Yet remember: true learning is not granted for arrogance or pursuit of power, but to protect the vulnerable and bring healing to your people.\"\n\nSoon his father Qunanbai entered. His greeting was austere and measured, testing his son’s composure, yet the spark of independent intellect in young Abai was already unmistakable."
+        }
+      }
+    ],
+    "quizzes": {
+      "questions": [
+        {
+          "id": "aj_q1",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Абай Семей қаласынан ауылға оралғанда неше жаста еді және қай медреседе білім алған?",
+            "ru": "Сколько лет было Абаю при возвращении из Семипалатинска и в каком медресе он учился?",
+            "en": "How old was Abai when returning from Semey, and at which madrassa did he study?"
+          },
+          "options": {
+            "kk": [
+              "13 жаста, Ахмет Риза медресесінде",
+              "16 жаста, Ғалия медресесінде",
+              "10 жаста, Орынбор гимназиясында",
+              "18 жаста, Қазан университетінде"
+            ],
+            "ru": [
+              "13 лет, в медресе Ахмета Ризы",
+              "16 лет, в медресе Галия",
+              "10 лет, в Оренбургской гимназии",
+              "18 лет, в медресе при Казанском университете"
+            ],
+            "en": [
+              "13 years old, at the Akhmet Riza madrassa",
+              "16 years old, at the Galiya madrassa",
+              "10 years old, at Orenburg gymnasium",
+              "18 years old, at Kazan university preparatory"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Абай 13 жасында үш жыл бойы оқыған Семейдегі Ахмет Риза медресесінен ауылына қайтты.",
+            "ru": "Тринадцатилетний Абай вернулся в аул после трех лет обучения в медресе Ахмета Ризы.",
+            "en": "Thirteen-year-old Abai returned after three years of schooling at the Akhmet Riza madrassa."
+          }
+        },
+        {
+          "id": "aj_q2",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Зере әжесі Абайды еркелетіп қандай есіммен атайтын еді?",
+            "ru": "Каким ласковым именем называла Абая его бабушка Зере?",
+            "en": "What affectionate nickname did grandmother Zere call Abai?"
+          },
+          "options": {
+            "kk": [
+              "Телғара",
+              "Шоқан",
+              "Көксерек",
+              "Сұлтан"
+            ],
+            "ru": [
+              "Телгара",
+              "Шокан",
+              "Коксерек",
+              "Султан"
+            ],
+            "en": [
+              "Telgara",
+              "Shokan",
+              "Kokserek",
+              "Sultan"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Зере әжесі Абайдың зеректігі мен ерекше болмысына сүйсініп, оны еркелетіп «Телғара» дейтін.",
+            "ru": "Бабушка Зере с любовью называла юного Абая именем «Телгара».",
+            "en": "Grandmother Zere lovingly called young Abai \"Telgara\"."
+          }
+        },
+        {
+          "id": "aj_q3",
+          "type": "quote_memory",
+          "question": {
+            "kk": "Зере әжесі немересі Абайға білімнің мәні жайында қандай өсиет айтты?",
+            "ru": "Какое напутствие дала бабушка Зере внуку относительно предназначения знаний?",
+            "en": "What moral counsel did grandmother Zere impart to Abai regarding the purpose of knowledge?"
+          },
+          "options": {
+            "kk": [
+              "Білімді тек атақ пен мал үшін емес, әлсізге қорған, елге пайдалы болу үшін жұмсау керек",
+              "Білімді тек сауда-саттық пен пайда табу үшін пайдалану қажет",
+              "Білім алған соң ауылға қайтпай, тек қалада өмір сүру керек",
+              "Кітапты тастап, тек мал бағумен айналысу керек"
+            ],
+            "ru": [
+              "Ученость дана не для гордыни и чинов, а чтобы стать защитой слабым и опорой народу",
+              "Знания нужны исключительно для скорого обогащения и торговли",
+              "После медресе следует навсегда остаться жить чиновником в городе",
+              "Книги следует оставить и думать лишь о преумножении табунов"
+            ],
+            "en": [
+              "Learning is granted not for arrogance or wealth, but to protect the weak and serve the people",
+              "Knowledge should be used strictly for commercial profit and trade",
+              "One should abandon the steppes permanently to become an urban official",
+              "Books should be set aside in favor of herding livestock"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Зере әже: «Білімді тек атақ пен мал үшін емес, әлсізге қорған, елге пайдалы болу үшін жұмса» деп өсиет еткен.",
+            "ru": "Бабушка учила Абая служить правде, защищать обездоленных и не кичиться ученостью.",
+            "en": "Grandmother Zere reminded him that true wisdom is dedicated to justice and sheltering the helpless."
+          }
+        }
+      ],
+      "openQuestion": {
+        "id": "aj_open",
+        "prompt": {
+          "kk": "Мұхтар Әуезовтің осы үзіндісінде жас Абайдың тұлғалық және азаматтық қалыптасуына ана мейірімі мен дала табиғаты қалай әсер етеді?",
+          "ru": "Как в этом произведении Мухтара Ауэзова показано влияние родной степи, материнской любви и уроков бабушки на становление мировоззрения Абая?",
+          "en": "How does Mukhtar Auezov depict the influence of native steppe heritage, maternal warmth, and grandmotherly counsel on Abai’s emerging worldview?"
+        },
+        "keyThemes": {
+          "kk": [
+            "білім",
+            "әділдік",
+            "ана",
+            "Зере",
+            "халық",
+            "дала",
+            "мейірім"
+          ],
+          "ru": [
+            "знание",
+            "справедливость",
+            "мать",
+            "Зере",
+            "народ",
+            "степь",
+            "милосердие",
+            "гуманизм"
+          ],
+          "en": [
+            "knowledge",
+            "justice",
+            "mother",
+            "Zere",
+            "people",
+            "steppe",
+            "mercy",
+            "humanism"
+          ]
+        },
+        "sampleAnswer": {
+          "kk": "Жас Абайдың бойындағы ізгілік пен даналық анасы Ұлжанның мейірімі, Зере әжесінің әділдік пен халыққа қызмет ету туралы өсиеттері арқылы берік орнығады.",
+          "ru": "Ауэзов показывает, что именно доброта матери Улжан и мудрые заветы бабушки Зере сформировали в юном Абае гуманизм, любовь к народу и нетерпимость к несправедливости.",
+          "en": "Auezov illustrates that maternal love and Zere’s ethical teachings grounded Abai in compassion and devotion to justice above raw political dominance."
+        }
+      }
+    }
+  },
+  {
+    "id": "kokserik",
+    "title": {
+      "kk": "Көксерек",
+      "ru": "Серый Лютый (Көксерек)",
+      "en": "Kokserek (The Grey Wolf)"
+    },
+    "author": {
+      "kk": "Мұхтар Әуезов",
+      "ru": "Мухтар Ауэзов",
+      "en": "Mukhtar Auezov"
+    },
+    "year": 1929,
+    "genre": {
+      "kk": "Повесть, Табиғат лирикасы",
+      "ru": "Повесть, Драматическая проза",
+      "en": "Novella, Nature & Drama"
+    },
+    "level": "intermediate",
+    "coverImage": "/src/assets/images/book_kokserik_1790149963714.jpg",
+    "estimatedReadMinutes": 8,
+    "tags": {
+      "kk": [
+        "Қазақ әдебиеті",
+        "Мұхтар Әуезов",
+        "Құрмаш",
+        "Қасқыр",
+        "Табиғат"
+      ],
+      "ru": [
+        "Мухтар Ауэзов",
+        "Курмаш",
+        "Волк",
+        "Природа степи"
+      ],
+      "en": [
+        "Mukhtar Auezov",
+        "Kurmash",
+        "Wolf",
+        "Nature"
+      ]
+    },
+    "synopsis": {
+      "kk": "Адам мен табиғат, жыртқыштың жабайы түйсігі мен баланың пәк сезімі арпалысқан классикалық драмалық повесть. Бөлтірікті қолға үйретпек болған бала Құрмаштың тағдыры.",
+      "ru": "Пронзительная классическая повесть о волчонке Коксереке, взятом из логова мальчиком Курмашем. Вечная драма противостояния дикой природы и человека.",
+      "en": "Mukhtar Auezov’s gripping masterpiece exploring the primal tension between wild nature and human companionship, following the young boy Kurmash and the wolf cub Kokserek."
+    },
+    "chapters": [
+      {
+        "id": "ks_c1",
+        "title": {
+          "kk": "1-бөлім: Ұядан алынған бөлтірік",
+          "ru": "Глава 1: Волчонок из логова",
+          "en": "Chapter 1: The Cub from the Den"
+        },
+        "content": {
+          "kk": "Ерте көктемнің салқын күнінде ауыл аңшылары қасқырдың апанын тауып, бірнеше бөлтірікті алып шықты. Басқа бөлтіріктер қырылып, тек жалғыз көккөз, арқасы күміс жал бөлтірік қана тірі қалды. \n\nБұл бөлтірікті он жасар Құрмаш бала өзіне сұрап алды. Баланың жүрегі мейірімге толы еді. Ол күшікті бауырына басып, оған «Көксерек» деп ат қойды. \n\nҚұрмаш оған ақ сүт беріп, ет турап, қой қораның жылы бұрышына жайлы төсек салып берді. Көксерек тез өсті, бірақ оның бойындағы жыртқыштық мінез еш басылмады. Басқа ауыл иттері оны жатсынып, жақындаса ырылдап, жүректері шайлығып тұратын. \n\nАуыл ақсақалдары балаға:\n— Құрмаш, бұл — қасқырдың баласы. Қасқырды қанша асырасаң да, орманға қарап ұлиды. Жабайы аңның қаны бір күні білінбей қалмайды, сақ бол, — деп ескертетін. Бірақ Құрмаш өз Көксерегіне шексіз сенді, оның маңдайынан сипап, жанындай жақсы көрді.\n\nКөксерек бірте-бірте дәу көкжал қасқырға айналды. Оның көзінен суық сұрғылт от жылтырап, түнде айға қарап ұлитын әдет шығарды. Табиғаттың еркін заңы оны далаға қарай жетелеп тұрған еді.",
+          "ru": "Ранней весной охотники выследили логово волчицы в зарослях ковыля и достали слепых волчат. Все детеныши погибли, и лишь один серый, крепкий волчонок с цепким взглядом остался в живых.\n\nДесятилетний мальчик-сирота Курмаш выпросил волчонка себе. Сердце мальчика источало безграничную ласку. Он назвал его Коксереком — Серым Лютым.\n\nКурмаш кормил его теплым кобыльим молоком, делился последним куском мяса, устроил логово в теплом углу загона. Волчонок крепчал не по дням, а по часам, но волчья сущность в нем не угасала. Дворовые собаки чуяли смертельного врага и боялись подходить близко.\n\nСтарики качали головами и предупреждали мальчика:\n— Курмаш, волк не станет верным псом. Сколько волка ни корми, он всё в степь смотрит. Дикая волчья кровь рано или поздно заговорит!\nНо мальчик лишь крепче прижимал зверя к груди, веря, что верность и забота сотворят чудо.\n\nШло время. Коксерек превратился в мощного серого зверя с холодным огнем в глазах. По ночам он всё чаще поднимал морду к луне, тоскуя по вечной свободе дикой степи.",
+          "en": "In early spring, steppe hunters discovered a wolf den deep within the rocky ravines. Only one sturdy, slate-gray cub survived the raid.\n\nTen-year-old orphan Kurmash begged his relatives to spare the creature. With gentle devotion, the boy named the cub Kokserek ('The Grey Fierce One').\n\nKurmash fed him warm mare's milk, gave him meat, and prepared a soft bed in a secluded corner of the corral. Kokserek grew rapidly, yet his untamable wolf instinct never waned. The village sheepdogs bristled and trembled at his scent.\n\nVillage elders repeatedly cautioned the youth:\n\"Kurmash, a wolf is not a companion hound. No matter how dearly you nurture him, he will yearn for the wild. Predatory blood will answer its ancestral call.\" Yet Kurmash believed his affectionate care would tame the beast.\n\nAs seasons passed, Kokserek transformed into an imposing wolf. At night, gazing at the distant moon over the snowbound steppe, the untamed wilderness called out to his blood."
+        }
+      },
+      {
+        "id": "ks_c2",
+        "title": {
+          "kk": "2-бөлім: Еркіндік шақыруы және трагедия",
+          "ru": "Глава 2: Зов свободы и роковая развязка",
+          "en": "Chapter 2: The Call of the Wild and the Tragic Fate"
+        },
+        "content": {
+          "kk": "Бір күні қыстың қаһарлы бораны басталған түні Көксерек шынжырын үзіп, қараңғы далаға қашып кетті. Ол үйретілген ауыл тұрмысын біржола тастап, түз тағыларының көсеміне айналды. \n\nБірнеше жыл өткенде, ел ішінде «Көксерек» атанып кеткен алып сұр қасқырдың аты шықты. Ол адамнан қорықпайтын, айлакер әрі өте қатал жыртқышқа айналған еді. Қыс қатты болып, мал қырылған жұт жылы қасқырлар ауылдарға шаба бастады.\n\nБір күні боранды күні қой іздеп далаға шыққан Құрмаш ақ түтек боранда адасып қалады. Алдынан көзінде от ойнаған, арқасында өзі салған қарғыбаудың белгісі бар дәу сұр қасқыр шыға келді.\n\n— Көксерек! Бұл мен ғой, Құрмашпын! — деп бала қуана алға ұмтылды.\n\nБірақ аш әрі жабайы табиғатына қайта оралған қасқырдың жадында балалық шақтың мейірімі сақталмаған еді. Жыртқыш түйсік жеңіп, қайғылы оқиға орын алды. Артынан ауыл аңшылары жетіп, қасқырдың көзін жойғанымен, бұл оқиға бүкіл далаға табиғат пен адам арасындағы шекараны бұзуға болмайтынын мәңгілік сабақ етіп қалдырды.",
+          "ru": "Однажды снежной метельной ночью Коксерек перегрыз веревку и бесследно умчался в холодную мглу степи. Он навсегда вернулся в свою естественную стихию, примкнув к дикой стае.\n\nПрошли годы. По округе пошла страшная слава о неуловимом и свирепом волке-одиночке, нападавшем на отары. Он знал повадки людей и потому был опаснее любого другого хищника. В голодный морозный год волки стали подходить к самым жилищам.\n\nВ суровый буран юный Курмаш вышел на поиски отбившихся овец и заблудился в снежной пелене. Неожиданно сквозь вихри метели перед ним возник огромный матёрый зверь с седой шерстью.\n\n— Коксерек! Это же я, твой Курмаш! — с радостной надеждой воскликнул мальчик, сделав шаг навстречу.\n\nНо в сердце дикого зверя не осталось места для человеческой памяти. Голод и слепая свирепость хищника заглушили давнее прошлое. Произошла трагедия. Прибывшие по следам охотники настигли волка, но этот горький финал остался для всех суровым напоминанием: законы природы неизменны, и дикий зверь всегда останется диким.",
+          "en": "One stormy winter night, Kokserek severed his tether and bounded into the darkness. He had returned permanently to the sovereignty of the wild, rising to become the formidable leader of the steppe wolves.\n\nYears elapsed. Rumors spread of an extraordinarily cunning and ruthless predator haunting the winter camps. Having observed human habits from youth, he feared neither campfire nor rifle. During a catastrophic freeze, wolves encroached directly upon settlements.\n\nIn a blinding blizzard, young Kurmash ventured into the snow to rescue stray sheep and lost his path. Through swirling drifts appeared an immense silver-grey wolf with burning amber eyes.\n\n\"Kokserek! It is me, your Kurmash!\" cried the boy, reaching out with innocent trust.\n\nYet in the starving predator's consciousness, memories of childhood milk and gentle hands had evaporated. Instinct reigned supreme, culminating in tragedy. Hunters eventually tracked down the beast, leaving behind an indelible parabolic lesson on the unyielding divide between humankind and the wild."
+        }
+      }
+    ],
+    "quizzes": {
+      "questions": [
+        {
+          "id": "ks_q1",
+          "type": "character_action",
+          "question": {
+            "kk": "Бөлтірікті апаннан алып шыққан соң, оған «Көксерек» деп ат қойып, мейіріммен баққан бала кім?",
+            "ru": "Как звали мальчика, который приютил волчонка и дал ему кличку Коксерек?",
+            "en": "What was the name of the young boy who took in the wolf cub and named him Kokserek?"
+          },
+          "options": {
+            "kk": [
+              "Құрмаш",
+              "Абай",
+              "Ыбырай",
+              "Қожа"
+            ],
+            "ru": [
+              "Курмаш",
+              "Абай",
+              "Ибрай",
+              "Кожа"
+            ],
+            "en": [
+              "Kurmash",
+              "Abai",
+              "Ibray",
+              "Kozha"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Бөлтірікті асырап алып, сүт беріп өсірген мейірімді бала — Құрмаш.",
+            "ru": "Мальчика звали Курмаш — он выходил волчонка и искренне любил его.",
+            "en": "The boy was Kurmash, who cared for the cub with heartfelt devotion."
+          }
+        },
+        {
+          "id": "ks_q2",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Ауыл ақсақалдары бала Құрмашқа қасқыр туралы қандай ескерту жасаған еді?",
+            "ru": "О чем предупреждали Курмаша аульные старики?",
+            "en": "What timeless warning did the elders give Kurmash regarding wolves?"
+          },
+          "options": {
+            "kk": [
+              "«Қасқырды қанша асырасаң да, орманға қарап ұлиды, жабайы қаны бір күні білінеді»",
+              "Қасқыр жылқы бағатын ең жақсы дос болады",
+              "Қасқыр қыста ұйқыға кетіп, ешкімге тиіспейді",
+              "Қасқыр ешқашан далаға қашпайды"
+            ],
+            "ru": [
+              "«Сколько волка ни корми, он всё в степь смотрит, дикая кровь заговорит»",
+              "Волк станет лучшей пастушьей собакой для отары",
+              "Волк зимой впадает в спячку и не опасен",
+              "Волк навсегда забудет повадки диких сородичей"
+            ],
+            "en": [
+              "\"No matter how you feed a wolf, his heart turns to the wild; predatory instinct will prevail\"",
+              "A wolf makes the finest sheepdog for the flock",
+              "A wolf hibernates during harsh winters and remains docile",
+              "A wolf raised by humans permanently loses all wild instincts"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Қариялар жыртқыштың жабайы табиғатын адам баласы өзгерте алмайтынын ескерткен болатын.",
+            "ru": "Старики напоминали пословицу о том, что природу дикого хищника невозможно переделать.",
+            "en": "The elders emphasized the immutable boundary of the wild predator instinct."
+          }
+        },
+        {
+          "id": "ks_q3",
+          "type": "quote_memory",
+          "question": {
+            "kk": "М. Әуезовтің «Көксерек» шығармасының басты философиялық тұжырымы қандай?",
+            "ru": "В чем заключается главная философская идея повести «Серый Лютый»?",
+            "en": "What is the central philosophical lesson of Mukhtar Auezov’s \"Kokserek\"?"
+          },
+          "options": {
+            "kk": [
+              "Табиғат заңдары мен жабайы жыртқыштың еркін болмысын зорлап үйрету мүмкін емес, оған құрметпен қарау керек",
+              "Жабайы аңдарды үй жануарларындай ұстау оңай",
+              "Адам кез келген аңды өзіне толық бағындыра алады",
+              "Даладағы барлық аңдарды жою керек"
+            ],
+            "ru": [
+              "Законы природы нерушимы, и дикого хищника невозможно насильно одомашнить против его естества",
+              "Любого хищника можно легко превратить в ручного питомца",
+              "Человек властен полностью подчинить себе законы дикой фауны",
+              "Природа не имеет собственной воли и законов"
+            ],
+            "en": [
+              "Nature possesses unbreakable laws; wild predators cannot be subordinated against their innate essence",
+              "Any ferocious beast can be easily turned into a domestic pet",
+              "Human desire always triumphs over the natural instincts of wildlife",
+              "Nature obeys human commands without consequence"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Жазушы табиғат пен адамның арасындағы үйлесімділік пен заңдылықтарды бұзу қауіпті екенін ұқтырады.",
+            "ru": "Повесть раскрывает трагедию нарушения естественных законов гармонии между человеком и природой.",
+            "en": "The work underscores that violating natural order leads to inevitable tragedy."
+          }
+        }
+      ],
+      "openQuestion": {
+        "id": "ks_open",
+        "prompt": {
+          "kk": "Неліктен Құрмаштың шексіз мейірімі мен қамқорлығы Көксеректің жыртқыштық түйсігін жеңе алмады? Ойыңызды қорытындылаңыз.",
+          "ru": "Почему искренняя любовь и забота Курмаша не смогли изменить дикую природу Коксерека? Поделитесь вашим читательским выводом.",
+          "en": "Why did Kurmash’s tender affection fail to alter Kokserek’s primal predatory nature? Reflect on the novella’s message."
+        },
+        "keyThemes": {
+          "kk": [
+            "табиғат",
+            "жыртқыш",
+            "еркіндік",
+            "түйсік",
+            "заң",
+            "мейірім"
+          ],
+          "ru": [
+            "природа",
+            "инстинкт",
+            "свобода",
+            "хищник",
+            "закон природы",
+            "дикость"
+          ],
+          "en": [
+            "nature",
+            "instinct",
+            "freedom",
+            "predator",
+            "natural law",
+            "wildness"
+          ]
+        },
+        "sampleAnswer": {
+          "kk": "Қасқырдың жаратылысы мен генетикалық еркіндік түйсігі кез келген адамның тәрбиесінен жоғары тұрады. Табиғат заңын күштеп өзгерту мүмкін емес.",
+          "ru": "Автор показывает, что многовековой природный инстинкт дикого зверя непреодолим. Любовь человека бессильна против законов естественного отбора и зова дикой природы.",
+          "en": "The novella demonstrates that ancient evolutionary instincts cannot be overturned by individual affection; nature obeys its own sovereign laws."
+        }
+      }
+    }
+  },
+  {
+    "id": "shuganyn-belgisi",
+    "title": {
+      "kk": "Шұғаның белгісі",
+      "ru": "Памятник Шуге (Шұғаның белгісі)",
+      "en": "Shuga’s Monument"
+    },
+    "author": {
+      "kk": "Бейімбет Майлин",
+      "ru": "Беимбет Майлин",
+      "en": "Beimbet Mailin"
+    },
+    "year": 1915,
+    "genre": {
+      "kk": "Повесть, Лиро-эпос",
+      "ru": "Классическая повесть, Драма",
+      "en": "Classic Novella, Steppe Romance"
+    },
+    "level": "beginner",
+    "coverImage": "/src/assets/images/book_shuga_1790149976819.jpg",
+    "estimatedReadMinutes": 7,
+    "tags": {
+      "kk": [
+        "Қазақ әдебиеті",
+        "Бейімбет Майлин",
+        "Махаббат",
+        "Шұға",
+        "Әбдірахман"
+      ],
+      "ru": [
+        "Беимбет Майлин",
+        "Любовь",
+        "Шуга",
+        "Абдрахман",
+        "Классика"
+      ],
+      "en": [
+        "Beimbet Mailin",
+        "Love story",
+        "Shuga",
+        "Steppe romance"
+      ]
+    },
+    "synopsis": {
+      "kk": "Қазақ әдебиетіндегі мөлдір махаббат пен қасіретті тағдырдың көркем ескерткіші. Сұлу әрі ақылды Шұға мен оқыған жас мұғалім Әбдірахманның шынайы сезімі.",
+      "ru": "Жемчужина дореволюционной казахской прозы о чистой любви красавицы Шуги и молодого учителя Абдрахмана, разрушенной кознями завистников и сословными предрассудками.",
+      "en": "A timeless jewel of Kazakh romantic prose narrating the pure love between the graceful Shuga and the enlightened teacher Abdrakhman, thwarted by clan envy and social barriers."
+    },
+    "chapters": [
+      {
+        "id": "sh_c1",
+        "title": {
+          "kk": "1-бөлім: Тобыл бойындағы сұлу қыз бен оқыған жігіт",
+          "ru": "Глава 1: Красавица Шуга и просветитель Абдрахман",
+          "en": "Chapter 1: The Beauty Shuga and the Enlightened Teacher"
+        },
+        "content": {
+          "kk": "Жаздың мамыражай кешінде Тобыл өзенінің жағасында келе жатқан жолаушылар алыстан көзге түскен жалғыз төбеге назар аударды. Жолбасшы қария:\n— Бұл төбені жұрт «Шұғаның белгісі» деп атайды. Мұнда көзі тірісінде ақылына көркі сай болған сұлу қыз Шұғаның мұңы жатыр, — деп сыр шертті.\n\nШұға — ауылдың беделді байы Есімбектің ерке өскен, он саусағынан өнері тамған, сөзі маржан, көркіне бүкіл дала тамсанған жалғыз қызы еді. Ол ауылға қаладан оқу бітіріп келген көзі ашық, білімді мұғалім Әбдірахманды жолықтырады.\n\nӘбдірахман елдегі балаларды оқытып, жастардың сауатын ашуға бар күшін салып жүрген азамат еді. Екеуі бір-бірін көрген сәттен-ақ жүректеріне махаббат оты тұтанды. Әбдірахманның парасаты мен Шұғаның нәзік болмысы үндесіп, олардың пәк сезімі бүкіл елге жайылды.\n\nАлайда, ескі дәстүрге байланған бай туыстары мен іші тар күншілдер бұл теңдессіз сезімді көре алмады. Ауылда жала жабылып, жастардың бақытына тосқауыл қойыла бастады.",
+          "ru": "Теплым летним вечером двое путников ехали берегом реки Тобол и обратили внимание на одинокий курган, возвышавшийся над степью. Старик-спутник вздохнул:\n— Это место зовут «Шұғаның белгісі» — памятником Шуге. Здесь похоронена девушка, чья красота и благородная душа не знали равных во всей округе.\n\nШуга была единственной дочерью почтенного бая Есимбека. О ее дивной стати, кротком нраве и остром уме слагали песни. В ту пору в их волость приехал молодой учитель Абдрахман, только что окончивший городскую семинарию. Он открыл школу для крестьянских детей и мечтал о просвещении народа.\n\nСудьба свела их, и вспыхнула чистая, возвышенная любовь. В умных речах Абдрахмана Шуга нашла отзвук своих девичьих дум, а юноша был покорен ее кристальной чистотой.\n\nНо завистники и сторонники косных феодальных обычаев не могли смириться со счастьем молодых. Вокруг юноши стали плести коварные сети наговоров.",
+          "en": "On a serene summer evening by the Tobol River, travelers gazed upon an isolated mound rising above the prairie. The elder guide whispered:\n\"That landmark is known as Shuga’s Monument. It preserves the memory of a maiden whose brilliance and nobility were celebrated across the steppes.\"\n\nShuga was the cherished daughter of the respected elder Esimbek. Renowned for her eloquence and dignity, she met Abdrakhman, an enlightened young scholar who had returned from the city to teach rural children.\n\nTheir mutual admiration blossomed into selfless devotion. In Abdrakhman’s visions of learning, Shuga found kindred ideals, while he beheld in her the radiant spirit of the steppe.\n\nYet reactionary rivals and clan gossips conspired against the young pedagogue, unable to abide an alliance forged through mutual respect rather than tribal barter."
+        }
+      },
+      {
+        "id": "sh_c2",
+        "title": {
+          "kk": "2-бөлім: Ғашықтар қасіреті және мәңгілік белгі",
+          "ru": "Глава 2: Разлука и вечная память любви",
+          "en": "Chapter 2: Separation and Eternal Memorial"
+        },
+        "content": {
+          "kk": "Күншіл ағайындар уездік бастыққа Әбдірахманның үстінен жалған домалақ арыз түсіріп: «Ол үкіметке қарсы бүлік тудырушы» деп жала жабады. Зұлымдықтың құрбаны болған жас жігітті түрмеге қамап, алыс қалаға айдап әкетеді.\n\nБұл суық хабар Шұғаның нәзік жүрегіне ауыр жара салды. Сүйгенінен көз жазып қалған ару қыз төсек тартып, дертке шалдығады. Ешбір емші оның сырқатына дауа таба алмады, өйткені оның дерті — сағыныш пен әділетсіздік күйігі еді.\n\nАрада біраз уақыт өткенде Әбдірахманның ақ екені дәлелденіп, ол босатылып ауылға қарай асыға ат басын бұрады. Бірақ ол жеткенше кеш еді. Шұға соңғы демінде өзінің жүрек сырын хатқа түсіріп, сүйіктісіне аманат қалдырып, мәңгілікке көз жұмған болатын.\n\nӘбдірахман зар еңіреп, оны осы биік төбе басына арулап жерлейді. Халық сол күннен бастап бұл жерді адал махаббаттың, таза сезімнің белгісі ретінде «Шұғаның белгісі» деп атап кетті. Бұл повесть қазақ даласындағы еркіндік пен шынайы махаббаттың мәңгілік гимні болып қалды.",
+          "ru": "Завистники оклеветали честного учителя перед уездным начальством, донеся, будто он подстрекает народ к неповиновению. Безвинного Абдрахмана арестовали и увезли по этапу в тюрьму.\n\nЭта весть сломила хрупкое здоровье Шуги. От горя и тоски она слегла в тяжелом недуге. Никакие лекари не могли помочь — ее сердце угасало без света любимых глаз.\n\nСпустя месяцы клевета развеялась, и Абдрахмана оправдали. Задыхаясь от тревоги, юноша мчался на коне в родной аул, меняя загнанных лошадей. Но было слишком поздно. Шуга скончалась за несколько часов до его приезда, оставив ему прощальное письмо, полное бессмертной любви и прощения.\n\nУбитый горем Абдрахман похоронил ее на высокой степной сопке. С тех пор люди назвали эту высоту «Памятником Шуге». Повесть Беимбета Майлина осталась в веках как гимн верности, чистоте и борьбе за свободу человеческого чувства.",
+          "en": "Slanderous adversaries forged a treasonous denunciation to imperial authorities, claiming the progressive teacher was instigating rebellion. Innocent Abdrakhman was arrested and exiled.\n\nThe shock shattered Shuga’s frail health. Consumed by grief and powerlessness against injustice, she fell gravely ill. No medicine could revive a spirit deprived of hope.\n\nEventually, the charges were proven utterly false, and Abdrakhman was exonerated. He raced day and night toward the steppe, urging his horse forward without rest. Yet he arrived hours too late: Shuga had passed away, clasping a farewell letter professing unalterable love.\n\nGrief-stricken, Abdrakhman laid her to rest atop the prominent knoll overlooking the Tobol valley. Ever since, generation after generation has honored the landmark as 'Shuga’s Monument' — an immortal anthem to unblemished devotion."
+        }
+      }
+    ],
+    "quizzes": {
+      "questions": [
+        {
+          "id": "sh_q1",
+          "type": "character_action",
+          "question": {
+            "kk": "Шұғаның сүйіктісі Әбдірахманның ауылдағы негізгі қызметі мен мақсаты қандай еді?",
+            "ru": "Кем был возлюбленный Шуги Абдрахман и каково было его призвание?",
+            "en": "What was Abdrakhman’s profession and vocation in the village?"
+          },
+          "options": {
+            "kk": [
+              "Ол балаларды оқытып, халықтың сауатын ашқан жас мұғалім еді",
+              "Ол алыс елдермен сауда жасайтын көпес болатын",
+              "Ол уездік соттың төрағасы болып қызмет істеді",
+              "Ол тек мал бағумен айналысатын байдың көмекшісі еді"
+            ],
+            "ru": [
+              "Он был молодым учителем, обучавшим сельских детей грамоте",
+              "Он был богатым купцом, торговавшим на ярмарках",
+              "Он служил уездным судьей",
+              "Он был батраком, присматривавшим за табунами"
+            ],
+            "en": [
+              "He was a dedicated young teacher educating rural children",
+              "He was a wealthy merchant trading at regional fairs",
+              "He was a district judge",
+              "He was a ranch hand tending herds"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Әбдірахман ауылда мектеп ашып, жастардың көзін ашуға тырысқан оқыған азамат болатын.",
+            "ru": "Абдрахман посвятил себя благородному делу просвещения сельских детей.",
+            "en": "Abdrakhman was a pioneering educator who established classes for local youth."
+          }
+        },
+        {
+          "id": "sh_q2",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Не себепті Тобыл бойындағы биік төбе «Шұғаның белгісі» деп аталып кетті?",
+            "ru": "Почему высокий курган у реки Тобол получил название «Памятник Шуге»?",
+            "en": "Why was the high knoll by the Tobol River named \"Shuga’s Monument\"?"
+          },
+          "options": {
+            "kk": [
+              "Онда адал сезімнің құрбаны болған ару қыз Шұға жерленіп, оның мөлдір махаббатының белгісі болып қалғандықтан",
+              "Ол жерде үлкен жәрмеңке өткізілгендіктен",
+              "Ол төбеде қала билеушісінің сарайы салынғандықтан",
+              "Ол жерде алтын кеніші табылғандықтан"
+            ],
+            "ru": [
+              "Там была похоронена верная своей любви Шуга, и холм стал вечным символом чистых чувств",
+              "На этой сопке проводились знаменитые конные скачки",
+              "Там располагалась летняя ставка губернатора",
+              "На том холме нашли клад"
+            ],
+            "en": [
+              "The faithful maiden Shuga was buried there, making it an eternal memorial of pure devotion",
+              "A major trading festival took place on that summit",
+              "A governor’s summer palace was built there",
+              "A gold mine was discovered beneath the ridge"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Әбдірахман сүйіктісі Шұғаны осы төбеге жерлеп, халық бұл жерді махаббат ескерткіші деп таныған.",
+            "ru": "Курган над Тоболом стал вечным памятником трагической и чистой любви Шуги.",
+            "en": "The hill stands as a solemn monument honoring Shuga’s steadfast romantic sacrifice."
+          }
+        },
+        {
+          "id": "sh_q3",
+          "type": "quote_memory",
+          "question": {
+            "kk": "Бейімбет Майлин бұл шығармасында қандай қоғамдық кеселді сынға алды?",
+            "ru": "Какие пороки общества критикует Беимбет Майлин в своей повести?",
+            "en": "What social injustice does Beimbet Mailin critique in this novella?"
+          },
+          "options": {
+            "kk": [
+              "Жастардың еркіндігін шектеген ескі қасаң әдеттерді, күншілдік пен жалақорлықты",
+              "Ғылым мен өнерге ұмтылуды",
+              "Кітап оқып, сауат ашуды",
+              "Ел арасындағы достықты"
+            ],
+            "ru": [
+              "Косные предрассудки, феодальное бесправие молодежи, зависть и доносительство",
+              "Стремление молодежи к знаниям и наукам",
+              "Грамотность и открытие сельских школ",
+              "Искреннюю дружбу и солидарность"
+            ],
+            "en": [
+              "Feudal constraints on youth liberty, petty clan envy, and malicious slander",
+              "The pursuit of science and cultural enlightenment",
+              "Literacy and expanding community education",
+              "Mutual friendship and solidarity"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Автор жастардың махаббатына кедергі болған ескі салт пен іштарлықты аяусыз әшкерелейді.",
+            "ru": "Повесть обличает сословную косность и доносы, губящие человеческое счастье.",
+            "en": "The author exposes archaic social barriers and deceitful jealousy that destroy human happiness."
+          }
+        }
+      ],
+      "openQuestion": {
+        "id": "sh_open",
+        "prompt": {
+          "kk": "Шұға мен Әбдірахманның тағдыры арқылы жазушы оқырманға қандай басты ой тастайды? Қазіргі заманда бұл шығарманың маңызы неде?",
+          "ru": "Какую главную гуманистическую мысль передает Беимбет Майлин через драму Шуги и Абдрахмана? В чем актуальность произведения?",
+          "en": "What core humanitarian truth does Beimbet Mailin communicate through the romance of Shuga and Abdrakhman?"
+        },
+        "keyThemes": {
+          "kk": [
+            "махаббат",
+            "әділдік",
+            "еркіндік",
+            "адалдық",
+            "өсек",
+            "Шұға"
+          ],
+          "ru": [
+            "любовь",
+            "справедливость",
+            "свобода",
+            "верность",
+            "честь",
+            "гуманизм",
+            "предрассудки"
+          ],
+          "en": [
+            "love",
+            "justice",
+            "freedom",
+            "loyalty",
+            "honor",
+            "humanism",
+            "prejudice"
+          ]
+        },
+        "sampleAnswer": {
+          "kk": "Шынайы махаббат пен адамның ар-намысы кез келген байлықтан жоғары. Жазушы адамның сезім еркіндігі мен әділдікті қорғауға шақырады.",
+          "ru": "Майлин показывает, что чистая любовь, верность и просвещение противостоят клевете и косности, а человеческое достоинство — высшая ценность.",
+          "en": "Mailin demonstrates that genuine love, moral dignity, and educational enlightenment prevail in historical memory over malice and archaic barriers."
+        }
+      }
+    }
+  },
+  {
+    "id": "botagoz",
+    "title": {
+      "kk": "Ботагөз (Ақбөпе)",
+      "ru": "Ботагоз",
+      "en": "Botagoz"
+    },
+    "author": {
+      "kk": "Сәбит Мұқанов",
+      "ru": "Сабит Муканов",
+      "en": "Sabit Mukanov"
+    },
+    "year": 1938,
+    "genre": {
+      "kk": "Тарихи роман, Драма",
+      "ru": "Исторический роман, Драма",
+      "en": "Historical Novel, Drama"
+    },
+    "level": "intermediate",
+    "coverImage": "/src/assets/images/book_botagoz_1790149988922.jpg",
+    "estimatedReadMinutes": 8,
+    "tags": {
+      "kk": [
+        "Қазақ әдебиеті",
+        "Сәбит Мұқанов",
+        "Ботагөз",
+        "Асқар",
+        "Тарих"
+      ],
+      "ru": [
+        "Сабит Муканов",
+        "Ботагоз",
+        "Аскар",
+        "История Казахстана"
+      ],
+      "en": [
+        "Sabit Mukanov",
+        "Botagoz",
+        "Askar",
+        "History"
+      ]
+    },
+    "synopsis": {
+      "kk": "Қазақ қызының қайсарлығы мен азаттық жолындағы табандылығын бейнелейтін тарихи роман. Батыл Ботагөз бен ұлтжанды мұғалім Асқардың қилы кезеңдегі өмірі.",
+      "ru": "Масштабное историческое полотно о судьбе гордой и свободолюбивой казахской девушки Ботагоз и прогрессивного учителя Аскара в вихре исторических перемен начала XX века.",
+      "en": "A sweeping historical novel detailing the courage of the proud Kazakh heroine Botagoz and teacher Askar amidst early 20th-century social transformations."
+    },
+    "chapters": [
+      {
+        "id": "bg_c1",
+        "title": {
+          "kk": "1-бөлім: Қайсар қыз бен жас ұстаз Асқар",
+          "ru": "Глава 1: Непокорная Ботагоз и учитель Аскар",
+          "en": "Chapter 1: The Resolute Botagoz and Teacher Askar"
+        },
+        "content": {
+          "kk": "Көкшетау баурайындағы ауылда өскен Ботагөз — көркіне ақылы сай, намысшыл әрі жігерлі қыз. Ол ер балалармен бірдей атқа мініп, асау жылқыны үйретіп, әділетсіздікке ешқашан бас имейтін.\n\nАуылға жас ұстаз Асқар Досанов келеді. Ол Омбы қаласынан білім алып, ауыл жастарын ғылым мен өнерге баулуды мақсат еткен парасатты азамат еді. Асқар мектеп ашып, қарапайым елдің балаларына хат танытады.\n\nБотагөз Асқардың әңгімелерін естіп, кітапқа құмарта бастайды. Асқар қыздың зеректігіне таңғалып, оған кітаптар береді. Екеуінің арасында туған таза достық пен рухани үндестік бірте-бірте терең махаббатқа ұласады.\n\nАлайда, бай-шонжарлар халықтың сауаттанғанын қаламады. Ботагөзге байдың тоқалы болу туралы мәжбүрлі ұсыныстар түседі. Қайсар қыз өз арын қорғап, барлық қысымға қарсы тұруға бел буады.",
+          "ru": "В ауле у живописных отрогов Кокшетау росла Ботагоз — девушка редкой красоты, гордого нрава и неукротимой воли. С малых лет она бесстрашно скакала на горячих конях и смело говорила правду в лицо сильным мира сего.\n\nВ их края прибыл молодой учитель Аскар Досанов. Получив образование в Омске, он мечтал принести в родные степи свет знаний и справедливости. Аскар открыл аульную школу для бедняцких детей.\n\nБотагоз с жадностью внимала урокам Аскара и потянулась к чтению. Восхищенный ее острым умом, юноша щедро делился книгами. Скоро между ними завязалась трогательная дружба, переросшая в крепкое чувство.\n\nОднако местная знать смотрела на школьного учителя как на смутьяна. Более того, влиятельный волостной попытался насильно взять независимую красавицу в жены. Но Ботагоз была не из тех, кто смиряется с чужой волей.",
+          "en": "In a settlement beneath the wooded hills of Kokshetau lived Botagoz — a maiden distinguished by keen intelligence, fearless composure, and an unbending sense of honor.\n\nTo the region arrived educator Askar Dosanov. Educated in Omsk, Askar sought to bring literacy and modern knowledge to prairie children, founding an independent schoolhouse.\n\nBotagoz was captivated by Askar’s enlightened lectures and immersed herself in literature. Their mutual intellectual fellowship blossomed into enduring romantic loyalty.\n\nYet feudal elders viewed education as a threat to their authority. When an influential chieftain attempted to force Botagoz into marriage, she stood unshakeable, defending her autonomy."
+        }
+      }
+    ],
+    "quizzes": {
+      "questions": [
+        {
+          "id": "bg_q1",
+          "type": "character_action",
+          "question": {
+            "kk": "Сәбит Мұқановтың романындағы басты кейіпкер Ботагөздің мінезі қандай қасиетімен ерекшеленеді?",
+            "ru": "Какими главными чертами характера выделяется героиня романа Ботагоз?",
+            "en": "What defining traits characterize the heroine Botagoz in Sabit Mukanov’s novel?"
+          },
+          "options": {
+            "kk": [
+              "Қайсарлық, әділдік, арын қорғай білу және білімге құштарлық",
+              "Қорқақтық пен жалтақтық",
+              "Тек байлық пен алтынға қызығушылық",
+              "Ешкіммен сөйлеспейтін жалқаулық"
+            ],
+            "ru": [
+              "Решительность, обостренное чувство справедливости, верность чести и тяга к знаниям",
+              "Покорность и робость перед сильными мира сего",
+              "Алчность и погоня за роскошью",
+              "Равнодушие ко всему происходящему"
+            ],
+            "en": [
+              "Resolute independence, thirst for knowledge, justice, and uncompromising personal honor",
+              "Timid submission to despotic traditions",
+              "Greed and obsession with luxury",
+              "Apathy toward the community"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Ботагөз қазақ қыздарының арасынан шыққан еркін, қайсар әрі намысшыл бейне.",
+            "ru": "Ботагоз символизирует несокрушимое достоинство и силу духа свободолюбивой женщины.",
+            "en": "Botagoz embodies the resilient spirit and dignity of a progressive Kazakh heroine."
+          }
+        },
+        {
+          "id": "bg_q2",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Ауылға Омбыдан оқып келіп, мектеп ашып, халықты білімге шақырған мұғалім кім?",
+            "ru": "Как звали учителя, вернувшегося из Омска и открывшего школу для детей?",
+            "en": "What was the name of the teacher who returned from Omsk to establish a school?"
+          },
+          "options": {
+            "kk": [
+              "Асқар Досанов",
+              "Әбдірахман",
+              "Құнанбай",
+              "Байтас"
+            ],
+            "ru": [
+              "Аскар Досанов",
+              "Абдрахман",
+              "Кунанбай",
+              "Байтас"
+            ],
+            "en": [
+              "Askar Dosanov",
+              "Abdrakhman",
+              "Qunanbai",
+              "Baitas"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Ауылда жастардың көзін ашқан білімді ұстаз — Асқар Досанов.",
+            "ru": "Молодого прогрессивного учителя звали Аскар Досанов.",
+            "en": "The educated teacher was Askar Dosanov."
+          }
+        },
+        {
+          "id": "bg_q3",
+          "type": "quote_memory",
+          "question": {
+            "kk": "Романдағы Асқардың басты өмірлік ұстанымы қандай болды?",
+            "ru": "Каково было главное жизненное кредо учителя Аскара?",
+            "en": "What was teacher Askar’s core conviction in the novel?"
+          },
+          "options": {
+            "kk": [
+              "Халықтың көзін білім мен мәдениет арқылы ашу, әділетті қоғам орнату",
+              "Тек өз пайдасын ойлап, байлық жинау",
+              "Мектепті жауып, қалаға қайтып кету",
+              "Ескі әділетсіздікке көніп өмір сүру"
+            ],
+            "ru": [
+              "Просвещать народ через культуру и науку, добиваясь справедливости",
+              "Искать лишь чинов и личного обогащения",
+              "Закрыть школу и отстраниться от нужд аула",
+              "Смириться с произволом баев"
+            ],
+            "en": [
+              "Enlighten the people through education and science while striving for fairness",
+              "Seek personal rank and material wealth at all costs",
+              "Shut down the school and retreat to urban comfort",
+              "Acquiesce to the whims of corrupt chieftains"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Асқар қараңғылықпен күресіп, халыққа білім сәулесін шашуды азаматтық борышы санады.",
+            "ru": "Аскар видел свою миссию в борьбе с невежеством и служении народу.",
+            "en": "Askar regarded educational enlightenment as his fundamental civic duty."
+          }
+        }
+      ],
+      "openQuestion": {
+        "id": "bg_open",
+        "prompt": {
+          "kk": "Ботагөз образы арқылы автор қазақ әйелінің қоғамдағы рөлі мен құқығы туралы қандай ой айтады?",
+          "ru": "Какую идею о роли и правах женщины в обществе раскрывает автор через образ Ботагоз?",
+          "en": "What message about women’s dignity and equality does the author convey through Botagoz?"
+        },
+        "keyThemes": {
+          "kk": [
+            "әйел теңдігі",
+            "намыс",
+            "білім",
+            "бостандық",
+            "қайсарлық",
+            "әділдік"
+          ],
+          "ru": [
+            "равноправие",
+            "честь",
+            "свобода",
+            "достоинство",
+            "женщина",
+            "образование",
+            "мужество"
+          ],
+          "en": [
+            "equality",
+            "honor",
+            "freedom",
+            "dignity",
+            "women",
+            "education",
+            "courage"
+          ]
+        },
+        "sampleAnswer": {
+          "kk": "Сәбит Мұқанов әйел затының тек ошақ қасымен шектелмей, өз тағдырын өзі шешетін, қоғамда тең құқылы қайраткер бола алатынын дәлелдейді.",
+          "ru": "Писатель утверждает ценность женского равноправия, свободы выбора и личного достоинства, показывая Ботагоз как самостоятельную и несгибаемую личность.",
+          "en": "Mukanov champions women’s equality and self-determination, depicting Botagoz as a valiant actor in shaping her own destiny."
+        }
+      }
+    }
+  },
+  {
+    "id": "alpamys-batyr",
+    "title": {
+      "kk": "Алпамыс батыр (Батырлар жыры)",
+      "ru": "Алпамыс батыр (Героический эпос)",
+      "en": "Alpamys Batyr (Heroic Epos)"
+    },
+    "author": {
+      "kk": "Қазақ халық эпосы",
+      "ru": "Казахский героический эпос",
+      "en": "Kazakh Heroic Epos"
+    },
+    "year": 1550,
+    "genre": {
+      "kk": "Батырлар жыры, Эпос",
+      "ru": "Героический эпос, Фольклор",
+      "en": "Heroic Epos, Folklore"
+    },
+    "level": "beginner",
+    "coverImage": "/src/assets/images/book_alpamys_1790150001542.jpg",
+    "estimatedReadMinutes": 7,
+    "tags": {
+      "kk": [
+        "Қазақ фольклоры",
+        "Алпамыс",
+        "Байшұбар",
+        "Гүлбаршын",
+        "Ерлік"
+      ],
+      "ru": [
+        "Казахский фольклор",
+        "Алпамыс",
+        "Байшубар",
+        "Гульбаршин",
+        "Батыр"
+      ],
+      "en": [
+        "Kazakh folklore",
+        "Alpamys",
+        "Baishubar",
+        "Heroism"
+      ]
+    },
+    "synopsis": {
+      "kk": "Қазақ халқының қаһармандық дастаны — елі мен жерін қорғаған айбынды Алпамыс батырдың, оның адал тұлпары Байшұбар мен сұлу Гүлбаршынның аңызға айналған ерлігі.",
+      "ru": "Жемчужина устного народного творчества — сказание о могучем витязе Алпамысе, его верном богатырском коне Байшубаре и верной супруге Гульбаршин, защитивших родину от захватчиков.",
+      "en": "The monumental Kazakh heroic epos celebrating the legendary champion Alpamys Batyr, his faithful steed Baishubar, and the devoted Gulbarshin defending their homeland."
+    },
+    "chapters": [
+      {
+        "id": "ab_c1",
+        "title": {
+          "kk": "1-бөлім: Батырдың тууы және Байшұбар тұлпар",
+          "ru": "Глава 1: Рождение богатыря и верный конь Байшубар",
+          "en": "Chapter 1: Birth of the Hero and the Steed Baishubar"
+        },
+        "content": {
+          "kk": "Ерте заманда Жиделі-Байсын жерінде Байбөрі деген атақты бай өмір сүріпті. Оның мыңғырған малы, ұшан-теңіз дәулеті болса да, қартайғанша перзент көрмей, зар еңірейді.\n\nКүндердің күнінде тілегі қабыл болып, Байбөрінің шаңырағында дүниеге ерекше ұл келеді. Баланың есімін Алпамыс деп қояды. Алпамыс күн санап емес, сағат санап өседі: жеті жасында садақ тартып, он жасында алысқан жауын алып ұратын айбынды батырға айналады.\n\nӘкесі оған арнап көп жылқының ішінен торы құлынды таңдайды. Бұл болашақта қанатты тұлпарға айналған атақты Байшұбар ат еді. Байшұбар мен Алпамыс бір-біріне айнымас серік болады.\n\nКөрші Қаратау еліндегі Сарыбайдың сұлу қызы Гүлбаршын екеуінің атастырылған серті бар еді. Алпамыс елі мен жеріне төнген қауіпті естіп, жас жігіт шағында атқа қонып, туған халқының намысы мен бейбітшілігін қорғауға аттанады.",
+          "ru": "В незапамятные времена в благословенном краю Жидели-Байсын жил знатный старец Байбори. Несметны были его табуны и отары, но на склоне лет горевал он, ибо не дал ему Создатель наследника.\n\nУслышал Всевышний искренние мольбы старца, и родился у него долгожданный сын, нареченный Алпамысом. Младенец рос не по дням, а по часам: в семь лет натягивал богатырский лук, а к десяти годам стал могучим батыром, которому не было равных в поединках.\n\nИз тысячи жеребят отец выбрал для сына невзрачного гнедого стригунка, которому суждено было стать крылатым богатырским конем — Байшубаром. Конь и батыр понимали друг друга без слов.\n\nС детства Алпамыс был обручен с прекрасной и мудрой Гульбаршин. Узнав о бедствиях и кознях врагов, посягнувших на свободу родной земли, юный Алпамыс оседлал верного коня и отправился в дальний поход, чтобы защитить отчий край.",
+          "en": "In ancient eras, in the blessed steppe haven of Zhideli-Baisyn, dwelt the elder Baibori. Despite immeasurable wealth and vast herds, he wept in his old age for lack of an heir.\n\nHis fervent prayers were answered when a son of supernatural vigor was born, named Alpamys. The youth grew with extraordinary speed: by age seven he bent mighty war bows, and by ten he surpassed all contenders in wrestling.\n\nFrom the herd, his father selected an unassuming colt destined to become the legendary winged charger Baishubar. Steed and master forged an unbreakable bond.\n\nBetrothed since infancy to the virtuous and sharp-witted Gulbarshin, Alpamys mounted his loyal warhorse to shield his homeland against foreign marauders and restore peace to the steppe."
+        }
+      },
+      {
+        "id": "ab_c2",
+        "title": {
+          "kk": "2-бөлім: Қалмақ еліндегі зындан және елге оралу",
+          "ru": "Глава 2: Подземная темница и спасение народа",
+          "en": "Chapter 2: The Deep Dungeon and the Triumph of Justice"
+        },
+        "content": {
+          "kk": "Жау еліне барған Алпамыс қапыда айлакер дұшпанның тұзағына түсіп, терең зынданға тасталады. Жеті жыл бойы тас қараңғы зынданда жатса да, батырдың рухы сынбады, еліне деген сағынышы сөнбеді.\n\nАдал тұлпары Байшұбар мен мейірімді қыз Қарлығаштың көмегімен Алпамыс ақыры зынданнан босап шығады. Ол тұлпарына мініп, туған жеріне оралғанда, Жиделі-Байсынды озбыр Ұлтан басып алып, қартайған әке-шешесін түйеші қылып қорлап, Гүлбаршынды зорлықпен алмақ болып жатқанын көреді.\n\nАлпамыс қарапайым бақташы кейпінде ауылға келіп, мергендік сайысына қатысады. Өзінің әйгілі садағын қолына алып, нысананы көздемей-ақ қақ жарғанда, халық өз батырын бірден таниды.\n\nОзбырлық пен зұлымдық жазасын алып, елде әділдік орнайды. Алпамыс пен Гүлбаршын қайта қауышып, халыққа бейбіт те бақытты өмір сыйлайды. Бұл жыр қазақ халқының ерлік пен отансүйгіштік рухын мәңгілікке паш етеді.",
+          "ru": "В стране неприятеля коварные враги обманом заманили батыра в глубокую темницу-зиндан. Семь долгих лет провел богатырь во мраке подземелья, но ни цепи, ни голод не сломили его несокрушимого духа.\n\nБлагодаря помощи верного коня Байшубара и благородной девы Карлыгаш богатырь вырвался на свободу. Помчавшись в родной край Жидели-Байсын, он обнаружил, что власть захватил жестокий и коварный Ултан: престарелых родителей Алпамыса он сделал рабами-верблюжатниками, а верную Гульбаршин принуждал к браку.\n\nНе открывая своего имени, в одежде пастуха Алпамыс явился на свадебные состязания. Когда он взял в руки свой исполинский тугой лук и без промаха поразил далекую мишень, народ восторженно узнал своего истинного защитника.\n\nЖестокий узурпатор понес заслуженное возмездие, а в степи воцарились мир и справедливость. Алпамыс воссоединился с преданной Гульбаршин, вернув счастье родителям и свободу своему народу.",
+          "en": "In enemy territory, through treacherous trickery, Alpamys was cast into a subterranean dungeon. For seven years he languished in the dark pit, yet despair never eroded his heroic soul.\n\nWith the loyalty of his steed Baishubar and the aid of maiden Karlygash, the champion shattered his bonds. Galloping home, he discovered the usurper Ultan had subjugated the settlement, reducing Alpamys’s elderly parents to mistreated camel-herders and coercing Gulbarshin into marriage.\n\nDisguised in humble attire, Alpamys entered the archery contest. Striding forth, he drew his colossal bow and split the bullseye effortlessly, whereupon the populace recognized their rightful protector.\n\nTyranny was vanquished and righteous order restored. Alpamys reunited with Gulbarshin, securing peace and honor for his grateful homeland."
+        }
+      }
+    ],
+    "quizzes": {
+      "questions": [
+        {
+          "id": "ab_q1",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Алпамыс батырдың айнымас серігі, қанатты тұлпарының аты қалай?",
+            "ru": "Как звали верного богатырского коня Алпамыса?",
+            "en": "What was the name of Alpamys’s faithful winged warhorse?"
+          },
+          "options": {
+            "kk": [
+              "Байшұбар",
+              "Тайбурыл",
+              "Құлагер",
+              "Тарлан"
+            ],
+            "ru": [
+              "Байшубар",
+              "Тайбурыл",
+              "Кулагер",
+              "Тарлан"
+            ],
+            "en": [
+              "Baishubar",
+              "Taiburyil",
+              "Kulager",
+              "Tarlan"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Алпамыс батырдың аты аңызға айналған серігі — Байшұбар тұлпар.",
+            "ru": "Крылатого богатырского коня Алпамыса звали Байшубар.",
+            "en": "Alpamys Batyr’s legendary steed was Baishubar."
+          }
+        },
+        {
+          "id": "ab_q2",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Алпамыс батырдың адал да ақылды жарының есімі кім?",
+            "ru": "Как звали верную и мудрую невесту Алпамыса?",
+            "en": "What was the name of Alpamys’s devoted and wise betrothed?"
+          },
+          "options": {
+            "kk": [
+              "Гүлбаршын",
+              "Құртқа",
+              "Ақжүніс",
+              "Шұға"
+            ],
+            "ru": [
+              "Гульбаршин",
+              "Куртка",
+              "Акжунис",
+              "Шуга"
+            ],
+            "en": [
+              "Gulbarshin",
+              "Kurtka",
+              "Akzhunis",
+              "Shuga"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Алпамыстың сүйген жары әрі серігі — дана Гүлбаршын.",
+            "ru": "Возлюбленной и мудрой спутницей батыра была Гульбаршин.",
+            "en": "The faithful companion and heroine was Gulbarshin."
+          }
+        },
+        {
+          "id": "ab_q3",
+          "type": "quote_memory",
+          "question": {
+            "kk": "«Алпамыс батыр» дастанының басты патриоттық идеясы неде?",
+            "ru": "В чем заключается главная патриотическая идея эпоса «Алпамыс батыр»?",
+            "en": "What is the paramount patriotic ideal embodied in the epic of Alpamys Batyr?"
+          },
+          "options": {
+            "kk": [
+              "Туған ел мен жерді қорғау, әділдікті сақтау және зұлымдыққа қарсы табанды күресу",
+              "Бөгде елдерді басып алып, байлық жинау",
+              "Ешқандай соғыссыз жеңілісті қабылдау",
+              "Тек өз қамын ойлап, елден кету"
+            ],
+            "ru": [
+              "Защита родной земли, преданность своему народу, торжество справедливости над насилием",
+              "Захват чужих земель ради добычи",
+              "Покорность врагам без сопротивления",
+              "Бегство от трудностей и равнодушие к отчему дому"
+            ],
+            "en": [
+              "Defense of the homeland, steadfast fidelity to the people, and triumph of righteousness over tyranny",
+              "Invasion of foreign lands solely for plunder",
+              "Passivity and surrender before adversaries",
+              "Deserting one’s community during tribulations"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Жыр халықты бірлікке, отаншылдыққа және әділеттілікке шақырады.",
+            "ru": "Эпос воспевает любовь к родине, мужество и неминуемое поражение угнетателей.",
+            "en": "The epos exalts courage, unyielding devotion to homeland, and the restoration of ethical order."
+          }
+        }
+      ],
+      "openQuestion": {
+        "id": "ab_open",
+        "prompt": {
+          "kk": "Алпамыс батыр жырынан қазақ халқының қандай дәстүрлері мен ерлік құндылықтарын байқауға болады?",
+          "ru": "Какие обычаи, традиционные ценности и представления о воинской чести казахского народа отражены в эпосе?",
+          "en": "What ancestral values, traditions, and principles of martial honor are highlighted in the Alpamys epic?"
+        },
+        "keyThemes": {
+          "kk": [
+            "ерлік",
+            "отан",
+            "адалдық",
+            "тұлпар",
+            "намыс",
+            "әділдік",
+            "бірлік"
+          ],
+          "ru": [
+            "честь",
+            "родина",
+            "верность",
+            "батыр",
+            "справедливость",
+            "конь",
+            "единство"
+          ],
+          "en": [
+            "honor",
+            "homeland",
+            "loyalty",
+            "champion",
+            "justice",
+            "steed",
+            "unity"
+          ]
+        },
+        "sampleAnswer": {
+          "kk": "Дастанда ел қорғау ердің басты парызы екені, адал дос пен тұлпардың орны, әйел затының ақылы мен сертке беріктігі айқын көрсетілген.",
+          "ru": "Эпос демонстрирует неразрывную связь батыра с родной землей, святость данного слова, верность боевого коня и мудрость женщины.",
+          "en": "The epic highlights the sacred duty of defending one’s soil, the bond with one’s noble charger, and the indispensable fortitude of women."
+        }
+      }
+    }
+  },
+  {
+    "id": "abai-words",
+    "title": {
+      "kk": "Қара сөздер",
+      "ru": "Слова назидания",
+      "en": "Words of Edification"
+    },
+    "author": {
+      "kk": "Абай Құнанбайұлы",
+      "ru": "Абай Кунанбаев",
+      "en": "Abai Qunanbaiuly"
+    },
+    "year": 1898,
+    "genre": {
+      "kk": "Философия, Әдебиет",
+      "ru": "Философия, Классика",
+      "en": "Philosophy, Classics"
+    },
+    "level": "intermediate",
+    "coverImage": "/src/assets/images/book_abai_words_1790149372465.jpg",
+    "estimatedReadMinutes": 8,
+    "tags": {
+      "kk": [
+        "Қазақ әдебиеті",
+        "Ақыл мен жүрек",
+        "Ғылым"
+      ],
+      "ru": [
+        "Казахская литература",
+        "Мудрость",
+        "Философия"
+      ],
+      "en": [
+        "Kazakh literature",
+        "Wisdom",
+        "Philosophy"
+      ]
+    },
+    "synopsis": {
+      "kk": "Ұлы ақын әрі ойшыл Абайдың адамгершілік, ғылым, еңбек және парасат жайында толғанған мәңгілік философиялық трактаты.",
+      "ru": "Фундаментальный философско-прозаический труд великого казахского мыслителя Абая о чести, разуме, науке, сердце и стремлении к просвещению.",
+      "en": "A profound philosophical work by the great Kazakh thinker Abai, meditating on human virtue, scientific inquiry, heart, and wisdom."
+    },
+    "chapters": [
+      {
+        "id": "c1",
+        "title": {
+          "kk": "Бірінші сөз (Бастау)",
+          "ru": "Слово первое (Вступление)",
+          "en": "Word One (The Beginning)"
+        },
+        "content": {
+          "kk": "Бұл жасқа келгенше жақсы өткіздік пе, жаман өткіздік пе, әйтеуір бірталай өмірімізді өткіздік: алыстық, жұлыстық, айтыстық, тартыстық — әурешілікті көре-көре келдік. Енді жер ортасы жасқа келдік: қажыдық, жалықтық; қылып жүрген ісіміздің бәрінің баянсызын, байлаусызын көрдік, бәрі қоршылық екенін білдік.\n\nАл, енді қалған өмірді қалай өткіземіз? Не істеп бағамыз? Соны таба алмай өзім де қайранмын.\n\nЕл бағу? Жоқ, елге бағым жоқ. Бағусыз дертке ұшырайын деген кісі бақпаса, не албыртқан, көңілі басылмаған жас бақпаса, бұл қылшылдаған жасымда қорлықты көп көрген соң, мені құдайым сақтасын.\n\nМал бағу? Жоқ, баға алмаймын. Балалар өздеріне керегінше бағар. Ендігі мал баққанның бәрі — ұры мен сұмның көзіне түсу үшін еңбек қылғанмен бірдей.\n\nҒылым бағу? Жоқ, ғылым бағарға да ғылым сөзін сөйлесер адам жоқ. Білгеніңді кімге үйретерсің, білмегеніңді кімнен сұрарсың?\n\nАқыры ойладым: осы ойыма келген нәрселерді қағазға жаза берейін, ақ қағаз бен қара сияны ермек қылайын, кімде-кім ішінен керекті сөз тапса, жазып алсын, я оқысын; керегі жоқ десе, өз сөзім өзімдікі дедім де, ақыры осыған байладым, енді мұнан басқа ешбір жұмысым жоқ.",
+          "ru": "Хорошо ли я прожил до этих лет, плохо ли, а пройдено немало: в борьбе и ссорах, в суете и тяжбах дошел до преклонного возраста. И вот устал от всего, увидел бренность и бесплодность всех своих трудов, убедился в мелочности стремлений.\n\nКак же теперь провести остаток жизни? Чем заняться? И сам поражаюсь, не находя ответа.\n\nПравить народом? Нет, народ не поддается правлению. Пусть правит тот, кто еще не испытал этого мучения, или тот, чье сердце молодо и неукротимо. А меня, испытавшего столько унижений, да избавит Всевышний от этой участи.\n\nПреумножать скот? Нет, не стану. Пусть дети сами заботятся о хлебе насущном. Ныне копить добро — значит лишь привлекать зависть воров и проходимцев.\n\nЗаняться наукой? Но кому передать знания, с кем разделить мысли? Кто захочет слушать, и у кого самого спросить о неведомом?\n\nВ конце концов решил: буду записывать мысли, что приходят на ум, возьму в спутники белую бумагу и черные чернила. Пусть тот, кто найдет в этих строках нужное слово, перепишет или просто прочтет его; а коли сочтет бесполезным — мои слова останутся при мне. И другого дела у меня отныне нет.",
+          "en": "Whether well or poorly I have lived up to this age, I have nevertheless lived quite a lifetime: struggling, striving, arguing, and enduring toil after toil. Now I have reached middle age; I am weary and exhausted. I have seen how unstable and futile all our efforts were, and how much humiliation lay within them.\n\nHow then shall I spend the remainder of my life? What path shall I take? I myself am at a loss to find an answer.\n\nGovern the people? No, the people cannot be governed this way. Let him govern who has not yet suffered such affliction, or whose youthful ambition is unquenched.\n\nAmass herds of livestock? No, my children will care for what they need. To hoard wealth today is merely to invite the greed of thieves and scoundrels.\n\nDevote myself to science? But with whom can I share discourse on wisdom? To whom shall I teach what I know, and of whom shall I inquire of what I do not?\n\nAt last I resolved: I shall write down whatever thoughts arise within my mind, taking white paper and black ink as my solace. Whoever finds a useful word therein may transcribe or read it; and if they find it useless, my words remain my own. And now I have no other occupation."
+        }
+      },
+      {
+        "id": "c2",
+        "title": {
+          "kk": "Жетінші сөз (Баланың табиғаты)",
+          "ru": "Слово седьмое (Природа познания)",
+          "en": "Word Seven (The Nature of Learning)"
+        },
+        "content": {
+          "kk": "Жас бала анадан туғанда екі түрлі мінезбен туады: біреуі — ішсем, жесем, ұйықтасам деп тұрады. Бұлар — тәннің құмары, бұлар болмаса, тән жанға қонақ үй бола алмайды, һәм өзі өспейді, қуат таппайды.\n\nЕкіншісі — білсем екен демеклік. Не көрсе соған талпынып, «ол немене?», «бұл немене?» деп, «ол неге үйтеді?», «бұл неге бүйтеді?» деп, көзі көрген, құлағы естігеннің бәрін сұрап, тыныштық көрмейді. Мұның бәрі — жан құмары, білсем екен, көрсем екен, үйренсем екен дегендік.\n\nДүниенің көрінген һәм көрінбеген сырын түгелдеп, ең болмаса денелеп білмесе, адам баласының адам болғаны қайсы? Ұқпаса, білмесе, жануардан несі артық?\n\nЕржеткен соң сол жан құмарын суытып аламыз. Мақтан қуамыз, пайда қуамыз, ар-ұятты шетке ысырып қоямыз. Білім-ғылымды көбейтуге емес, атақ шығаруға құмар боламыз. Бұл — біздің қасіретіміз.",
+          "ru": "Ребенок появляется на свет, имея две основные потребности: первая — пить, есть и спать. Это потребности тела, без них плоть не сможет служить пристанищем для души, не вырастет и не обретет сил.\n\nВторая потребность — жажда познания. Младенец тянется ко всему, что видит и слышит: «Что это?», «Почему так?», трогает предметы, прислушивается к звукам и не знает покоя. Все это — потребность души, неутолимое желание всё увидеть, узнать, постичь.\n\nЕсли человек не стремится разгадать видимые и сокрытые тайны мира, то в чем тогда его человеческое достоинство? Если он не познает истины, чем он превосходит бессловесное животное?\n\nНо повзрослев, мы часто остужаем в себе эту чистую жажду души. Мы начинаем гнаться за сиюминутной выгодой, хвастовством, чинами и забываем о совести. Мы тратим жизнь не на приобретение истинных знаний, а на пустую молву. И в этом наша величайшая беда.",
+          "en": "A child is born into this world endowed with two primary instincts: the first is to drink, eat, and sleep. These belong to bodily cravings; without them, the physical form could not serve as a dwelling place for the soul, nor could it grow and gain strength.\n\nThe second instinct is the thirst for knowledge. The child reaches out to everything seen and heard, asking ceaselessly: \"What is that?\", \"Why does it do this?\", never resting. All this is the craving of the soul — the ardent desire to know, to see, and to learn.\n\nIf a human being does not strive to comprehend the visible and invisible secrets of the universe, wherein lies his humanity? Without understanding, how does he surpass a beast?\n\nYet when we grow into adulthood, we quench this noble craving of the soul. We chase vanity, fleeting profit, and cast shame aside. This is our tragedy."
+        }
+      },
+      {
+        "id": "c3",
+        "title": {
+          "kk": "Отыз бірінші сөз (Есте сақтаудың төрт шарты)",
+          "ru": "Слово тридцать первое (Четыре условия памяти)",
+          "en": "Word Thirty-One (Four Keys to Retention)"
+        },
+        "content": {
+          "kk": "Естіген нәрсені ұмытпастыққа төрт түрлі себеп бар: әуелі — көкірегі байлаулы берік болмақ керек; екінші — сол нәрсені естігенде я көргенде ғибратлану керек, көңілденіп, тұшынып, ықыласпен тыңдау керек; үшінші — сол нәрсені ішінен бірнеше уақыт қайтарып ойланып, көңілге бекіту керек; төртінші — ой кеселді нәрселерден қашық болу керек.\n\nОй кеселі дегеніміз не? Ол — салғырттық, бойкүйездік, уайымсыздық, құмарпаздық немесе бос күлкі. Бұл кеселдер пайда болған жерде естіген ақыл, оқыған білім тоқтамайды, құмға құйған судай жоқ болады.\n\nКімде-кім осы төрт шартты орындаса, оның білімі ұзаққа барады, тозбайды, өзіне де, өзгеге де пайдасын тигізеді.",
+          "ru": "Чтобы запомнить услышанное и не растерять знания, необходимы четыре условия: во-первых, нужно иметь твердость духа и ясный ум; во-вторых, воспринимать поучение с искренним воодушевлением и глубоким интересом, слушая с открытым сердцем; в-третьих, многократно мысленно возвращаться к услышанному, закрепляя истину в памяти; в-четвертых, избегать душевных пороков, разрушающих мысль.\n\nЧто же это за пороки мысли? Это беспечность, лень, праздность, пустые забавы и суетное легкомыслие. Где поселяются эти недуги, там мудрость не задерживается — она утекает, как вода в песок.\n\nТот, кто соблюдает эти четыре правила, сбережет знание на долгие годы, и оно принесет щедрые плоды ему самому и окружающим.",
+          "en": "There are four conditions necessary to retain what has been heard and never forget it: first, one must possess steadfast resolve and an attentive mind; second, one must listen with genuine devotion and deep appreciation, absorbing the truth with warmth in the heart; third, one must revisit the concept repeatedly in quiet contemplation, anchoring it in the consciousness; fourth, one must shun the illnesses of the mind.\n\nAnd what are the illnesses of the mind? They are carelessness, indolence, frivolous amusement, and vain distractions. Wherever these ailments take root, wisdom cannot dwell; it vanishes like water poured into dry desert sand.\n\nWhoever observes these four conditions will preserve knowledge for years to come, bringing lasting benefit to oneself and others."
+        }
+      }
+    ],
+    "quizzes": {
+      "questions": [
+        {
+          "id": "abai_q1",
+          "type": "multiple_choice",
+          "question": {
+            "kk": "«Бірінші сөзде» Абай қалған өмірін қалай өткізуге шешім қабылдайды?",
+            "ru": "В «Слове первом» чему в итоге решает посвятить остаток дней Абай?",
+            "en": "In \"Word One\", what does Abai ultimately decide to dedicate the rest of his days to?"
+          },
+          "options": {
+            "kk": [
+              "Ел басқарып, әкім болуға",
+              "Қағаз бен сияны ермек етіп, ойларын жазуға",
+              "Мал бағып, дүние-мүлік жинауға",
+              "Шет елдерге саяхат жасауға"
+            ],
+            "ru": [
+              "Управлению народом и волостным делам",
+              "Записи своих мыслей на белой бумаге черными чернилами",
+              "Преумножению стад скота и богатства",
+              "Дальним путешествиям в чужие края"
+            ],
+            "en": [
+              "Governing the clans and political matters",
+              "Writing down his reflections with black ink on white paper",
+              "Amassing cattle herds and tangible wealth",
+              "Traveling to distant foreign lands"
+            ]
+          },
+          "correctIndex": 1,
+          "explanation": {
+            "kk": "Абай ел бағудан, мал жинаудан бас тартып, «ақ қағаз бен қара сияны ермек қылайын» деп шешеді.",
+            "ru": "Абай отверг управление, накопление скота и избрал путь письма: «возьму в спутники белую бумагу и черные чернила».",
+            "en": "Abai declined political governance and wealth, choosing instead to write down his reflections."
+          }
+        },
+        {
+          "id": "abai_q2",
+          "type": "detail_memory",
+          "question": {
+            "kk": "«Жетінші сөзде» айтылғандай, бала анадан туғанда пайда болатын екі қажеттілік қандай?",
+            "ru": "Согласно «Слову седьмому», какие две потребности заложены в человеке с рождения?",
+            "en": "According to \"Word Seven\", what are the two core needs a human is born with?"
+          },
+          "options": {
+            "kk": [
+              "Тән құмары (ішіп-жеу, ұйқы) және жан құмары (білсем екен деу)",
+              "Баюға ұмтылу және билікке таласу",
+              "Ұйықтау және ойын ойнау",
+              "Сөйлеу және жүру қабілеті"
+            ],
+            "ru": [
+              "Потребность тела (еда, питье, сон) и потребность души (жажда познания)",
+              "Стремление к богатству и жажда власти",
+              "Сон и постоянные игры",
+              "Умение красиво говорить и путешествовать"
+            ],
+            "en": [
+              "Cravings of the body (eating, sleeping) and cravings of the soul (thirst for knowledge)",
+              "Ambition for gold and lust for political power",
+              "Rest and endless child games",
+              "Eloquence in speech and physical speed"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Абай біреуі тән құмары (ішсем, жесем), екіншісі жан құмары (білсем, көрсем, үйренсем) деп атайды.",
+            "ru": "Абай прямо разделяет потребности на плотские (пища, сон) и духовные (жажда познания «Что это? Почему так?»).",
+            "en": "Abai clearly distinguishes the physical bodily needs from the soul’s relentless inquiry and thirst for learning."
+          }
+        },
+        {
+          "id": "abai_q3",
+          "type": "detail_memory",
+          "question": {
+            "kk": "«Отыз бірінші сөзде» естіген нәрсені ұмытпау үшін неше шарт аталады?",
+            "ru": "В «Слове тридцать первом» сколько условий хорошей памяти называет мыслитель?",
+            "en": "In \"Word Thirty-One\", how many conditions does Abai describe for retaining knowledge without forgetting?"
+          },
+          "options": {
+            "kk": [
+              "Екі шарт",
+              "Үш шарт",
+              "Төрт шарт",
+              "Жеті шарт"
+            ],
+            "ru": [
+              "Два условия",
+              "Три условия",
+              "Четыре условия",
+              "Семь условий"
+            ],
+            "en": [
+              "Two conditions",
+              "Three conditions",
+              "Four conditions",
+              "Seven conditions"
+            ]
+          },
+          "correctIndex": 2,
+          "explanation": {
+            "kk": "Мәтінде: «Естіген нәрсені ұмытпастыққа төрт түрлі себеп бар» деп нақты көрсетілген.",
+            "ru": "В тексте сказано: «Чтобы запомнить услышанное и не растерять знания, необходимы четыре условия».",
+            "en": "The text explicitly states: \"There are four conditions necessary to retain what has been heard and never forget it.\""
+          }
+        },
+        {
+          "id": "abai_q4",
+          "type": "quote_memory",
+          "question": {
+            "kk": "Абайдың айтуынша, ақыл мен білімді «құмға құйған судай» жоқ қылатын ой кеселдері қандай?",
+            "ru": "Что Абай называет «болезнями мысли», из-за которых знание уходит, как «вода в сухой песок»?",
+            "en": "What does Abai label as \"illnesses of the mind\" that cause wisdom to evaporate like \"water in desert sand\"?"
+          },
+          "options": {
+            "kk": [
+              "Кітаптың аздығы мен уақыттың тапшылығы",
+              "Салғырттық, бойкүйездік, уайымсыздық, бос күлкі",
+              "Қартаю мен көздің нашарлауы",
+              "Тіл білмеу мен сапарға шықпау"
+            ],
+            "ru": [
+              "Нехватка книг и дефицит времени",
+              "Беспечность, лень, праздность и легкомыслие",
+              "Физическое старение и слабое зрение",
+              "Незнание иностранных языков"
+            ],
+            "en": [
+              "Shortage of scrolls and lack of free time",
+              "Carelessness, indolence, frivolity, and vain distractions",
+              "Bodily aging and declining eyesight",
+              "Lack of foreign language training"
+            ]
+          },
+          "correctIndex": 1,
+          "explanation": {
+            "kk": "Ой кеселдеріне Абай салғырттық, бойкүйездік пен бос күлкіні жатқызады.",
+            "ru": "Абай причисляет к недугам мысли лень, беззаботность, пустые развлечения и беспечность.",
+            "en": "Abai warns that laziness, careless distraction, and empty laughter dissolve any gathered knowledge."
+          }
+        }
+      ],
+      "openQuestion": {
+        "id": "abai_open",
+        "prompt": {
+          "kk": "Абайдың жастарға және оқырманға айтқан ең басты өсиеті мен насихаты неде? Өз ойыңызбен 2-3 сөйлеммен түсіндіріңіз.",
+          "ru": "В чём главный нравственный наказ Абая для читателя и будущего поколения? Напишите своими словами.",
+          "en": "What is the primary moral message and edification Abai offers to future generations? Explain in your own words."
+        },
+        "keyThemes": {
+          "kk": [
+            "ғылым",
+            "білім",
+            "ақыл",
+            "еңбек",
+            "ар-ұят",
+            "жан құмары",
+            "есте сақтау"
+          ],
+          "ru": [
+            "знания",
+            "наука",
+            "разум",
+            "душа",
+            "совесть",
+            "труд",
+            "память",
+            "просвещение"
+          ],
+          "en": [
+            "knowledge",
+            "science",
+            "soul",
+            "virtue",
+            "conscience",
+            "labor",
+            "memory",
+            "wisdom"
+          ]
+        },
+        "sampleAnswer": {
+          "kk": "Абай адамды өмір бойы білім мен ғылымға ұмтылуға, ар-ұятты сақтауға, тән ләззатынан гөрі жан құмарын (танымды) жоғары қоюға үндейді.",
+          "ru": "Главный наказ Абая — непрерывное стремление к знаниям, развитие разума и совести, а также преобладание духовных поисков над материальной выгодой.",
+          "en": "Abai urges humans to pursue knowledge unceasingly, cultivate steadfast moral conscience, and elevate the soul’s hunger for wisdom above fleeting bodily vanity."
+        }
+      }
+    }
+  },
+  {
+    "id": "little-prince",
+    "title": {
+      "kk": "Кішкентай ханзада",
+      "ru": "Маленький принц",
+      "en": "The Little Prince"
+    },
+    "author": {
+      "kk": "Антуан де Сент-Экзюпери",
+      "ru": "Антуан де Сент-Экзюпери",
+      "en": "Antoine de Saint-Exupéry"
+    },
+    "year": 1943,
+    "genre": {
+      "kk": "Ертегі, Философия",
+      "ru": "Аллегория, Сказка",
+      "en": "Philosophical Tale"
+    },
+    "level": "beginner",
+    "coverImage": "/src/assets/images/book_little_prince_1790149461291.jpg",
+    "estimatedReadMinutes": 7,
+    "tags": {
+      "kk": [
+        "Достық",
+        "Махаббат",
+        "Раушан гүл",
+        "Түлкі"
+      ],
+      "ru": [
+        "Дружба",
+        "Любовь",
+        "Роза",
+        "Лис"
+      ],
+      "en": [
+        "Friendship",
+        "Love",
+        "Rose",
+        "The Fox"
+      ]
+    },
+    "synopsis": {
+      "kk": "Өзге ғаламшардан келген алтын шашты баланың достық, жауапкершілік және нағыз құндылықтар туралы жүрекке жылы тиетін ертегісі.",
+      "ru": "Трогательная философская повесть-притча о дружбе, верности, ответственности за тех, кого приручили, и видении сердцем.",
+      "en": "A timeless poetic novella exploring friendship, devotion, responsibility, and the profound truth that what is essential is invisible to the eye."
+    },
+    "chapters": [
+      {
+        "id": "lp_c1",
+        "title": {
+          "kk": "1-тарау: Сахара шөліндегі кездесу",
+          "ru": "Глава 1: Встреча в пустыне Сахара",
+          "en": "Chapter 1: Meeting in the Sahara Desert"
+        },
+        "content": {
+          "kk": "Алты жасымда бір керемет сурет көрген едім. Онда алып жыланның аңды тұтастай жұтып жатқаны бейнеленіпті. Мен де қарындаш алып, өзімнің алғашқы суретімді салдым. Оны үлкендерге көрсетіп: «Бұл суреттен қорықпайсыңдар ма?» деп сұрадым.\nҮлкендер маған: «Қалпақтан несіне қорқамыз?» деді.\nАл ол қалпақ емес, пілді жұтып қойған айдаһар болатын! Үлкендер түсінбеген соң, мен оның ішкі жағын салып бердім. Сонда үлкендер маған сурет салуды қойып, география мен арифметикаға ден қоюға кеңес берді.\n\nОсылайша мен ұшқыш болдым. Дүниені көп шарладым. Бір күні ұшағымның қозғалтқышы бұзылып, Сахара шөліне амалсыз қондым. Жалғыз қалдым, ауыз суым бір аптаға ғана жететін.\n\nТаңертең ерте бейтаныс нәзік дауыс мені оятты:\n— Өтінемін... маған бір қозы салып беріңізші!\n— Не?\n— Маған қозы салып беріңізші...\n\nОрнымнан қарғып тұрып көзімді уқаладым. Қарсы алдымда ерекше, алтын шашты кішкентай бала маған байыппен қарап тұр екен. Ол шөлде адасқан немесе шөлдеп шаршаған балаға мүлде ұқсамайтын. Бұл — менің Кішкентай ханзадамен алғашқы жүздесуім еді. Мен оған қозының орнына қорап салып бердім: «Сен сұраған қозы осы қораптың ішінде», – дедім. Баланың жүзіне күлкі үйіріліп: «Міне, дәл мен қалаған қозы осы!» деп қуанды.",
+          "ru": "Когда мне было шесть лет, я увидел в книге картинку: удав глотал хищного зверя. Я нарисовал свой первый рисунок и показал его взрослым, спросив, не страшно ли им.\nОни ответили: «Разве шляпа страшная?»\nНо это была не шляпа, а удав, проглотивший слона! Взрослые никогда ничего не понимают сами, и детям приходится бесконечно им всё объяснять. Они посоветовали мне бросить рисование и заняться географией, историей и арифметикой.\n\nЯ вырос и стал летчиком. Облетел почти весь свет. И вот однажды мой самолет потерпел аварию над Сахарой. Что-то сломалось в моторе. Я остался один на один с песками, воды у меня оставалось едва на неделю.\n\nНа рассвете меня разбудил тоненький голосок:\n— Пожалуйста... нарисуй мне барашка!\n— Что?!\n— Нарисуй мне барашка...\n\nЯ вскочил, протер глаза. Передо мной стоял удивительный светловолосый мальчуган. Он не казался испуганным, голодным или заблудившимся. Так я познакомился с Маленьким принцем. Я долго не мог нарисовать нужного барашка, и в отчаянии набросал простой ящик с тремя отверстиями: «Вот тебе ящик. А барашек, которого ты просишь, сидит внутри». И лицо малыша озарилось: «Вот именно такого я и хотел!»",
+          "en": "Once when I was six years old, I saw a picture of a boa constrictor swallowing an animal whole. Inspired, I drew my first masterpiece and showed it to grown-ups, asking if it frightened them.\nThey replied: \"Why should anyone be frightened by a hat?\"\nMy drawing was not of a hat; it was a boa constrictor digesting an elephant. Grown-ups never understand anything by themselves, and it is tiresome for children always and forever to be explaining things to them.\n\nSo I chose another profession and learned to pilot airplanes. I flew all over the world. Then, one day, something broke in my engine over the Sahara Desert. I was stranded a thousand miles from any inhabited region, with barely eight days of drinking water left.\n\nAt dawn, a tiny, extraordinary voice woke me:\n\"Please... draw me a sheep!\"\n\"What?!\"\n\"Draw me a sheep...\"\n\nI leaped to my feet, rubbing my eyes. Before me stood an enchanting little boy with golden hair. He did not seem lost, nor dying of thirst. In the end, out of patience to fix my motor, I sketched a simple wooden crate with three airholes: \"This is only his box. The sheep you asked for is inside.\" To my astonishment, his face beamed: \"That is exactly the way I wanted it!\""
+        }
+      },
+      {
+        "id": "lp_c2",
+        "title": {
+          "kk": "2-тарау: Раушан гүл және Түлкінің құпиясы",
+          "ru": "Глава 2: Роза и тайна Лиса",
+          "en": "Chapter 2: The Rose and the Fox’s Secret"
+        },
+        "content": {
+          "kk": "Ханзада өз ғаламшарында бір ғана гүлді сүйетін еді. Ол гүл тым тәкаппар, әрі өзінің төрт тікеніне ғана сенетін сұлу қызыл раушан болатын. Ханзада оны суарып, түні бойы шыны қақпақпен желден қорғады. Бірақ Жерге келіп, мыңдаған раушан гүлдері толып тұрған бақты көргенде, ол жылап жіберді: оның гүлі өзін ғаламдағы жалғыз гүлмін деп мақтанған еді ғой.\n\nСол сәтте Түлкі пайда болды.\n— Маған қосылып ойна, менің көңілім мұңды, — деді ханзада.\n— Мен сенімен ойнай алмаймын, өйткені мен әлі бауыр баспағанмын, — деді Түлкі.\n— «Бауыр басу» деген не?\n— Ол — байланыс орнату, үйренісу деген сөз. Қазір сен мен үшін жүз мыңдаған өзге балалар сияқты қарапайым баласың, сен маған аса керек те емессің. Мен де сен үшін жай бір түлкімін. Бірақ егер сен мені баурап алсаң, біз бір-бірімізге дүниедегі ең жақын дос боламыз. Сен маған бүкіл әлемде жалғыз боласың, мен де саған жалғыз боламын.\n\nХанзада Түлкімен дос болды. Ал қоштасар сәтте Түлкі оған мәңгілік ұлы құпиясын сыйлады:\n— Міне, менің құпия сырым, ол өте қарапайым: Жүрекпен ғана анық көруге болады. Ең маңызды, ең асыл нәрсе көзбен көрінбейді. Сенің раушаныңды соншалықты қымбат еткен — оған жұмсаған өз уақытың. Сен өзің бауыр басқан жанға әрқашан жауаптысың.",
+          "ru": "На своей крошечной планете принц нежно лелеял розу. Она была прекрасна, но капризна и горделива, хвастаясь четырьмя шипами против тигров. Принц поливал ее родниковой водой и укрывал стеклянным колпаком от сквозняков. Но когда на Земле он увидел сад, полный цветущих роз, он упал в траву и заплакал: его роза уверяла его, будто она единственная во всей вселенной.\n\nИ тут появился Лис.\n— Поиграй со мной, мне так грустно, — попросил Маленький принц.\n— Не могу, я не приручен, — ответил Лис.\n— А что значит «приручить»?\n— Это забытое понятие. Оно означает: создать узы. Сейчас ты для меня всего лишь мальчик, точно такой же, как сто тысяч других мальчиков. И я тебе не нужен. Но если ты меня приручишь, мы станем нужны друг другу. Ты будешь для меня единственным на всем белом свете, и я буду для тебя один на всем свете.\n\nИ они подружились. А в час прощания Лис открыл принцу простую истину:\n— Вот мой секрет, он очень прост: зорко одно лишь сердце. Самого главного глазами не увидишь. Твоя роза так дорога тебе потому, что ты отдал ей всю свою душу и всё свое время. Ты навсегда в ответе за всех, кого приручил.",
+          "en": "On his tiny asteroid B-612, the prince loved a flower. She was breathtakingly beautiful, yet proud and dramatic, relying on her four thorns against the world. The prince watered her diligently and shielded her from drafts with a glass globe. But when he arrived on Earth and encountered an entire garden brimming with five thousand identical roses, he wept: his flower had assured him she was unique in all creation.\n\nIt was then that the Fox appeared.\n\"Come play with me, I am so sorrowful,\" said the Little Prince.\n\"I cannot play with you,\" said the Fox. \"I am not tamed.\"\n\"What does 'tamed' mean?\"\n\"It is an act too often neglected,\" said the Fox. \"It means to establish ties. To me, you are still nothing more than a little boy who is just like a hundred thousand other little boys. And I have no need of you. But if you tame me, then we shall need each other. To me, you will be unique in all the world. To you, I shall be unique in all the world.\"\n\nAnd so the prince tamed the Fox. When the hour of departure drew near, the Fox gave him a parting gift:\n\"Here is my secret, very simple: It is only with the heart that one can see rightly; what is essential is invisible to the eye. It is the time you have wasted on your rose that makes your rose so important. You become responsible, forever, for what you have tamed.\""
+        }
+      }
+    ],
+    "quizzes": {
+      "questions": [
+        {
+          "id": "lp_q1",
+          "type": "multiple_choice",
+          "question": {
+            "kk": "Кішкентай ханзада Сахара шөлінде автордан ең алдымен нені салып беруді сұрады?",
+            "ru": "О чем первым делом попросил Маленький принц летчика в Сахаре?",
+            "en": "What did the Little Prince first ask the stranded pilot to draw in the Sahara Desert?"
+          },
+          "options": {
+            "kk": [
+              "Ұшақ салып беруді",
+              "Қозы салып беруді",
+              "Раушан гүлін салып беруді",
+              "Айдаһар салып беруді"
+            ],
+            "ru": [
+              "Нарисовать самолет",
+              "Нарисовать барашка",
+              "Нарисовать куст розы",
+              "Нарисовать удава"
+            ],
+            "en": [
+              "Draw an airplane",
+              "Draw a sheep",
+              "Draw a rose",
+              "Draw a boa constrictor"
+            ]
+          },
+          "correctIndex": 1,
+          "explanation": {
+            "kk": "Кішкентай ханзада ұйқыдан оятып: «Маған бір қозы салып беріңізші!» деп өтінді.",
+            "ru": "Малыш разбудил летчика словами: «Пожалуйста... нарисуй мне барашка!».",
+            "en": "The Little Prince woke the pilot at dawn saying: \"Please... draw me a sheep!\""
+          }
+        },
+        {
+          "id": "lp_q2",
+          "type": "quote_memory",
+          "question": {
+            "kk": "Түлкі ханзадаға сыйлаған ұлы құпия қандай сөздермен айтылады?",
+            "ru": "Какую главную тайну открыл Лис Маленькому принцу на прощание?",
+            "en": "What iconic secret did the Fox share with the Little Prince as a farewell gift?"
+          },
+          "options": {
+            "kk": [
+              "«Ең басты нәрсе – көп ақша мен атақ табу»",
+              "«Жүрекпен ғана анық көруге болады. Ең маңызды нәрсе көзбен көрінбейді»",
+              "«Ешкімге сенбе, жалғыз жүрген жақсы»",
+              "«Үлкендер әрқашан балалардан ақылды»"
+            ],
+            "ru": [
+              "«Самое главное в жизни — иметь много денег и власти»",
+              "«Зорко одно лишь сердце. Самого главного глазами не увидишь»",
+              "«Никогда никого к себе не подпускай близко»",
+              "«Взрослые всегда правы во всех делах»"
+            ],
+            "en": [
+              "\"The only important thing is to gather coins and crowns\"",
+              "\"It is only with the heart that one can see rightly; what is essential is invisible to the eye\"",
+              "\"Never trust any beast you meet along your road\"",
+              "\"Grown-ups possess deeper wisdom in all things\""
+            ]
+          },
+          "correctIndex": 1,
+          "explanation": {
+            "kk": "Түлкінің сөзі: «Жүрекпен ғана анық көруге болады. Ең маңызды нәрсе көзбен көрінбейді».",
+            "ru": "Знаменитый завет Лиса: «Зорко одно лишь сердце. Самого главного глазами не увидишь».",
+            "en": "The Fox reveals that heart-sight is the true sight, and essence cannot be seen with physical eyes."
+          }
+        },
+        {
+          "id": "lp_q3",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Түлкінің айтуынша, ханзаданың раушаны неліктен мыңдаған өзге гүлдерден ерекше және қымбат болды?",
+            "ru": "Почему роза Маленького принца оказалась дороже тысяч других роз в саду?",
+            "en": "Why was the prince’s rose so much more precious to him than five thousand identical flowers in the garden?"
+          },
+          "options": {
+            "kk": [
+              "Өйткені ол алтыннан жасалған еді",
+              "Өйткені ол оған өз уақыты мен жан жылуын жұмсап, бауыр басқан еді",
+              "Өйткені оның тікені өзге гүлдерден ұзын болды",
+              "Өйткені ол қыста да тоңбайтын еді"
+            ],
+            "ru": [
+              "Потому что она была сделана из чистого золота",
+              "Потому что он отдал ей свое время, душу и приручил ее заботой",
+              "Потому что у нее было двадцать шипов вместо четырех",
+              "Потому что она никогда не увядала"
+            ],
+            "en": [
+              "Because she was forged of pure gold",
+              "Because he devoted his time and love to her, watering and caring for her",
+              "Because her thorns were sharp enough to fell a tiger",
+              "Because she blossomed through frost without light"
+            ]
+          },
+          "correctIndex": 1,
+          "explanation": {
+            "kk": "Түлкі: «Сенің раушаныңды соншалықты қымбат еткен — оған жұмсаған өз уақытың» деп үйретеді.",
+            "ru": "Лис поясняет: «Твоя роза так дорога тебе потому, что ты отдал ей всю свою душу и время».",
+            "en": "The Fox explains: \"It is the time you have wasted on your rose that makes your rose so important.\""
+          }
+        },
+        {
+          "id": "lp_q4",
+          "type": "character_action",
+          "question": {
+            "kk": "Автор бала кезінде бірінші суретіне нені салып еді, ал үлкендер оны не деп ойлады?",
+            "ru": "Что изобразил автор в детстве на своем первом рисунке, и что в нем увидели взрослые?",
+            "en": "What did the narrator draw as a six-year-old child, and what did grown-ups mistake it for?"
+          },
+          "options": {
+            "kk": [
+              "Пілді жұтқан айдаһарды салған, бірақ үлкендер қалпақ деп ойлады",
+              "Қораптағы қозыны салған, бірақ үлкендер үңгір деп ойлады",
+              "Ағашты салған, бірақ үлкендер гүл деді",
+              "Ұшақты салған, бірақ құс деді"
+            ],
+            "ru": [
+              "Удава, проглотившего слона, но взрослые решили, что это обычная шляпа",
+              "Барашка в ящике, но взрослые посчитали это сундуком",
+              "Дерево баобаб, но взрослые увидели гриб",
+              "Самолет, но взрослые приняли его за птицу"
+            ],
+            "en": [
+              "A boa constrictor digesting an elephant, but grown-ups saw a mere hat",
+              "A sheep in a crate, but grown-ups saw a chest",
+              "A baobab tree, but grown-ups saw a mushroom",
+              "An airplane, but grown-ups saw a seagull"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Автор пілді жұтқан алып жыланды салды, бірақ үлкендер оны «жай қалпақ» деді.",
+            "ru": "Взрослые приняли рисунок удава, переваривающего слона, за обыкновенную шляпу.",
+            "en": "Grown-ups mistook the shape of the elephant inside the snake for a gentleman’s brimmed hat."
+          }
+        }
+      ],
+      "openQuestion": {
+        "id": "lp_open",
+        "prompt": {
+          "kk": "«Сен өзің бауыр басқан жанға әрқашан жауаптысың» деген сөзді қалай түсінесіз? Достық пен жауапкершілік туралы өз ойыңызды жазыңыз.",
+          "ru": "Как вы понимаете мысль: «Ты навсегда в ответе за всех, кого приручил»? Поделитесь своими размышлениями о дружбе и верности.",
+          "en": "How do you understand the Fox’s maxim: \"You become responsible, forever, for what you have tamed\"? Share your reflection."
+        },
+        "keyThemes": {
+          "kk": [
+            "достық",
+            "жауапкершілік",
+            "жүрек",
+            "сенім",
+            "уақыт",
+            "қамқорлық"
+          ],
+          "ru": [
+            "дружба",
+            "ответственность",
+            "забота",
+            "сердце",
+            "верность",
+            "доверие",
+            "время"
+          ],
+          "en": [
+            "friendship",
+            "responsibility",
+            "care",
+            "heart",
+            "loyalty",
+            "trust",
+            "love"
+          ]
+        },
+        "sampleAnswer": {
+          "kk": "Біреумен дос болып, оның сеніміне кірген соң, оған қамқорлық таныту, қиын сәтте тастап кетпеу — әр адамның рухани борышы мен жауапкершілігі.",
+          "ru": "Приручить — значит создать искреннюю душевную связь. Человек обязан беречь тех, кто доверился ему, и отвечать за их чувства и благополучие.",
+          "en": "To tame someone is to forge an emotional bond of mutual vulnerability and trust; one must honor that bond through lifelong care, empathy, and loyalty."
+        }
+      }
+    }
+  },
+  {
+    "id": "sherlock-holmes",
+    "title": {
+      "kk": "Богемиядағы жанжал",
+      "ru": "Скандал в Богемии",
+      "en": "A Scandal in Bohemia"
+    },
+    "author": {
+      "kk": "Артур Конан Дойл",
+      "ru": "Артур Конан Дойл",
+      "en": "Arthur Conan Doyle"
+    },
+    "year": 1891,
+    "genre": {
+      "kk": "Детектив, Классика",
+      "ru": "Детектив, Классика",
+      "en": "Detective Mystery"
+    },
+    "level": "intermediate",
+    "coverImage": "/src/assets/images/book_sherlock_holmes_1790149472353.jpg",
+    "estimatedReadMinutes": 9,
+    "tags": {
+      "kk": [
+        "Шерлок Холмс",
+        "Ирэн Адлер",
+        "Детектив",
+        "Бейкер-стрит"
+      ],
+      "ru": [
+        "Шерлок Холмс",
+        "Ирен Адлер",
+        "Бейкер-стрит",
+        "Расследование"
+      ],
+      "en": [
+        "Sherlock Holmes",
+        "Irene Adler",
+        "Baker Street",
+        "Mystery"
+      ]
+    },
+    "synopsis": {
+      "kk": "Шерлок Холмсты өмірінде бір-ақ рет айласымен таңғалдырған жалғыз әйел — дарынды әнші әрі актриса Ирэн Адлер жайындағы әйгілі оқиға.",
+      "ru": "Легендарное дело великого сыщика Шерлока Холмса, где единственная женщина сумела разгадать его замысел и превзойти его в проницательности.",
+      "en": "The renowned case where Sherlock Holmes is matched and outwitted by the woman who forever held his intellectual admiration: Irene Adler."
+    },
+    "chapters": [
+      {
+        "id": "sh_c1",
+        "title": {
+          "kk": "1-тарау: Бейкер-стриттегі құпия қонақ",
+          "ru": "Глава 1: Таинственный визитер на Бейкер-стрит",
+          "en": "Chapter 1: The Royal Visitor on Baker Street"
+        },
+        "content": {
+          "kk": "Шерлок Холмс үшін ол әрқашан «Ол әйел» болып қалды. Мен оның осы әйелге қатысты басқа сөз айтқанын өте сирек естігенмін. Холмстың көзқарасында Ирэн Адлер бүкіл әйел затының биігінде тұрды.\n\nБір күні кешке Бейкер-стриттегі 221-Б пәтерімізге бетперде киген, бойы сұңғақ әрі сымбатты мырза келді. Ол өзін граф фон Крамм деп таныстырғанымен, Холмс бірден оның Богемияның тақ мұрагері король екенін айтып, маскасын шешуді ұсынды.\n\nКорольдің басына үлкен қауіп төнген еді: жақын күндері ол Скандинавия королінің қызына үйленбекші. Бірақ бұрын оның америкалық контральто әншісі Ирэн Адлермен байланысы болған. Ирэннің қолында екеуі бірге түскен компромат фотосурет бар. Егер ол сурет қалыңдықтың отбасына жетсе, неке бұзылады. Король үйді тінтуге ұрылар жалдаса да, фотосурет табылмаған.\n\n— Менің мақсатым сол суретті табу, — деді король.\n— Ал суреттің өлшемі қандай? — деп сұрады Холмс.\n— Кабинеттік форматта, сондықтан оны әйел адам үнемі өзімен бірге алып жүре алмайды.\n— Өте жақсы, — деді Холмс мырс етіп. — Мен бұл істі қолға аламын.",
+          "ru": "Для Шерлока Холмса она навсегда осталась «Этой Женщиной». Я редко слышал, чтобы он называл ее иначе. В его глазах она затмила и превзошла всех представительниц своего пола.\n\nОднажды мартовским вечером в гостиную дома 221-б по Бейкер-стрит вошел рослый джентльмен в черной маске. Он назвался графом фон Краммом, но Холмс с первого же взгляда разоблачил гостя: перед нами стоял сам наследный король Богемии.\n\nМонарх оказался в отчаянном положении: он готовился к браку со скандинавской принцессой, однако его прошлая возлюбленная, оперная примадонна Ирен Адлер, угрожала отправить будущим родственникам их совместную кабинетную фотографию. Король нанимал грабителей, дважды обыскивал ее дом и багаж — снимок словно сквозь землю провалился.\n\n— Мой брак расстроится, если фото станет известно, — сокрушался венценосный гость.\n— Каков размер карточки? — уточнил Холмс.\n— Большой кабинетный портрет. Женщина не сможет носить его в ридикюле.\n— Превосходно, — холодно улыбнулся сыщик. — Оставьте это мне, Ваше Величество.",
+          "en": "To Sherlock Holmes she is always *the* woman. I have seldom heard him mention her under any other name. In his eyes she eclipses and predominates the whole of her sex.\n\nOne evening, a tall, powerfully built visitor wearing a black vizard mask called at 221B Baker Street, introducing himself as Count von Kramm. Holmes, without a moment’s hesitation, addressed him by his true title: the hereditary King of Bohemia.\n\nThe King confessed his grave dilemma. He was betrothed to a young Scandinavian princess of strict sensibilities. However, years earlier, he had known Irene Adler, the well-known American contralto singer. She possessed a cabinet photograph of them together and threatened to send it to the royal family on the announcement of the betrothal. The King had hired burglars and waylaid her carriage twice, but the picture could not be discovered.\n\n\"What is the size of the photograph?\" inquired Holmes.\n\"A cabinet size. Too large for easy carriage upon her person.\"\n\"Very good,\" said Holmes with a keen spark in his grey eyes. \"Leave the matter with me.\""
+        }
+      },
+      {
+        "id": "sh_c2",
+        "title": {
+          "kk": "2-тарау: Түтін шашкасы және құпия жасырынған орын",
+          "ru": "Глава 2: Дымовая ракета и тайник",
+          "en": "Chapter 2: The Smoke Rocket and the Secret Cache"
+        },
+        "content": {
+          "kk": "Келесі күні Холмс қарт діни қызметкер кейпіне еніп, Ирэн Адлердің үйінің алдына барды. Күймеден түскен Ирэнге бұзақылар тиіскендей көрініс жасалып, Холмс көмекке ұмтылып, жерге құлап жарақат алғандай сыңай танытты. Жанашыр Ирэн жаралы «пасторды» өз қонақ бөлмесіне кіргізуді бұйырды.\n\nХолмстың белгісі бойынша, мен ашық терезеден арнайы түтін шығаратын шашканы бөлмеге лақтырып: «Өрт! Өрт!» деп айқай салдым.\nКөшедегі адамдар да «Өрт!» деп шулады.\n\nБөлме түтінге толған сол сәтте Ирэн Адлер не істеді? Әйел адамдар үйден өрт шыққанда ең қымбат бағалайтын затына қарай жүгіреді. Ирэн бөлменің түкпіріндегі қоңырау шнурының қасындағы жылжымалы тақташаға ұмтылып, жасырынған суретті қолына алуға тырысты. Бұл Холмсқа жеткілікті еді!\n\nАлайда, келесі таңда біз корольмен бірге үйге кіргенде, Ирэннің түнде күйеуімен бірге Англиядан кетіп қалғанын білдік. Жасырынған орында тек бір ғана сурет — Ирэннің жеке портреті және Холмсқа жазған хаты қалған екен. Хатта ол Холмстың айласын түсініп, оны ер адам киімінде Бейкер-стритке дейін бақылап барғанын, ал корольге фотосурет ешқашан жарияланбайтынын уәде еткен. Холмс корольдің ұсынған алтын жүзігінен бас тартып, марапат ретінде Ирэннің сол қалдырған жалғыз суретін ғана сұрап алды.",
+          "ru": "На следующий день Холмс переоделся благообразным пожилым священником. Когда экипаж Ирен Адлер подъехал к дому, подставные бродяги инсценировали драку. Сыщик бросился на защиту дамы и рухнул на мостовую с окровавленным лицом. Благородная женщина приказала внести раненого пастора в свою гостиную.\n\nПо условленному сигналу я метнул в открытое окно дымовую ракету и закричал: «Пожар! Пожар!». Улица тут же подхватила панический клич.\n\nВ критический миг смертельной опасности женщина инстинктивно бросается спасать самое дорогое сокровище. Ирен молнией метнулась к потайной деревянной панели над шнуром звонка и приоткрыла тайник, где покоилась злополучная карточка. Холмс увидел всё, что ему требовалось!\n\nОднако на рассвете, когда мы с королем пришли изъять улику, дом оказался пуст. Ирен с новоиспеченным супругом тайно отплыла на континент. В пустом тайнике лежало письмо для Шерлока Холмса и ее собственная великолепная фотография. Она писала, что заподозрила неладное, проследила за мнимым пастором до порога дома 221-б в мужском костюме и переиграла его. Король был спасен, а Холмс отказался от золотого перстня с изумрудом, попросив у монарха лишь один трофей на память — портрет Ирен Адлер.",
+          "en": "The following day, disguised as an amiable, aged nonconformist clergyman, Holmes orchestrated a staged scuffle outside Irene Adler’s villa. Rushing to shield her from the ruffians, he fell dramatically to the pavement, bathed in theatrical crimson blood. In natural compassion, she had the injured clergyman carried into her drawing room.\n\nAt Holmes’s precise signal, I hurled a plumber’s smoke rocket through the open window and shouted: \"Fire! Fire!\" The cry echoed down the street.\n\nWhen a woman fears fire, she dashes by instinct to that which is dearest to her soul. Irene darted without hesitation toward a small secret panel just above the bell-rope, tearing back the sliding woodwork to snatch her treasure. Holmes had observed every fraction of the cache!\n\nYet when we returned next morning with the King, the bird had flown. Irene had crossed the Channel that very night with her new husband, leaving behind a letter for Sherlock Holmes and a portrait of herself in evening dress. She had detected the trick, tailed the clergyman back to Baker Street disguised in an ulster coat, and gracefully bowed out, promising never to harm the King. Holmes refused the monarch's emerald ring, requesting only Irene Adler’s photograph as his sole honorarium."
+        }
+      }
+    ],
+    "quizzes": {
+      "questions": [
+        {
+          "id": "sh_q1",
+          "type": "character_action",
+          "question": {
+            "kk": "Холмс Ирэн Адлердің үйіне кіру үшін қандай адам кейпіне еніп киінді?",
+            "ru": "В кого переоделся Шерлок Холмс, чтобы проникнуть в гостиную Ирен Адлер?",
+            "en": "What disguise did Sherlock Holmes adopt in order to gain entry to Irene Adler’s drawing room?"
+          },
+          "options": {
+            "kk": [
+              "Қарт діни қызметкер (пастор)",
+              "Күйме жүргізушісі",
+              "Полиция офицері",
+              "Богемия королі"
+            ],
+            "ru": [
+              "Пожилой священник (пастор)",
+              "Кучер кэба",
+              "Полицейский инспектор",
+              "Богемский дворянин"
+            ],
+            "en": [
+              "An elderly clergyman (pastor)",
+              "A cab driver",
+              "A Scotland Yard inspector",
+              "A bohemian nobleman"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Холмс рақымшыл қарт пастор кейпіне еніп, жараланған болып үйге кірді.",
+            "ru": "Холмс надел одеяние благообразного священника и сымитировал ранение.",
+            "en": "Holmes disguised himself as a venerable clergyman and faked an injury to be carried indoors."
+          }
+        },
+        {
+          "id": "sh_q2",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Холмс пен Ватсон Ирэннің суретті жасырған жерін қалай анықтады?",
+            "ru": "Каким трюком сыщик заставил Ирен выдать местоположение тайника с фотографией?",
+            "en": "By what psychological stratagem did Holmes force Irene to reveal the secret hiding place of the photograph?"
+          },
+          "options": {
+            "kk": [
+              "Терезеден түтін шашкасын лақтырып, жалған өрт дабылын көтеру арқылы",
+              "Үйдің барлық бөлмелерін күшпен тінтіп шығу арқылы",
+              "Қызметшіні параға сатып алу арқылы",
+              "Корольдің жеке келіссөз жүргізуі арқылы"
+            ],
+            "ru": [
+              "Бросили дымовую ракету и сымитировали тревогу пожара",
+              "Обыскали дом силами королевской стражи",
+              "Подкупили горничную крупной суммой",
+              "Наняли грабителей с отмычками"
+            ],
+            "en": [
+              "Hurled a smoke rocket through the window and raised a panic of \"Fire!\"",
+              "Conducted an armed police raid through the house",
+              "Bribed the maid with gold sovereigns",
+              "Demanded the key under royal decree"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Өрт қаупі туғанда әйел адам ең қымбат затына қарай жүгіреді деген психологиялық тәсіл қолданылды.",
+            "ru": "При ложной тревоге о пожаре Ирен бросилась к тайнику над шнуром звонка, чтобы спасти снимок.",
+            "en": "Holmes relied on the instinct that in a fire, a person rushes to protect their most vital secret."
+          }
+        },
+        {
+          "id": "sh_q3",
+          "type": "character_action",
+          "question": {
+            "kk": "Холмс корольдің қымбат алтын жүзігінен бас тартып, марапат ретінде не сұрады?",
+            "ru": "От какого вознаграждения отказался Холмс, попросив вместо него лишь одну вещь?",
+            "en": "What did Holmes decline, choosing instead Irene Adler’s portrait as his sole reward?"
+          },
+          "options": {
+            "kk": [
+              "Король ұсынған алтын жүзіктен бас тартып, Ирэн Адлердің фотосуретін сұрады",
+              "Үлкен ақшалай сыйақыдан бас тартып, ат сұрады",
+              "Богемиядағы сарайдан бас тартып, кітап сұрады",
+              "Жаңа ұшақ сұрады"
+            ],
+            "ru": [
+              "Отказался от изумрудного перстня короля, попросив фотопортрет Ирен Адлер",
+              "Отказался от золотого мешка, попросив королевский экипаж",
+              "Отказался от титула графа, попросив старинную трубку",
+              "Попросил орден подвязки"
+            ],
+            "en": [
+              "Refused the King’s emerald ring, requesting Irene Adler’s photograph instead",
+              "Refused a chest of gold, asking for a royal carriage",
+              "Refused an earldom, asking for an antique pipe",
+              "Asked for a diplomatic passport"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Холмс корольдің изумруд жүзігінен бас тартып, Ирэннің портретін естелікке қалдырды.",
+            "ru": "Сыщик отклонил драгоценный перстень монарха, оставив себе карточку Ирен Адлер.",
+            "en": "Holmes declined the King’s emerald ring, retaining only the photograph of Irene Adler."
+          }
+        }
+      ],
+      "openQuestion": {
+        "id": "sh_open",
+        "prompt": {
+          "kk": "Неліктен Ирэн Адлер Шерлок Холмстың көзқарасында «ерекше әйел» ретінде қалды? Ол детективті қалай жеңді?",
+          "ru": "Почему Ирен Адлер навсегда осталась в памяти Шерлока Холмса как исключительная личность? Как ей удалось его опередить?",
+          "en": "Why did Irene Adler forever hold a singular place in Sherlock Holmes’s intellect? How did she outmaneuver him?"
+        },
+        "keyThemes": {
+          "kk": [
+            "ақыл",
+            "айла",
+            "байқампаздық",
+            "ерлер киімі",
+            "құрмет",
+            "жеңіс"
+          ],
+          "ru": [
+            "ум",
+            "проницательность",
+            "мужской костюм",
+            "хитрость",
+            "уважение",
+            "слежка",
+            "опередила"
+          ],
+          "en": [
+            "intellect",
+            "wits",
+            "disguise",
+            "outsmarted",
+            "respect",
+            "cleverness"
+          ]
+        },
+        "sampleAnswer": {
+          "kk": "Ирэн Адлер Холмстың өрт туралы айласын түсініп, оны ер адам киімінде Бейкер-стритке дейін өзі аңдып, Холмсты ақылымен сан соқтырған жалғыз әйел болды.",
+          "ru": "Ирен Адлер проявила блестящую проницательность: раскрыла замысел с фальшивым пожаром, переоделась мужчиной, выследила Холмса и благополучно уехала, сохранив свое достоинство.",
+          "en": "Irene Adler deciphered the smoke deception, trailed the detective in male disguise to his very doorstep, and proved that feminine wit could gracefully match the greatest deductive mind."
+        }
+      }
+    }
+  },
+  {
+    "id": "animal-farm",
+    "title": {
+      "kk": "Жануарлар қорасы",
+      "ru": "Скотный двор",
+      "en": "Animal Farm"
+    },
+    "author": {
+      "kk": "Джордж Оруэлл",
+      "ru": "Джордж Оруэлл",
+      "en": "George Orwell"
+    },
+    "year": 1945,
+    "genre": {
+      "kk": "Аллегория, Сатира",
+      "ru": "Сатира, Притча",
+      "en": "Satirical Allegory"
+    },
+    "level": "advanced",
+    "coverImage": "/src/assets/images/book_animal_farm_1790149482950.jpg",
+    "estimatedReadMinutes": 8,
+    "tags": {
+      "kk": [
+        "Еркіндік",
+        "Теңдік",
+        "Саясат",
+        "Боксер"
+      ],
+      "ru": [
+        "Свобода",
+        "Равенство",
+        "Заповеди",
+        "Боксер"
+      ],
+      "en": [
+        "Freedom",
+        "Equality",
+        "Commandments",
+        "Boxer"
+      ]
+    },
+    "synopsis": {
+      "kk": "Адамдардың қанауынан құтылып, теңдік қоғамын құрмақ болған ферма жануарларының билік пен өтірікке бой алдыруы туралы әлемге әйгілі сатира.",
+      "ru": "Культовая притча-антиутопия о том, как благородная мечта о свободе и равенстве превращается в жестокую диктатуру и манипуляцию.",
+      "en": "A world-famous allegorical fable depicting how an idealistic uprising for freedom and equality descends into authoritarian tyranny."
+    },
+    "chapters": [
+      {
+        "id": "af_c1",
+        "title": {
+          "kk": "1-тарау: Қарт Майордың түсі және Жеті өсиет",
+          "ru": "Глава 1: Сон Старого Майора и Семь Заповедей",
+          "en": "Chapter 1: Old Major’s Dream and the Seven Commandments"
+        },
+        "content": {
+          "kk": "Ферма иесі мистер Джонс ұйықтауға кеткенде, қорадағы барлық жануарлар үлкен сарайға жиналды. Құрметті кәрі доңыз Қарт Майор оларға өзінің көрген түсін айтып берді.\n\n— Жолдастар! — деді ол. — Біздің өміріміз неге соншалықты ауыр? Себебі адам біздің барлық еңбегімізді ұрлайды! Адам — ештеңе өндірмей, тек басқаның еңбегін жейтін жалғыз мақұлық. Біз осы қанаудан құтылсақ, барлығымыз еркін және тең боламыз! Барлық жануарлар — туыс!\n\nКөп ұзамай жануарлар көтеріліс жасап, қатыгез Джонсты қуып шықты. Ферма атауы «Жануарлар қорасы» болып өзгерді. Шошқалар жазуды үйреніп, сарайдың қабырғасына ақ бояумен Жеті өсиетті жазып қойды:\n1. Екі аяқпен жүретіннің бәрі — жау.\n2. Төрт аяқпен жүретін немесе қанаты бардың бәрі — дос.\n3. Ешбір жануар киім кимесін.\n4. Ешбір жануар төсекте жатпасын.\n5. Ешбір жануар спирттік ішімдік ішпесін.\n6. Ешбір жануар өзге жануарды өлтірмесін.\n7. Барлық жануарлар тең!",
+          "ru": "Когда хозяин усадьбы мистер Джонс уснул мертвецким сном, животные тайком собрались в амбаре послушать мудрого хряка Старого Майора.\n\n— Товарищи! — обратился он. — В чем суть нашей горькой доли? Наш единственный враг — Человек! Человек — единственное существо, которое потребляет, ничего не производя. Уничтожьте Человека, и плоды наших тяжких трудов будут принадлежать нам! Все животные — братья!\n\nВскоре животные восстали и прогнали Джонса. Ферму переименовали в «Скотный двор». Самыми сообразительными оказались свиньи. Они выучились грамоте и начертали на дегтярной стене амбара Семь Заповедей:\n1. Тот, кто ходит на двух ногах — враг.\n2. Тот, кто ходит на четырех ногах или имеет крылья — друг.\n3. Животное да не носит платья.\n4. Животное да не спит на кровати.\n5. Животное да не пьет спиртного.\n6. Животное да не убьет другое животное.\n7. Все животные равны!",
+          "en": "When Mr. Jones, the proprietor of Manor Farm, had drunkenly locked the hen-houses, all the animals gathered in the big barn to listen to Old Major, the prize boar.\n\n\"Comrades,\" he proclaimed, \"what is the nature of this life of ours? Let us face it: our lives are miserable, laborious, and short. Why? Because nearly the whole of the produce of our labour is stolen from us by human beings! Man is the only creature that consumes without producing. Remove Man, and the root cause of hunger and overwork is abolished forever! All animals are comrades!\"\n\nEarly that summer, the Rebellion took place: Jones was expelled, and the Manor Farm became Animal Farm. The pigs, having taught themselves to read, painted the Seven Commandments on the tarred barn wall:\n1. Whatever goes upon two legs is an enemy.\n2. Whatever goes upon four legs, or has wings, is a friend.\n3. No animal shall wear clothes.\n4. No animal shall sleep in a bed.\n5. No animal shall drink alcohol.\n6. No animal shall kill any other animal.\n7. All animals are equal."
+        }
+      },
+      {
+        "id": "af_c2",
+        "title": {
+          "kk": "2-тарау: Өсиеттердің бұрмалануы және соңғы ақиқат",
+          "ru": "Глава 2: Искажение заповедей и финал",
+          "en": "Chapter 2: The Altered Commandments and the Final Truth"
+        },
+        "content": {
+          "kk": "Уақыт өте келе Наполеон есімді қатал шошқа барлық билікті қолына алды. Адал жұмысшы қара күш иесі — Боксер есімді жылқы күні-түні «Мен одан да көп жұмыс істеймін!» деп, жел диірменін салуға бар күшін салды.\n\nБірақ шошқалар адамдардың үйіне көшіп, төсекте жатып, шарап іше бастады. Жануарлар қабырғадағы өсиеттерді қайта оқыса, оларға сөздер қосылып кеткен екен:\n«Ешбір жануар төсекте... жаймамен жатпасын».\n«Ешбір жануар себепсіз басқаны өлтірмесін».\n\nАл қартайып ауырған Боксерді мал дәрігеріне апарамыз деп алдап, сойғыш қасапшыға сатып жіберді.\n\nАқырында қабырғадағы бүкіл өсиеттер өшіріліп, орнында бір-ақ сөйлем қалды:\n«БАРЛЫҚ ЖАНУАРЛАР ТЕҢ, БІРАҚ КЕЙБІР ЖАНУАРЛАР ӨЗГЕЛЕРДЕН ГӨРІ ТЕҢІРЕК».\n\nАқырғы күні жануарлар терезеден қарағанда, шошқалардың екі аяқпен жүріп, адамдармен бірге карта ойнап, арақ ішіп отырғанын көрді. Олар шошқадан адамға, адамнан шошқаға қарады, бірақ қайсысы адам, қайсысы шошқа екенін ажырата алмады.",
+          "ru": "Шли месяцы, и хряк Наполеон захватил абсолютную власть с помощью выращенных им свирепых псов. Верный ломовой конь Боксер самоотверженно трудился на ветряной мельнице, повторяя свой девиз: «Я буду работать еще усерднее!».\n\nНо верхушка свиней переселилась в хозяйский дом, стала спать на шелковых простынях и пить вино. Всякий раз заповеди на стене тайно дописывались:\n«Животное да не спит на кровати... с простынями».\n«Животное да не убьет другое животное... без причины».\n\nКогда надорвавшийся от каторжной работы Боксер заболел, свиньи обманом отправили его в фургоне на живодерню, а деньги пропили.\n\nВ конце концов все прежние заповеди были смыты, и осталась лишь одна страшная формула:\n«ВСЕ ЖИВОТНЫЕ РАВНЫ, НО НЕКОТОРЫЕ ЖИВОТНЫЕ БОЛЕЕ РАВНЫ, ЧЕМ ДРУГИЕ».\n\nВ финале животные заглянули в окно фермерского дома: свиньи ходили на задних лапах, носили сюртуки и пили виски с окрестными плантаторами. И уже невозможно было разобрать, где свиньи, а где люди.",
+          "en": "As seasons passed, the ferocious boar Napoleon consolidated dictatorial power using a pack of savage attack dogs. The noble cart-horse Boxer worked until his muscles cracked on the windmill, living by his personal motto: \"I will work harder!\"\n\nYet the pigs moved into the farmhouse, slept in feather beds, and drank whisky. Each time simpler animals grew uneasy, the commandments were found subtly amended:\n\"No animal shall sleep in a bed... with sheets.\"\n\"No animal shall kill any other animal... without cause.\"\n\nWhen Boxer’s strength finally collapsed from exhausted labor, the pigs sold him to the knacker’s slaughterhouse, using the blood-money to purchase another case of whisky.\n\nIn the end, all the commandments were whitewashed out, replaced by a single decree:\n\"ALL ANIMALS ARE EQUAL, BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.\"\n\nIn the climactic scene, the animals peered through the farmhouse window. The pigs were walking on their hind legs, brandishing whips, and toasting human farmers over cards and spirits. The creatures outside looked from pig to man, and from man to pig, and from pig to man again; but already it was impossible to say which was which."
+        }
+      }
+    ],
+    "quizzes": {
+      "questions": [
+        {
+          "id": "af_q1",
+          "type": "quote_memory",
+          "question": {
+            "kk": "Сарайдың қабырғасындағы барлық өсиеттер өшіріліп, соңында қандай жалғыз бұрмаланған ұран қалды?",
+            "ru": "Какая единственная искаженная формулировка осталась в итоге на стене вместо семи заповедей?",
+            "en": "What final paradoxical decree replaced all Seven Commandments upon the barn wall?"
+          },
+          "options": {
+            "kk": [
+              "«Барлық жануарлар тең, бірақ кейбір жануарлар өзгелерден гөрі теңірек»",
+              "«Адам қайта оралсын»",
+              "«Жануарларға тыныштық керек»",
+              "«Тек қана жылқылар еңбек етсін»"
+            ],
+            "ru": [
+              "«Все животные равны, но некоторые животные более равны, чем другие»",
+              "«Человек — лучший друг скота»",
+              "«Никакой работы по воскресеньям»",
+              "«Власть принадлежит всем поровну»"
+            ],
+            "en": [
+              "\"All animals are equal, but some animals are more equal than others\"",
+              "\"Man is the eternal protector of beasts\"",
+              "\"Work shall cease on rainy days\"",
+              "\"Every creature commands its own destiny\""
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Шошқалар теңдік ұғымын толық жойып, осы әйгілі сөйлемді қалдырды.",
+            "ru": "Знаменитый оксюморон авторитаризма: «Все животные равны, но некоторые более равны».",
+            "en": "The pigs reduced all egalitarian ideals into the infamous mockery of equality."
+          }
+        },
+        {
+          "id": "af_q2",
+          "type": "character_action",
+          "question": {
+            "kk": "Адал еңбек еткен күшті жылқы Боксер ауырып қалғанда, Наполеон оны қайда жіберді?",
+            "ru": "Куда свиньи на самом деле отправили надорвавшегося коня Боксера, когда он заболел?",
+            "en": "Where did Napoleon and the pigs secretly dispatch the faithful work-horse Boxer when he collapsed?"
+          },
+          "options": {
+            "kk": [
+              "Жануарлар қасапханасына (сойғышқа) сатып жіберді",
+              "Жайлы демалыс орнына жіберді",
+              "Қалалық ең үздік ауруханаға емдетті",
+              "Өз еркімен орманға жіберді"
+            ],
+            "ru": [
+              "Продали на живодерню (на убой)",
+              "Отправили на заслуженную пенсию на клеверное поле",
+              "Положили в образцовую ветеринарную клинику",
+              "Отпустили пастись на волю"
+            ],
+            "en": [
+              "Sold him to the knacker’s slaughterhouse for meat and glue",
+              "Retired him with honor to the lush clover pasture",
+              "Treated him in a premier hospital in the neighboring town",
+              "Granted him freedom in the wild"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "Боксерді дәрігерге емес, қасапшының көлігіне тиеп, ақшасына ішімдік алды.",
+            "ru": "Боксера коварно продали мяснику, а на вырученные деньги свиньи купили виски.",
+            "en": "The pigs sent their most devoted worker to be slaughtered, using the proceeds for liquor."
+          }
+        },
+        {
+          "id": "af_q3",
+          "type": "detail_memory",
+          "question": {
+            "kk": "Кітаптың соңында жануарлар терезеден қарағанда нені көріп, таңғалды?",
+            "ru": "Что увидели потрясенные животные через окно фермы в финальной сцене книги?",
+            "en": "What did the outside animals observe through the farmhouse window in the concluding scene?"
+          },
+          "options": {
+            "kk": [
+              "Шошқалардың екі аяқпен жүріп, адамдармен араласып кеткенін және оларды ажырату мүмкін болмай қалғанын",
+              "Ферманың өртеніп кеткенін",
+              "Джонстың қайтып келіп кешірім сұрағанын",
+              "Жануарлардың барлығының қашып кеткенін"
+            ],
+            "ru": [
+              "Свиньи пировали с людьми на двух ногах, и было невозможно отличить человека от свиньи",
+              "Ферма была полностью разрушена ураганом",
+              "Джонс вернулся и мирно пас овец",
+              "Все животные стали летать"
+            ],
+            "en": [
+              "The pigs were standing on two legs, drinking with humans, indistinguishable from them",
+              "The entire farm had burned down in an accidental fire",
+              "Mr. Jones had returned with humble gifts",
+              "All other creatures had quietly crossed the border"
+            ]
+          },
+          "correctIndex": 0,
+          "explanation": {
+            "kk": "«Шошқадан адамға, адамнан шошқаға қарады, бірақ қайсысы адам, қайсысы шошқа екенін ажырата алмады».",
+            "ru": "В финале свиньи уподобились прежним тиранам-людям до полной неразличимости.",
+            "en": "The ruling pigs had transformed entirely into their former oppressors."
+          }
+        }
+      ],
+      "openQuestion": {
+        "id": "af_open",
+        "prompt": {
+          "kk": "Оруэлл бұл сатиралық шығармасы арқылы билік, өтірік және әділдік туралы қандай сабақ бергісі келді?",
+          "ru": "Какой главный урок о природе власти, пропаганде и гражданской бдительности несет эта повесть?",
+          "en": "What vital warning about power, deceptive propaganda, and civic apathy does Orwell impart?"
+        },
+        "keyThemes": {
+          "kk": [
+            "билік",
+            "теңдік",
+            "өтірік",
+            "насихат",
+            "бостандық",
+            "әділдік"
+          ],
+          "ru": [
+            "власть",
+            "тирания",
+            "пропаганда",
+            "равенство",
+            "манипуляция",
+            "свобода",
+            "бдительность"
+          ],
+          "en": [
+            "power",
+            "propaganda",
+            "tyranny",
+            "equality",
+            "manipulation",
+            "freedom",
+            "alertness"
+          ]
+        },
+        "sampleAnswer": {
+          "kk": "Әділдік пен теңдік ұрандарымен билікке келгендер бақылаусыз қалса, олар бұрынғы қанаушылардан да сорақы тиранға айналады. Халық сауатты әрі қырағы болуы керек.",
+          "ru": "Повесть предостерегает, что слепое повиновение, искажение фактов и отсутствие критики превращают любую революцию в еще более жестокую диктатуру.",
+          "en": "Orwell warns that uncritical obedience and manipulation of truth inevitably allow cynical elites to turn ideals of equality into absolute despotism."
+        }
+      }
+    }
+  }
+]

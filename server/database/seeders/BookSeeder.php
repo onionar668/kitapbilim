@@ -11,7 +11,12 @@ class BookSeeder extends Seeder
     {
         $path = database_path('data/books.json');
         if (! is_file($path)) {
-            return;
+            $fallback = base_path('../client/database/data/books.json');
+            if (is_file($fallback)) {
+                $path = $fallback;
+            } else {
+                return;
+            }
         }
 
         $items = json_decode((string) file_get_contents($path), true);
