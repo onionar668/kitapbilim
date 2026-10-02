@@ -1,0 +1,6 @@
+{
+  "name": "KitapBilim - Read & Quiz",
+  "description": "Интерактивная библиотека с опросниками на знание прочитанного на казахском, русском и английском языках. Кітап оқып, есте сақтауды тексеру жүйесі.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
