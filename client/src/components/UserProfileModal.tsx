@@ -1,6 +1,7 @@
 import React from 'react';
 import { User, Book, Language, UserStats } from '../types';
 import { translations } from '../utils/translations';
+import { formatDuration } from '../utils/formatDuration';
 import { X, LogOut, BookOpen, Trash2, Plus, Award, UserCheck, Calendar, Shield } from 'lucide-react';
 
 interface UserProfileModalProps {
@@ -93,21 +94,13 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
         </div>
 
         {/* Quick Stats Grid */}
-        <div className="grid grid-cols-3 border-b border-stone-100 bg-stone-50/80 px-6 py-3.5 text-center">
+        <div className="grid grid-cols-2 border-b border-stone-100 bg-stone-50/80 px-6 py-3.5 text-center">
           <div>
             <div className="text-xl font-bold font-display-book text-stone-900">
               {userStats.completedBookIds.length}
             </div>
             <div className="text-[11px] text-stone-500 font-medium">
               {t.statsBooksRead}
-            </div>
-          </div>
-          <div className="border-x border-stone-200">
-            <div className="text-xl font-bold font-display-book text-stone-900">
-              {userStats.attempts.length}
-            </div>
-            <div className="text-[11px] text-stone-500 font-medium">
-              {t.statsQuizzesTaken}
             </div>
           </div>
           <div>
@@ -173,7 +166,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                       {b.title[currentLang] || b.title.ru || b.title.kk}
                     </h4>
                     <p className="text-[11px] text-stone-500 truncate">
-                      {b.author[currentLang] || b.author.ru} · {b.estimatedReadMinutes} {t.readTimeMin}
+                      {b.author[currentLang] || b.author.ru} · {formatDuration(b.estimatedReadMinutes * 60, currentLang)}
                     </p>
                   </div>
 

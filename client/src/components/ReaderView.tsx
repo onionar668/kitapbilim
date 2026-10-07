@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { syncReadingProgress } from '../api/books';
+import { fetchReadingProgress, syncReadingProgress } from '../api/books';
 import { Book, Language, ReaderTheme, ReaderFontSize, ReaderFontFamily, User } from '../types';
 import { translations } from '../utils/translations';
 import {
@@ -7,11 +7,8 @@ import {
   ChevronLeft,
   ChevronRight,
   Settings2,
-  Volume2,
-  VolumeX,
   CheckCircle2,
   List,
-  Sparkles
 } from 'lucide-react';
 
 interface ReaderViewProps {
@@ -19,7 +16,17 @@ interface ReaderViewProps {
   currentLang: Language;
   currentUser?: User | null;
   onBackToLibrary: () => void;
-  onFinishAndTakeQuiz: () => void;
+  onFinishReading: (position: Pick<SavedReaderPosition, 'chapterIndex' | 'scrollPercent'>) => void;
+}
+
+interface SavedReaderPosition {
+  chapterIndex: number;
+  scrollPercent: number;
+  savedAt: number;
+}
+
+function readerPositionStorageKey(bookId: string, userId?: string): string {
+  return `kitapbilim_reader_position:${userId ?? 'guest'}:${bookId}`;
 }
 
 export const ReaderView: React.FC<ReaderViewProps> = ({
@@ -27,7 +34,7 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
   currentLang,
   currentUser,
   onBackToLibrary,
-  onFinishAndTakeQuiz,
+  onFinishReading,
 }) => {
   const t = translations[currentLang];
   const [currentChapterIndex, setCurrentChapterIndex] = useState(0);
@@ -36,11 +43,23 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
   const [fontFamily, setFontFamily] = useState<ReaderFontFamily>('serif');
   const [showSettings, setShowSettings] = useState(false);
   const [showContents, setShowContents] = useState(false);
-  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [progressReady, setProgressReady] = useState(false);
 
   const articleRef = useRef<HTMLDivElement>(null);
-  const speechRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const restoredScrollPercentRef = useRef<number | null>(null);
+  const saveProgressRef = useRef<() => void>(() => undefined);
+  const finishingRef = useRef(false);
+  const saveInFlightRef = useRef(false);
+  const pendingServerSaveRef = useRef<{
+    bookId: string;
+    chapterIndex: number;
+    scrollPercent: number;
+    progressPercent: number;
+  } | null>(null);
+  const serverSavePromiseRef = useRef<Promise<void>>(Promise.resolve());
+  const flushServerSaveRef = useRef<() => Promise<void>>(async () => undefined);
+  const saveTimerRef = useRef<number | undefined>(undefined);
 
   const chapters = book.chapters;
   const currentChapter = chapters[currentChapterIndex] || chapters[0];
@@ -50,83 +69,212 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
   const chapterTitle = currentChapter?.title[currentLang] || currentChapter?.title.ru || '';
   const chapterContent = currentChapter?.content[currentLang] || currentChapter?.content.ru || '';
 
-  // Track scroll progress
   useEffect(() => {
     const handleScroll = () => {
       const el = articleRef.current;
       if (!el) return;
-      const totalHeight = el.scrollHeight - window.innerHeight;
-      if (totalHeight <= 0) {
-        setScrollProgress(100);
-        return;
-      }
-      const current = window.scrollY;
-      const pct = Math.min(100, Math.max(0, Math.round((current / totalHeight) * 100)));
+      const articleTop = el.getBoundingClientRect().top + window.scrollY;
+      const maxScroll = Math.max(0, el.offsetHeight - window.innerHeight);
+      const current = Math.min(maxScroll, Math.max(0, window.scrollY - articleTop));
+      const pct = maxScroll === 0 ? 0 : Math.round((current / maxScroll) * 100);
       setScrollProgress(pct);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [currentChapterIndex]);
+  }, []);
 
   useEffect(() => {
-    if (!currentUser) return;
+    let active = true;
+    setProgressReady(false);
+    setCurrentChapterIndex(0);
+    setScrollProgress(0);
+    restoredScrollPercentRef.current = null;
 
-    const overall = Math.round(
-      ((currentChapterIndex + scrollProgress / 100) / Math.max(chapters.length, 1)) * 100
+    const storageKey = readerPositionStorageKey(book.id, currentUser?.id);
+    let savedPosition: SavedReaderPosition | null = null;
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        const parsed = JSON.parse(stored) as Partial<SavedReaderPosition>;
+        if (
+          typeof parsed.chapterIndex === 'number' &&
+          Number.isInteger(parsed.chapterIndex) &&
+          typeof parsed.scrollPercent === 'number' &&
+          Number.isFinite(parsed.scrollPercent) &&
+          typeof parsed.savedAt === 'number' &&
+          Number.isFinite(parsed.savedAt)
+        ) {
+          savedPosition = {
+            chapterIndex: parsed.chapterIndex,
+            scrollPercent: Math.min(100, Math.max(0, Math.round(parsed.scrollPercent))),
+            savedAt: parsed.savedAt,
+          };
+        }
+      }
+    } catch (error) {
+      console.error('Failed to read saved book position:', error);
+    }
+
+    const restoreProgress = async () => {
+      if (currentUser) {
+        try {
+          const serverPosition = await fetchReadingProgress(book.id);
+          if (serverPosition) {
+            const serverSavedAt = serverPosition.lastReadAt
+              ? Date.parse(serverPosition.lastReadAt)
+              : 0;
+            if (!savedPosition || serverSavedAt > savedPosition.savedAt) {
+              savedPosition = {
+                chapterIndex: serverPosition.chapterIndex,
+                scrollPercent: serverPosition.scrollPercent,
+                savedAt: Number.isFinite(serverSavedAt) ? serverSavedAt : Date.now(),
+              };
+            }
+          }
+        } catch (error) {
+          console.error('Failed to load saved book position:', error);
+        }
+      }
+
+      if (!active) return;
+
+      if (savedPosition && chapters.length > 0) {
+        const chapterIndex = Math.min(chapters.length - 1, Math.max(0, savedPosition.chapterIndex));
+        restoredScrollPercentRef.current = Math.min(100, Math.max(0, savedPosition.scrollPercent));
+        setCurrentChapterIndex(chapterIndex);
+        setScrollProgress(Math.min(100, Math.max(0, savedPosition.scrollPercent)));
+      }
+      setProgressReady(true);
+    };
+
+    void restoreProgress();
+    return () => {
+      active = false;
+    };
+  }, [book.id, chapters.length, currentUser?.id]);
+
+  useEffect(() => {
+    if (!progressReady) return;
+
+    const position: SavedReaderPosition = {
+      chapterIndex: currentChapterIndex,
+      scrollPercent: scrollProgress,
+      savedAt: Date.now(),
+    };
+    const overall = Math.min(
+      100,
+      Math.round(((position.chapterIndex + position.scrollPercent / 100) / Math.max(chapters.length, 1)) * 100)
     );
 
-    const timer = window.setTimeout(() => {
-      syncReadingProgress({
-        bookId: book.id,
-        status: 'reading',
-        chapterIndex: currentChapterIndex,
-        progressPercent: Math.min(100, overall),
-      }).catch(() => undefined);
-    }, 800);
+    const saveProgress = () => {
+      try {
+        localStorage.setItem(
+          readerPositionStorageKey(book.id, currentUser?.id),
+          JSON.stringify(position)
+        );
+      } catch (error) {
+        console.error('Failed to save book position locally:', error);
+      }
 
-    return () => window.clearTimeout(timer);
-  }, [book.id, chapters.length, currentChapterIndex, currentUser, scrollProgress]);
-
-  // Handle Text-To-Speech with Web Speech API
-  useEffect(() => {
-    return () => {
-      if (window.speechSynthesis) {
-        window.speechSynthesis.cancel();
+      if (currentUser) {
+        pendingServerSaveRef.current = {
+          bookId: book.id,
+          chapterIndex: position.chapterIndex,
+          scrollPercent: position.scrollPercent,
+          progressPercent: overall,
+        };
+        void flushServerSaveRef.current();
       }
     };
-  }, [currentChapterIndex]);
+    saveProgressRef.current = saveProgress;
 
-  const toggleAudio = () => {
-    if (!('speechSynthesis' in window)) {
-      alert(t.ttsNotSupported);
+    const timer = window.setTimeout(saveProgress, 800);
+    saveTimerRef.current = timer;
+    return () => window.clearTimeout(timer);
+  }, [book.id, chapters.length, currentChapterIndex, currentUser?.id, progressReady, scrollProgress]);
+
+  flushServerSaveRef.current = async () => {
+    if (saveInFlightRef.current) {
+      await serverSavePromiseRef.current;
+      if (pendingServerSaveRef.current) return flushServerSaveRef.current();
       return;
     }
 
-    if (isPlayingAudio) {
-      window.speechSynthesis.cancel();
-      setIsPlayingAudio(false);
-    } else {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(chapterContent);
-      
-      // Match voice language
-      const langMap: Record<Language, string> = {
-        kk: 'kk-KZ',
-        ru: 'ru-RU',
-        en: 'en-US'
-      };
-      utterance.lang = langMap[currentLang] || 'ru-RU';
-      utterance.rate = 0.95;
+    const payload = pendingServerSaveRef.current;
+    if (!payload) return;
 
-      utterance.onend = () => setIsPlayingAudio(false);
-      utterance.onerror = () => setIsPlayingAudio(false);
+    pendingServerSaveRef.current = null;
+    saveInFlightRef.current = true;
+    const request = syncReadingProgress({ ...payload, status: 'reading' })
+      .catch((error) => {
+        console.error('Failed to save book position:', error);
+      })
+      .finally(() => {
+        saveInFlightRef.current = false;
+      });
+    serverSavePromiseRef.current = request;
+    await request;
 
-      speechRef.current = utterance;
-      window.speechSynthesis.speak(utterance);
-      setIsPlayingAudio(true);
-    }
+    if (pendingServerSaveRef.current) return flushServerSaveRef.current();
   };
+
+  useEffect(() => () => {
+    if (!finishingRef.current) saveProgressRef.current();
+  }, []);
+
+  const finishReading = async () => {
+    if (finishingRef.current) return;
+    const position: SavedReaderPosition = {
+      chapterIndex: currentChapterIndex,
+      scrollPercent: scrollProgress,
+      savedAt: Date.now(),
+    };
+    finishingRef.current = true;
+    try {
+      localStorage.setItem(
+        readerPositionStorageKey(book.id, currentUser?.id),
+        JSON.stringify(position)
+      );
+    } catch (error) {
+      console.error('Failed to save book position locally:', error);
+    }
+
+    window.clearTimeout(saveTimerRef.current);
+    if (currentUser) {
+      const overall = Math.min(
+        100,
+        Math.round(((position.chapterIndex + position.scrollPercent / 100) / Math.max(chapters.length, 1)) * 100)
+      );
+      pendingServerSaveRef.current = {
+        bookId: book.id,
+        chapterIndex: position.chapterIndex,
+        scrollPercent: position.scrollPercent,
+        progressPercent: overall,
+      };
+      await flushServerSaveRef.current();
+    }
+    onFinishReading({
+      chapterIndex: position.chapterIndex,
+      scrollPercent: position.scrollPercent,
+    });
+  };
+
+  useEffect(() => {
+    const scrollPercent = restoredScrollPercentRef.current;
+    if (!progressReady || scrollPercent === null) return;
+    restoredScrollPercentRef.current = null;
+
+    const restoreScroll = () => {
+      const el = articleRef.current;
+      if (!el) return;
+      const articleTop = el.getBoundingClientRect().top + window.scrollY;
+      const maxScroll = Math.max(0, el.offsetHeight - window.innerHeight);
+      window.scrollTo({ top: articleTop + maxScroll * scrollPercent / 100, behavior: 'auto' });
+    };
+
+    window.requestAnimationFrame(() => window.requestAnimationFrame(restoreScroll));
+  }, [currentChapterIndex, progressReady]);
 
   // Font size classes
   const fontSizes = {
@@ -176,7 +324,7 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
             </div>
           </div>
 
-          {/* Controls: Contents, TTS, Reader Settings, Quiz CTA */}
+          {/* Controls: Contents, Reader Settings, Quiz CTA */}
           <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             {/* Table of contents button */}
             {chapters.length > 1 && (
@@ -200,8 +348,9 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
                           key={ch.id}
                           onClick={() => {
                             setCurrentChapterIndex(idx);
+                            setScrollProgress(0);
                             setShowContents(false);
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                            window.scrollTo({ top: 0, behavior: 'auto' });
                           }}
                           className={`w-full text-left px-3 py-2 text-xs rounded-lg transition-colors cursor-pointer ${
                             currentChapterIndex === idx
@@ -217,19 +366,6 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
                 )}
               </div>
             )}
-
-            {/* Audio Speech Button */}
-            <button
-              onClick={toggleAudio}
-              className={`p-2 rounded-lg transition-colors cursor-pointer ${
-                isPlayingAudio
-                  ? 'bg-amber-600 text-white animate-pulse'
-                  : 'hover:bg-black/5 dark:hover:bg-white/10'
-              }`}
-              title={isPlayingAudio ? t.textToSpeechStop : t.textToSpeechPlay}
-            >
-              {isPlayingAudio ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-            </button>
 
             {/* Settings button */}
             <div className="relative">
@@ -331,14 +467,12 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
               )}
             </div>
 
-            {/* Direct Quiz Jump Button */}
             <button
-              onClick={onFinishAndTakeQuiz}
+              onClick={() => void finishReading()}
               className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-stone-900 text-white hover:bg-stone-800 transition-colors shadow-xs cursor-pointer whitespace-nowrap"
             >
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-              <span className="hidden sm:inline">{t.finishReadingAndQuiz}</span>
-              <span className="sm:hidden">{t.takeQuizDirectly}</span>
+              <span>{t.finishReading}</span>
             </button>
           </div>
         </div>
@@ -379,7 +513,8 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
               <button
                 onClick={() => {
                   setCurrentChapterIndex(currentChapterIndex - 1);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  setScrollProgress(0);
+                  window.scrollTo({ top: 0, behavior: 'auto' });
                 }}
                 className="flex items-center justify-center gap-1 flex-1 sm:flex-initial px-3.5 py-2.5 sm:py-2 text-xs font-semibold rounded-lg border border-stone-300 dark:border-stone-700 hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer"
               >
@@ -392,7 +527,8 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
               <button
                 onClick={() => {
                   setCurrentChapterIndex(currentChapterIndex + 1);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  setScrollProgress(0);
+                  window.scrollTo({ top: 0, behavior: 'auto' });
                 }}
                 className="flex items-center justify-center gap-1 flex-1 sm:flex-initial px-3.5 py-2.5 sm:py-2 text-xs font-semibold rounded-lg border border-stone-300 dark:border-stone-700 hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer"
               >
@@ -402,13 +538,12 @@ export const ReaderView: React.FC<ReaderViewProps> = ({
             )}
           </div>
 
-          {/* Primary Action: Read finished & take quiz */}
           <button
-            onClick={onFinishAndTakeQuiz}
+            onClick={() => void finishReading()}
             className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold text-white bg-amber-700 hover:bg-amber-800 rounded-xl shadow-md transition-all cursor-pointer"
           >
-            <Sparkles className="w-4 h-4" />
-            <span>{t.finishReadingAndQuiz}</span>
+            <CheckCircle2 className="w-4 h-4" />
+            <span>{t.finishReading}</span>
           </button>
         </div>
       </main>

@@ -1,12 +1,15 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import axios from 'axios';
 import {
   Activity,
+  Archive,
   BookOpen,
   Check,
   Loader2,
   Pencil,
   Plus,
   RefreshCw,
+  RotateCcw,
   Search,
   Shield,
   Tag,
@@ -18,21 +21,26 @@ import {
   AdminReaderRow,
   AdminUserRow,
   BookCategory,
+  TrashedBook,
   createBook,
   createCategory,
   deleteBook,
   deleteCategory,
+  extractPdfText,
   fetchAdminReaders,
+  fetchAdminTrash,
   fetchAdminUsers,
   fetchBooks,
   fetchCategories,
   updateBook,
   updateCategory,
+  restoreTrashedBook,
+  permanentlyDeleteTrashedBook,
 } from '../api/books';
-import { Book, Language, User } from '../types';
+import { Book, Chapter, Language, User } from '../types';
 import { translations } from '../utils/translations';
 
-type AdminSection = 'users' | 'readers' | 'categories' | 'books';
+type AdminSection = 'users' | 'readers' | 'categories' | 'books' | 'trash';
 type LocalizedText = Record<Language, string>;
 
 interface AdminViewProps {
@@ -46,6 +54,7 @@ interface BookDraft {
   author: LocalizedText;
   genre: LocalizedText;
   content: LocalizedText;
+  coverImage: string;
   publishToCatalog: boolean;
 }
 
@@ -53,6 +62,9 @@ interface BookEditDraft {
   id: string;
   title: LocalizedText;
   author: LocalizedText;
+  genre: LocalizedText;
+  chapters: Chapter[];
+  coverImage: string;
   publishToCatalog: boolean;
 }
 
@@ -69,8 +81,49 @@ const emptyBookDraft = (): BookDraft => ({
   author: emptyLocalizedText(),
   genre: emptyLocalizedText(),
   content: emptyLocalizedText(),
+  coverImage: '',
   publishToCatalog: true,
 });
+
+const MAX_COVER_FILE_BYTES = 100 * 1024 * 1024;
+const MAX_COVER_DATA_URL_LENGTH = 60_000;
+
+async function compressCoverImage(file: File): Promise<string> {
+  if (!file.type.startsWith('image/')) {
+    throw new Error('Selected file is not an image');
+  }
+  if (file.size > MAX_COVER_FILE_BYTES) {
+    throw new Error('Selected image exceeds the upload size limit');
+  }
+
+  const objectUrl = URL.createObjectURL(file);
+  try {
+    const image = new Image();
+    image.src = objectUrl;
+    await image.decode();
+
+    const scale = Math.min(1, 800 / image.width, 1200 / image.height);
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.max(1, Math.round(image.width * scale));
+    canvas.height = Math.max(1, Math.round(image.height * scale));
+
+    const context = canvas.getContext('2d');
+
+    if (!context) throw new Error('Could not process selected image');
+    context.fillStyle = '#ffffff';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+    for (let quality = 0.85; quality >= 0.35; quality -= 0.1) {
+      const dataUrl = canvas.toDataURL('image/jpeg', quality);
+      if (dataUrl.length <= MAX_COVER_DATA_URL_LENGTH) return dataUrl;
+    }
+
+    throw new Error('Could not compress selected image to the supported size');
+  } finally {
+    URL.revokeObjectURL(objectUrl);
+  }
+}
 
 const inputClass =
   'w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 outline-none transition focus:border-amber-700 focus:ring-2 focus:ring-amber-700/15';
@@ -88,11 +141,16 @@ export const AdminView: React.FC<AdminViewProps> = ({
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [loadError, setLoadError] = useState(false);
-  const [actionError, setActionError] = useState<'validation' | 'request' | null>(null);
+  const [actionError, setActionError] = useState<
+    'validation' | 'request' | 'cover' | 'pdf' | 'pdf-size' | null
+  >(null);
+  const [processingCover, setProcessingCover] = useState(false);
+  const [processingPdf, setProcessingPdf] = useState(false);
   const [users, setUsers] = useState<AdminUserRow[]>([]);
   const [readers, setReaders] = useState<AdminReaderRow[]>([]);
   const [categories, setCategories] = useState<BookCategory[]>([]);
   const [books, setBooks] = useState<Book[]>([]);
+  const [trashedBooks, setTrashedBooks] = useState<TrashedBook[]>([]);
 
   const [categoryFormOpen, setCategoryFormOpen] = useState(false);
   const [editingCategoryId, setEditingCategoryId] = useState<string | null>(null);
@@ -106,6 +164,7 @@ export const AdminView: React.FC<AdminViewProps> = ({
   const [editingBook, setEditingBook] = useState<BookEditDraft | null>(null);
   const [savingBookId, setSavingBookId] = useState<string | null>(null);
   const [deletingBookId, setDeletingBookId] = useState<string | null>(null);
+  const [trashActionBookId, setTrashActionBookId] = useState<string | null>(null);
 
   const pickTitle = (record?: Record<Language, string>) =>
     record?.[currentLang] || record?.ru || record?.kk || '—';
@@ -121,16 +180,18 @@ export const AdminView: React.FC<AdminViewProps> = ({
     setLoadError(false);
 
     try {
-      const [usersData, readersData, categoriesData, booksData] = await Promise.all([
+      const [usersData, readersData, categoriesData, booksData, trashData] = await Promise.all([
         fetchAdminUsers(),
         fetchAdminReaders(),
         fetchCategories(),
         fetchBooks(),
+        fetchAdminTrash(),
       ]);
       setUsers(usersData);
       setReaders(readersData);
       setCategories(categoriesData);
       setBooks(booksData);
+      setTrashedBooks(trashData);
       onBooksChanged(booksData);
     } catch (error) {
       console.error('Failed to load admin dashboard data:', error);
@@ -184,6 +245,16 @@ export const AdminView: React.FC<AdminViewProps> = ({
         .includes(query)
     );
   }, [books, search, currentLang]);
+
+  const visibleTrashedBooks = useMemo(() => {
+    const query = search.trim().toLocaleLowerCase();
+    if (!query) return trashedBooks;
+    return trashedBooks.filter((book) =>
+      `${pickTitle(book.title)} ${pickTitle(book.author)} ${book.createdByUserName ?? ''}`
+        .toLocaleLowerCase()
+        .includes(query)
+    );
+  }, [trashedBooks, search, currentLang]);
 
   const updateBooks = (nextBooks: Book[]) => {
     setBooks(nextBooks);
@@ -261,6 +332,7 @@ export const AdminView: React.FC<AdminViewProps> = ({
 
   const createAdminBook = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (processingCover || processingPdf) return;
     if (
       languages.some((language) => !bookDraft.title[language].trim()) ||
       languages.some((language) => !bookDraft.author[language].trim()) ||
@@ -301,7 +373,7 @@ export const AdminView: React.FC<AdminViewProps> = ({
           en: bookDraft.genre.en.trim(),
         },
         level: 'intermediate',
-        coverImage: '',
+        coverImage: bookDraft.coverImage,
         synopsis: content,
         chapters: [{
           id: 'admin-chapter-1',
@@ -328,6 +400,19 @@ export const AdminView: React.FC<AdminViewProps> = ({
       id: book.id,
       title: { ...book.title },
       author: { ...book.author },
+      genre: { ...book.genre },
+      chapters: book.chapters.length > 0
+        ? book.chapters.map((chapter) => ({
+            ...chapter,
+            title: { ...chapter.title },
+            content: { ...chapter.content },
+          }))
+        : [{
+            id: 'admin-chapter-1',
+            title: { ...book.title },
+            content: { ...book.synopsis },
+          }],
+      coverImage: book.coverImage,
       publishToCatalog: Boolean(book.isCatalog),
     });
     clearActionError();
@@ -336,9 +421,11 @@ export const AdminView: React.FC<AdminViewProps> = ({
   const saveBookEdit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!editingBook) return;
+    if (processingCover || processingPdf) return;
     if (
       languages.some((language) => !editingBook.title[language].trim()) ||
-      languages.some((language) => !editingBook.author[language].trim())
+      languages.some((language) => !editingBook.author[language].trim()) ||
+      editingBook.chapters.length === 0
     ) {
       setActionError('validation');
       return;
@@ -350,6 +437,17 @@ export const AdminView: React.FC<AdminViewProps> = ({
       const saved = await updateBook(editingBook.id, {
         title: editingBook.title,
         author: editingBook.author,
+        genre: editingBook.genre,
+        chapters: editingBook.chapters.map((chapter) => ({
+          ...chapter,
+          title: Object.fromEntries(
+            languages.map((language) => [language, chapter.title[language].trim()])
+          ),
+          content: Object.fromEntries(
+            languages.map((language) => [language, chapter.content[language].trim()])
+          ),
+        })),
+        coverImage: editingBook.coverImage,
         publishToCatalog: editingBook.publishToCatalog,
       });
       updateBooks(books.map((book) => book.id === saved.id ? saved : book));
@@ -369,11 +467,45 @@ export const AdminView: React.FC<AdminViewProps> = ({
     try {
       await deleteBook(book.id);
       updateBooks(books.filter((item) => item.id !== book.id));
+      setTrashedBooks((items) => [
+        { ...book, deletedAt: new Date().toISOString() },
+        ...items.filter((item) => item.id !== book.id),
+      ]);
     } catch (error) {
       console.error('Failed to delete book:', error);
       setActionError('request');
     } finally {
       setDeletingBookId(null);
+    }
+  };
+
+  const restoreBook = async (book: TrashedBook) => {
+    setTrashActionBookId(book.id);
+    clearActionError();
+    try {
+      const restored = await restoreTrashedBook(book.id);
+      setTrashedBooks((items) => items.filter((item) => item.id !== book.id));
+      updateBooks([restored, ...books]);
+    } catch (error) {
+      console.error('Failed to restore book from trash:', error);
+      setActionError('request');
+    } finally {
+      setTrashActionBookId(null);
+    }
+  };
+
+  const permanentlyDeleteBook = async (book: TrashedBook) => {
+    if (!window.confirm(t.adminConfirmPermanentDeleteBook)) return;
+    setTrashActionBookId(book.id);
+    clearActionError();
+    try {
+      await permanentlyDeleteTrashedBook(book.id);
+      setTrashedBooks((items) => items.filter((item) => item.id !== book.id));
+    } catch (error) {
+      console.error('Failed to permanently delete book:', error);
+      setActionError('request');
+    } finally {
+      setTrashActionBookId(null);
     }
   };
 
@@ -390,6 +522,7 @@ export const AdminView: React.FC<AdminViewProps> = ({
     { id: 'readers', label: t.adminReaders, count: readers.length, icon: <Activity className="h-4 w-4" /> },
     { id: 'categories', label: t.adminCategories, count: categories.length, icon: <Tag className="h-4 w-4" /> },
     { id: 'books', label: t.adminBooks, count: books.length, icon: <BookOpen className="h-4 w-4" /> },
+    { id: 'trash', label: t.adminTrash, count: trashedBooks.length, icon: <Archive className="h-4 w-4" /> },
   ];
 
   const localizedInputs = (
@@ -423,6 +556,98 @@ export const AdminView: React.FC<AdminViewProps> = ({
           )}
         </label>
       ))}
+    </div>
+  );
+
+  const coverImageInput = (
+    value: string,
+    onChange: (coverImage: string) => void,
+  ) => (
+    <div className="space-y-2">
+      <label className="block space-y-1.5">
+        <span className="text-xs font-semibold text-stone-600">{t.adminCoverImage}</span>
+        <input
+          type="file"
+          accept="image/*"
+          disabled={processingCover}
+          onChange={async (event) => {
+            const input = event.currentTarget;
+            const file = input.files?.[0];
+            input.value = '';
+            if (!file) return;
+
+            setProcessingCover(true);
+            clearActionError();
+            try {
+              onChange(await compressCoverImage(file));
+            } catch (error) {
+              console.error('Failed to process book cover:', error);
+              setActionError('cover');
+            } finally {
+              setProcessingCover(false);
+            }
+          }}
+          className={`${inputClass} file:mr-3 file:rounded-md file:border-0 file:bg-stone-100 file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-stone-700`}
+        />
+      </label>
+      <p className="text-xs text-stone-500">
+        {processingCover ? t.adminCoverProcessing : t.adminCoverHint}
+      </p>
+      {value && (
+        <div className="flex items-center gap-3">
+          <img
+            src={value}
+            alt={t.adminCoverImage}
+            className="h-24 w-16 rounded-md border border-stone-200 object-cover"
+          />
+          <button
+            type="button"
+            onClick={() => onChange('')}
+            className={secondaryButtonClass}
+          >
+            <X className="h-4 w-4" />
+            {t.adminRemoveCover}
+          </button>
+        </div>
+      )}
+    </div>
+  );
+
+  const pdfImportInput = (onImport: (text: string) => void) => (
+    <div className="space-y-2 rounded-lg border border-stone-200 bg-white p-3">
+      <label className="block space-y-1.5">
+        <span className="text-xs font-semibold text-stone-700">{t.adminImportPdf}</span>
+        <input
+          type="file"
+          accept="application/pdf,.pdf"
+          disabled={processingPdf}
+          onChange={async (event) => {
+            const input = event.currentTarget;
+            const file = input.files?.[0];
+            input.value = '';
+            if (!file) return;
+
+            setProcessingPdf(true);
+            clearActionError();
+            try {
+              onImport(await extractPdfText(file));
+            } catch (error) {
+              console.error('Failed to extract book text from PDF:', error);
+              setActionError(
+                axios.isAxiosError(error) && error.response?.status === 413
+                  ? 'pdf-size'
+                  : 'pdf'
+              );
+            } finally {
+              setProcessingPdf(false);
+            }
+          }}
+          className={`${inputClass} file:mr-3 file:rounded-md file:border-0 file:bg-stone-100 file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-stone-700`}
+        />
+      </label>
+      <p className="text-xs text-stone-500">
+        {processingPdf ? t.adminPdfProcessing : t.adminPdfHint}
+      </p>
     </div>
   );
 
@@ -473,7 +698,7 @@ export const AdminView: React.FC<AdminViewProps> = ({
         </button>
       </header>
 
-      <section aria-label={t.adminTitle} className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+      <section aria-label={t.adminTitle} className="grid grid-cols-2 gap-3 lg:grid-cols-5">
         {sectionItems.map((item) => (
           <button
             key={item.id}
@@ -554,7 +779,15 @@ export const AdminView: React.FC<AdminViewProps> = ({
 
         {actionError && (
           <div role="alert" className="mx-4 mt-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 sm:mx-5">
-            {actionError === 'validation' ? t.adminRequiredFields : t.adminActionError}
+            {actionError === 'validation'
+              ? t.adminRequiredFields
+              : actionError === 'cover'
+                ? t.adminCoverError
+                : actionError === 'pdf-size'
+                  ? t.adminPdfTooLargeForServer
+                : actionError === 'pdf'
+                  ? t.adminPdfError
+                : t.adminActionError}
           </div>
         )}
 
@@ -634,6 +867,62 @@ export const AdminView: React.FC<AdminViewProps> = ({
                   <div className="text-xs leading-5 text-stone-500">
                     <p>{t.adminStarted}: {formatDate(reader.startedAt)}</p>
                     <p>{t.adminLastRead}: {formatDate(reader.lastReadAt)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : <EmptyState message={t.adminNoResults} />
+        )}
+
+        {section === 'trash' && (
+          visibleTrashedBooks.length > 0 ? (
+            <div className="divide-y divide-stone-100">
+              {visibleTrashedBooks.map((book) => (
+                <article key={book.id} className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
+                  <div className="flex min-w-0 items-center gap-3">
+                    {book.coverImage ? (
+                      <img
+                        src={book.coverImage}
+                        alt=""
+                        className="h-16 w-11 shrink-0 rounded border border-stone-200 object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-16 w-11 shrink-0 items-center justify-center rounded border border-stone-200 bg-stone-100">
+                        <BookOpen className="h-5 w-5 text-stone-400" />
+                      </div>
+                    )}
+                    <div className="min-w-0">
+                      <h2 className="truncate text-sm font-bold text-stone-900">{pickTitle(book.title)}</h2>
+                      <p className="mt-1 truncate text-xs text-stone-500">
+                        {pickTitle(book.author)}
+                        {book.createdByUserName ? ` · ${book.createdByUserName}` : ''}
+                      </p>
+                      <p className="mt-1 text-xs text-stone-500">
+                        {t.adminDeletedAt}: {formatDate(book.deletedAt ?? undefined)}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex shrink-0 flex-wrap gap-2">
+                    <button
+                      type="button"
+                      onClick={() => void restoreBook(book)}
+                      disabled={trashActionBookId === book.id}
+                      className={secondaryButtonClass}
+                    >
+                      {trashActionBookId === book.id
+                        ? <Loader2 className="h-4 w-4 animate-spin" />
+                        : <RotateCcw className="h-4 w-4" />}
+                      {t.adminRestore}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => void permanentlyDeleteBook(book)}
+                      disabled={trashActionBookId === book.id}
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-red-200 bg-white px-3 py-2 text-sm font-semibold text-red-700 transition hover:bg-red-50 disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                      <Trash2 className="h-4 w-4" />
+                      {t.adminPermanentlyDelete}
+                    </button>
                   </div>
                 </article>
               ))}
@@ -778,11 +1067,19 @@ export const AdminView: React.FC<AdminViewProps> = ({
                 </fieldset>
                 <fieldset className="space-y-2">
                   <legend className="mb-2 text-xs font-bold uppercase tracking-wide text-stone-600">{t.adminBookContent}</legend>
+                  {pdfImportInput((text) => setBookDraft((previous) => ({
+                    ...previous,
+                    content: { kk: text, ru: text, en: text },
+                  })))}
                   {localizedInputs('content', bookDraft.content, (language, value) => setBookDraft((previous) => ({
                     ...previous,
                     content: { ...previous.content, [language]: value },
                   })), true, true)}
                 </fieldset>
+                {coverImageInput(bookDraft.coverImage, (coverImage) => setBookDraft((previous) => ({
+                  ...previous,
+                  coverImage,
+                })))}
                 <label className="flex items-start gap-2 text-sm text-stone-700">
                   <input
                     type="checkbox"
@@ -798,7 +1095,7 @@ export const AdminView: React.FC<AdminViewProps> = ({
                 <div className="flex justify-end">
                   <button
                     type="submit"
-                    disabled={savingBook}
+                    disabled={savingBook || processingCover || processingPdf}
                     className="inline-flex items-center gap-2 rounded-lg bg-amber-800 px-3.5 py-2 text-sm font-semibold text-white transition hover:bg-amber-900 disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {savingBook ? <Loader2 className="h-4 w-4 animate-spin" /> : <Check className="h-4 w-4" />}
@@ -827,6 +1124,52 @@ export const AdminView: React.FC<AdminViewProps> = ({
                             previous ? { ...previous, author: { ...previous.author, [language]: value } } : previous
                           ), true)}
                         </fieldset>
+                        <fieldset className="space-y-2">
+                          <legend className="mb-2 text-xs font-bold uppercase tracking-wide text-stone-600">{t.adminBookGenre}</legend>
+                          {localizedInputs('genre', editingBook.genre, (language, value) => setEditingBook((previous) =>
+                            previous ? { ...previous, genre: { ...previous.genre, [language]: value } } : previous
+                          ))}
+                        </fieldset>
+                        {editingBook.chapters.map((chapter, chapterIndex) => (
+                          <fieldset key={chapter.id} className="space-y-3 rounded-lg border border-stone-200 p-3">
+                            <legend className="px-1 text-xs font-bold uppercase tracking-wide text-stone-600">
+                              {t.adminChapter} {chapterIndex + 1}
+                            </legend>
+                            <div>
+                              <p className="mb-2 text-xs font-semibold text-stone-600">{t.adminChapterTitle}</p>
+                              {localizedInputs('title', chapter.title, (language, value) => setEditingBook((previous) =>
+                                previous ? {
+                                  ...previous,
+                                  chapters: previous.chapters.map((item, index) => index === chapterIndex
+                                    ? { ...item, title: { ...item.title, [language]: value } }
+                                    : item),
+                                } : previous
+                              ), true)}
+                            </div>
+                            <div>
+                              <p className="mb-2 text-xs font-semibold text-stone-600">{t.adminBookContent}</p>
+                              {pdfImportInput((text) => setEditingBook((previous) =>
+                                previous ? {
+                                  ...previous,
+                                  chapters: previous.chapters.map((item, index) => index === chapterIndex
+                                    ? { ...item, content: { kk: text, ru: text, en: text } }
+                                    : item),
+                                } : previous
+                              ))}
+                              {localizedInputs('content', chapter.content, (language, value) => setEditingBook((previous) =>
+                                previous ? {
+                                  ...previous,
+                                  chapters: previous.chapters.map((item, index) => index === chapterIndex
+                                    ? { ...item, content: { ...item.content, [language]: value } }
+                                    : item),
+                                } : previous
+                              ), false, true)}
+                            </div>
+                          </fieldset>
+                        ))}
+                        {coverImageInput(editingBook.coverImage, (coverImage) => setEditingBook((previous) =>
+                          previous ? { ...previous, coverImage } : previous
+                        ))}
                         <label className="flex items-start gap-2 text-sm text-stone-700">
                           <input
                             type="checkbox"
@@ -845,7 +1188,7 @@ export const AdminView: React.FC<AdminViewProps> = ({
                           </button>
                           <button
                             type="submit"
-                            disabled={savingBookId === book.id}
+                            disabled={savingBookId === book.id || processingCover || processingPdf}
                             className="inline-flex items-center gap-2 rounded-lg bg-amber-800 px-3.5 py-2 text-sm font-semibold text-white transition hover:bg-amber-900 disabled:cursor-not-allowed disabled:opacity-50"
                           >
                             {savingBookId === book.id

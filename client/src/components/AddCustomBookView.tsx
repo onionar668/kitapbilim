@@ -35,16 +35,6 @@ export const AddCustomBookView: React.FC<AddCustomBookViewProps> = ({
     }
     if (!title.trim() || !content.trim()) return;
 
-    // Generate basic quiz questions based on text sentences
-    const sentences = content
-      .split(/[.!?]+/)
-      .map((s) => s.trim())
-      .filter((s) => s.length > 20);
-
-    const firstSentence = sentences[0] || content.slice(0, 80);
-    const middleSentence = sentences[Math.floor(sentences.length / 2)] || content.slice(80, 160);
-    const lastSentence = sentences[sentences.length - 1] || content.slice(-100);
-
     const customBook: Book = {
       id: 'custom_' + Date.now(),
       title: { kk: title, ru: title, en: title },
@@ -71,130 +61,12 @@ export const AddCustomBookView: React.FC<AddCustomBookViewProps> = ({
         },
       ],
       quizzes: {
-        questions: [
-          {
-            id: 'cq_1',
-            type: 'detail_memory',
-            question: {
-              kk: `Мәтіннің бастапқы бөлігінде не туралы сөз қозғалады?`,
-              ru: `О чем говорится в первой части прочитанного произведения?`,
-              en: `What is discussed in the opening segment of this text?`,
-            },
-            options: {
-              kk: [
-                firstSentence.slice(0, 90) + '...',
-                'Мәтінде мүлде айтылмаған басқа бір оқиға',
-                'Бөгде кейіпкердің сапары туралы',
-                'Ауа райының күрт бұзылуы туралы',
-              ],
-              ru: [
-                firstSentence.slice(0, 90) + '...',
-                'Постороннее событие, не упоминавшееся в тексте',
-                'О путешествии неизвестного персонажа',
-                'О резком изменении погоды',
-              ],
-              en: [
-                firstSentence.slice(0, 90) + '...',
-                'An unrelated event not mentioned in the text',
-                'A journey of a stranger',
-                'Sudden weather shifts',
-              ],
-            },
-            correctIndex: 0,
-            explanation: {
-              kk: `Бастапқы үзінді: "${firstSentence.slice(0, 100)}..."`,
-              ru: `Фрагмент из текста: "${firstSentence.slice(0, 100)}..."`,
-              en: `Excerpt from the text: "${firstSentence.slice(0, 100)}..."`,
-            },
-          },
-          {
-            id: 'cq_2',
-            type: 'detail_memory',
-            question: {
-              kk: `Мәтіннің негізгі оқиғасында қандай түйінді ой айтылады?`,
-              ru: `Какая ключевая мысль выражена в центральной части текста?`,
-              en: `What key concept is emphasized in the middle portion of the text?`,
-            },
-            options: {
-              kk: [
-                'Мәтінге қатысы жоқ жалған пайымдау',
-                middleSentence.slice(0, 90) + '...',
-                'Оқиғалардың барлығы ойдан шығарылғандығы',
-                'Кейіпкерлердің еш әрекет жасамауы',
-              ],
-              ru: [
-                'Ошибочное утверждение, отсутствующее в тексте',
-                middleSentence.slice(0, 90) + '...',
-                'Что все события происходят во сне',
-                'Что никто не предпринимал никаких действий',
-              ],
-              en: [
-                'An incorrect claim absent from the story',
-                middleSentence.slice(0, 90) + '...',
-                'That everything was an illusion',
-                'That no characters took any initiative',
-              ],
-            },
-            correctIndex: 1,
-            explanation: {
-              kk: `Мәтіннен үзінді: "${middleSentence.slice(0, 100)}..."`,
-              ru: `Цитата из середины: "${middleSentence.slice(0, 100)}..."`,
-              en: `Direct excerpt: "${middleSentence.slice(0, 100)}..."`,
-            },
-          },
-          {
-            id: 'cq_3',
-            type: 'quote_memory',
-            question: {
-              kk: `Шығарма қалай қорытындыланады?`,
-              ru: `Как завершается данное произведение?`,
-              en: `How does this literary passage conclude?`,
-            },
-            options: {
-              kk: [
-                'Түсініксіз күйде үзіліп қалады',
-                'Басқа кітапқа сілтеме жасалады',
-                lastSentence.slice(0, 90) + '...',
-                'Ешқандай қорытынды жасалмайды',
-              ],
-              ru: [
-                'Обрывается без завершения',
-                'Упоминанием посторонней истории',
-                lastSentence.slice(0, 90) + '...',
-                'Вопросом без ответа',
-              ],
-              en: [
-                'Abrupt silence without resolution',
-                'A reference to a foreign legend',
-                lastSentence.slice(0, 90) + '...',
-                'An unanswered generic query',
-              ],
-            },
-            correctIndex: 2,
-            explanation: {
-              kk: `Қорытынды үзінді: "${lastSentence.slice(0, 100)}..."`,
-              ru: `Финальный фрагмент: "${lastSentence.slice(0, 100)}..."`,
-              en: `Concluding sentence: "${lastSentence.slice(0, 100)}..."`,
-            },
-          },
-        ],
+        questions: [],
         openQuestion: {
           id: 'custom_open',
-          prompt: {
-            kk: 'Осы оқыған мәтініңіздің басты мағынасы мен қорытындысы қандай? Өз ойыңызбен 2-3 сөйлеммен түсіндіріңіз.',
-            ru: 'В чём главная мысль и практический вывод из прочитанного текста? Сформулируйте своими словами.',
-            en: 'What is the primary message or lesson of this text? Articulate in your own words.',
-          },
-          keyThemes: {
-            kk: ['ой', 'мағына', 'қорытынды', 'түйін'],
-            ru: ['смысл', 'вывод', 'идея', 'урок'],
-            en: ['meaning', 'lesson', 'insight', 'moral'],
-          },
-          sampleAnswer: {
-            kk: 'Мәтінде баяндалған негізгі оқиға мен автордың түйінді ойы.',
-            ru: 'Ключевая мысль текста отражает взаимосвязь описанных событий.',
-            en: 'The core lesson reflects the synthesis of the narrative events.',
-          },
+          prompt: { kk: '', ru: '', en: '' },
+          keyThemes: { kk: [], ru: [], en: [] },
+          sampleAnswer: { kk: '', ru: '', en: '' },
         },
       },
     };
@@ -347,13 +219,6 @@ export const AddCustomBookView: React.FC<AddCustomBookViewProps> = ({
             }
             className="w-full p-4 text-sm bg-stone-50 border border-stone-200 rounded-xl text-stone-900 focus:outline-hidden focus:ring-2 focus:ring-stone-900 focus:bg-white leading-relaxed"
           />
-          <p className="text-[11px] text-stone-400">
-            {currentLang === 'kk'
-              ? 'Жүйе мәтінді автоматты түрде талдап, есте сақтауды тексеретін сауалнама дайындайды.'
-              : currentLang === 'ru'
-              ? 'Система автоматически создаст опросник на знание сюжета и понимание деталей текста.'
-              : 'The system will generate memory retention questions based on the text structure.'}
-          </p>
         </div>
 
         <div className="flex items-center justify-end gap-3 pt-4 border-t border-stone-100">

@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { Book, Language, User, UserStats } from '../types';
 import { translations } from '../utils/translations';
-import { Search, BookOpen, CheckCircle, HelpCircle, Clock, Sparkles, User as UserIcon, Trash2, Plus, LogIn, Lock } from 'lucide-react';
+import { formatDuration } from '../utils/formatDuration';
+import { Search, BookOpen, Clock, Sparkles, User as UserIcon, Trash2, Plus, LogIn, Lock } from 'lucide-react';
 
 interface LibraryViewProps {
   books: Book[];
@@ -9,7 +10,6 @@ interface LibraryViewProps {
   currentLang: Language;
   currentUser: User | null;
   onSelectBookForReading: (book: Book) => void;
-  onSelectBookForQuiz: (book: Book) => void;
   onOpenAuth: () => void;
   onNavigateToAddBook: () => void;
   onDeleteBook: (bookId: string) => void;
@@ -21,7 +21,6 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
   currentLang,
   currentUser,
   onSelectBookForReading,
-  onSelectBookForQuiz,
   onOpenAuth,
   onNavigateToAddBook,
   onDeleteBook,
@@ -103,11 +102,6 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
                 ? 'Литература и глубокое осмысление'
                 : 'Literature & Deep Retention'}
             </p>
-            <span className="text-stone-600">·</span>
-            <span className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-300 bg-emerald-950/70 border border-emerald-800/60 px-2 py-0.5 rounded">
-              <Sparkles className="w-3 h-3 text-emerald-400" />
-              {t.noAiBadge}
-            </span>
           </div>
 
           <h1 className="font-display-book text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
@@ -152,20 +146,13 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
                   </h3>
                 </div>
               </div>
-              <div className="grid grid-cols-2 sm:flex items-center gap-2 shrink-0 pt-2 sm:pt-0 border-t border-stone-800/80 sm:border-0">
+              <div className="flex items-center gap-2 shrink-0 pt-2 sm:pt-0 border-t border-stone-800/80 sm:border-0">
                 <button
                   onClick={() => onSelectBookForReading(readingNationBook)}
                   className="px-3.5 py-2 sm:py-1.5 text-xs font-semibold bg-amber-500 hover:bg-amber-400 text-stone-950 rounded-lg transition-colors cursor-pointer flex items-center justify-center gap-1.5 shadow-sm"
                 >
                   <BookOpen className="w-3.5 h-3.5" />
                   <span>{currentLang === 'kk' ? 'Үндеуді оқу' : currentLang === 'ru' ? 'Читать послание' : 'Read Address'}</span>
-                </button>
-                <button
-                  onClick={() => onSelectBookForQuiz(readingNationBook)}
-                  className="px-3 py-2 sm:py-1.5 text-xs font-semibold bg-stone-800 hover:bg-stone-700 text-stone-200 rounded-lg transition-colors cursor-pointer flex items-center justify-center gap-1 border border-stone-700"
-                >
-                  <HelpCircle className="w-3.5 h-3.5 text-amber-300" />
-                  <span>{currentLang === 'kk' ? 'Тест тапсыру' : currentLang === 'ru' ? 'Пройти тест' : 'Take Quiz'}</span>
                 </button>
               </div>
             </div>
@@ -333,11 +320,6 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
           const genre = book.genre[currentLang] || book.genre.ru;
           const synopsis = book.synopsis[currentLang] || book.synopsis.ru;
 
-          // Check if user has passed this book's quiz
-          const attempts = userStats.attempts.filter((a) => a.bookId === book.id);
-          const bestScore = attempts.length > 0
-            ? Math.max(...attempts.map((a) => a.percentage))
-            : null;
           const isRead = userStats.completedBookIds.includes(book.id);
 
           return (
@@ -410,13 +392,6 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
                   </button>
                 )}
 
-                {/* Subtle completion ribbon if completed */}
-                {bestScore !== null && (
-                  <div className="absolute top-3 right-3 bg-stone-900/90 backdrop-blur text-amber-300 text-xs font-semibold px-2.5 py-1 rounded shadow-xs flex items-center gap-1">
-                    <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>{bestScore}%</span>
-                  </div>
-                )}
               </div>
 
               {/* Card Body with Zero-Pill Unboxed Metadata */}
@@ -430,7 +405,7 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
                     <span aria-hidden="true">·</span>
                     <span className="flex items-center gap-1">
                       <Clock className="w-3 h-3" />
-                      {book.estimatedReadMinutes} {t.readTimeMin}
+                      {formatDuration(book.estimatedReadMinutes * 60, currentLang)}
                     </span>
                   </div>
 
@@ -450,21 +425,13 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
                     {genre}
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 gap-2">
                     <button
                       onClick={() => onSelectBookForReading(book)}
                       className="w-full flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold text-white bg-stone-900 hover:bg-stone-800 rounded-lg transition-colors cursor-pointer"
                     >
                       <BookOpen className="w-3.5 h-3.5" />
                       <span>{isRead ? t.continueReading : t.startReading}</span>
-                    </button>
-
-                    <button
-                      onClick={() => onSelectBookForQuiz(book)}
-                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold text-stone-800 bg-stone-100 hover:bg-stone-200 border border-stone-200 rounded-lg transition-colors cursor-pointer"
-                    >
-                      <HelpCircle className="w-3.5 h-3.5 text-stone-600" />
-                      <span>{t.takeQuizDirectly}</span>
                     </button>
                   </div>
                 </div>

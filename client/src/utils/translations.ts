@@ -26,6 +26,7 @@ export interface UIStrings {
   nextChapter: string;
   prevChapter: string;
   finishReadingAndQuiz: string;
+  finishReading: string;
   readingSettings: string;
   themeLight: string;
   themeSepia: string;
@@ -33,9 +34,6 @@ export interface UIStrings {
   fontSize: string;
   fontSerif: string;
   fontSans: string;
-  textToSpeechPlay: string;
-  textToSpeechStop: string;
-  ttsNotSupported: string;
   backToLibrary: string;
   backToReader: string;
   quizTitle: string;
@@ -125,6 +123,11 @@ export interface UIStrings {
   adminReaders: string;
   adminCategories: string;
   adminBooks: string;
+  adminTrash: string;
+  adminRestore: string;
+  adminPermanentlyDelete: string;
+  adminDeletedAt: string;
+  adminConfirmPermanentDeleteBook: string;
   adminRefresh: string;
   adminSearch: string;
   adminNoResults: string;
@@ -156,6 +159,17 @@ export interface UIStrings {
   adminBookAuthor: string;
   adminBookGenre: string;
   adminBookContent: string;
+  adminChapterTitle: string;
+  adminCoverImage: string;
+  adminCoverHint: string;
+  adminCoverProcessing: string;
+  adminRemoveCover: string;
+  adminCoverError: string;
+  adminImportPdf: string;
+  adminPdfHint: string;
+  adminPdfProcessing: string;
+  adminPdfError: string;
+  adminPdfTooLargeForServer: string;
   adminCatalog: string;
   adminPublished: string;
   adminPrivate: string;
@@ -170,12 +184,12 @@ export interface UIStrings {
 export const translations: Record<Language, UIStrings> = {
   kk: {
     brand: "KitapBilim",
-    tagline: "Кітап оқып, біліміңді тексер",
+    tagline: "Кітап оқыңыз және жаңа әлемдерді ашыңыз",
     navLibrary: "Кітапхана",
     navStats: "Нәтижелер",
     navAddBook: "Өз мәтініңді қосу",
-    heroTitle: "Оқыңыз, есте сақтаңыз, біліміңізді тексеріңіз",
-    heroSubtitle: "Әлемдік және қазақ әдебиетінің інжу-маржандарын оқып, мазмұнды қаншалықты есте сақтағаныңызды тексеруге арналған интерактивті викториналар.",
+    heroTitle: "Оқыңыз және әдебиет әлеміне саяхаттаңыз",
+    heroSubtitle: "Әлемдік және қазақ әдебиетінің інжу-маржандарын оқып, сүйікті кітаптарыңызға қайта оралыңыз.",
     searchPlaceholder: "Кітап атауы немесе авторы бойынша іздеу...",
     allGenres: "Барлық жанрлар",
     allLevels: "Барлық деңгейлер",
@@ -194,6 +208,7 @@ export const translations: Record<Language, UIStrings> = {
     nextChapter: "Келесі бөлім",
     prevChapter: "Алдыңғы бөлім",
     finishReadingAndQuiz: "Оқуды аяқтау және викторина тапсыру",
+    finishReading: "Оқуды аяқтау",
     readingSettings: "Оқу баптаулары",
     themeLight: "Жарық",
     themeSepia: "Сепия",
@@ -201,9 +216,6 @@ export const translations: Record<Language, UIStrings> = {
     fontSize: "Қаріп өлшемі",
     fontSerif: "Классикалық (Serif)",
     fontSans: "Заманауи (Sans)",
-    textToSpeechPlay: "Мәтінді тыңдау",
-    textToSpeechStop: "Тоқтату",
-    ttsNotSupported: "Браузерде дыбыстау қолдау таппады",
     backToLibrary: "Кітапханаға қайту",
     backToReader: "Кітапқа оралу",
     quizTitle: "Есте сақтауды тексеру сауалнамасы",
@@ -230,9 +242,9 @@ export const translations: Record<Language, UIStrings> = {
     readAgain: "Кітапты қайта оқу",
     printCertificate: "Сертификатты жүктеу / Басып шығару",
     certificateTitle: "Оқырман жетістігі сертификаты",
-    certificateSubtitle: "Кітапты толық меңгергені үшін марапатталады",
+    certificateSubtitle: "Кітапты толық оқығаны үшін беріледі",
     certifiedThat: "Бұл құжат мына оқырманға беріледі:",
-    completedBookAndPassed: "Аталған шығарманы толық оқып, есте сақтау сауалнамасын сәтті аяқтады:",
+    completedBookAndPassed: "Аталған шығарманы толық оқып шықты:",
     withScoreOf: "Жинаған нәтижесі:",
     dateAwarded: "Берілген күні:",
     readerNamePrompt: "Сертификатқа жазылатын есіміңіз:",
@@ -293,6 +305,11 @@ export const translations: Record<Language, UIStrings> = {
     adminReaders: "Оқу барысы",
     adminCategories: "Санаттар",
     adminBooks: "Кітаптар",
+    adminTrash: "Себет",
+    adminRestore: "Қалпына келтіру",
+    adminPermanentlyDelete: "Біржола жою",
+    adminDeletedAt: "Себетке салынған күні",
+    adminConfirmPermanentDeleteBook: "Бұл кітапты және оның мұқабасын біржола жою керек пе? Бұл әрекетті қайтару мүмкін емес.",
     adminRefresh: "Жаңарту",
     adminSearch: "Іздеу...",
     adminNoResults: "Ештеңе табылмады.",
@@ -324,11 +341,22 @@ export const translations: Record<Language, UIStrings> = {
     adminBookAuthor: "Автор",
     adminBookGenre: "Жанр",
     adminBookContent: "Мәтін",
+    adminChapterTitle: "Бөлім атауы",
+    adminCoverImage: "Мұқаба суреті",
+    adminCoverHint: "Сурет автоматты түрде оңтайландырылады (ең көбі 20 МБ).",
+    adminCoverProcessing: "Сурет өңделуде…",
+    adminRemoveCover: "Мұқабаны алып тастау",
+    adminCoverError: "Суретті өңдеу мүмкін болмады. Басқа суретті таңдаңыз (ең көбі 20 МБ).",
+    adminImportPdf: "PDF файлынан мәтін импорттау",
+    adminPdfHint: "PDF өлшеміне қолданба шектеу қоймайды. Мәтін барлық тіл өрістеріне қойылады.",
+    adminPdfProcessing: "PDF мәтіні шығарылуда…",
+    adminPdfError: "PDF мәтінін шығару мүмкін болмады. PDF файлының дұрыстығын тексеріңіз.",
+    adminPdfTooLargeForServer: "Сервер сұрауды қабылдамады. PHP немесе проксидегі сұрау өлшемі шектеуін тексеріңіз.",
     adminCatalog: "Жалпы каталогта жариялау",
     adminPublished: "Каталогта",
     adminPrivate: "Жеке",
     adminCreateBook: "Кітапты жасау",
-    adminConfirmDeleteBook: "Бұл кітапты біржола жойғыңыз келетініне сенімдісіз бе?",
+    adminConfirmDeleteBook: "Бұл кітапты себетке жылжытқыңыз келетініне сенімдісіз бе?",
     adminRequiredFields: "Барлық міндетті өрістерді толтырыңыз.",
     adminLoadError: "Әкімші деректерін жүктеу сәтсіз аяқталды. Қайталап көріңіз.",
     adminActionError: "Әрекетті орындау сәтсіз аяқталды. Қайталап көріңіз.",
@@ -336,12 +364,12 @@ export const translations: Record<Language, UIStrings> = {
   },
   ru: {
     brand: "KitapBilim",
-    tagline: "Читай книги и проверяй память",
+    tagline: "Читайте книги и открывайте новые миры",
     navLibrary: "Библиотека",
     navStats: "Мои результаты",
     navAddBook: "Добавить свой текст",
-    heroTitle: "Читайте, запоминайте, проходите опросы",
-    heroSubtitle: "Интерактивная библиотека шедевров классики с интеллектуальными опросниками на знание сюжета, деталей и ключевых смыслов.",
+    heroTitle: "Читайте и открывайте мир литературы",
+    heroSubtitle: "Читайте шедевры мировой и казахской литературы и возвращайтесь к любимым книгам.",
     searchPlaceholder: "Поиск по названию или автору...",
     allGenres: "Все жанры",
     allLevels: "Все уровни",
@@ -360,6 +388,7 @@ export const translations: Record<Language, UIStrings> = {
     nextChapter: "Следующая глава",
     prevChapter: "Предыдущая глава",
     finishReadingAndQuiz: "Завершить чтение и пройти опрос",
+    finishReading: "Завершить чтение",
     readingSettings: "Настройки ридера",
     themeLight: "Светлая ",
     themeSepia: "Сепия",
@@ -367,9 +396,6 @@ export const translations: Record<Language, UIStrings> = {
     fontSize: "Размер шрифта",
     fontSerif: "С засечками (Serif)",
     fontSans: "Без засечек (Sans)",
-    textToSpeechPlay: "Слушать аудио",
-    textToSpeechStop: "Остановить",
-    ttsNotSupported: "Озвучивание не поддерживается браузером",
     backToLibrary: "В библиотеку",
     backToReader: "К книге",
     quizTitle: "Опросник на понимание и память",
@@ -396,9 +422,9 @@ export const translations: Record<Language, UIStrings> = {
     readAgain: "Перечитать книгу",
     printCertificate: "Скачать / Распечатать сертификат",
     certificateTitle: "Сертификат внимательного читателя",
-    certificateSubtitle: "Подтверждает глубокое понимание прочитанного произведения",
+    certificateSubtitle: "Выдаётся за завершение чтения книги",
     certifiedThat: "Настоящий сертификат удостоверяет, что:",
-    completedBookAndPassed: "полностью прочитал(а) произведение и успешно ответил(а) на вопросы опросника:",
+    completedBookAndPassed: "полностью прочитал(а) произведение:",
     withScoreOf: "Итоговый результат:",
     dateAwarded: "Дата выдачи:",
     readerNamePrompt: "Имя для сертификата:",
@@ -459,6 +485,11 @@ export const translations: Record<Language, UIStrings> = {
     adminReaders: "Чтение",
     adminCategories: "Категории",
     adminBooks: "Книги",
+    adminTrash: "Корзина",
+    adminRestore: "Восстановить",
+    adminPermanentlyDelete: "Удалить навсегда",
+    adminDeletedAt: "В корзине с",
+    adminConfirmPermanentDeleteBook: "Удалить книгу и её обложку навсегда? Это действие нельзя отменить.",
     adminRefresh: "Обновить",
     adminSearch: "Поиск...",
     adminNoResults: "Ничего не найдено.",
@@ -490,11 +521,22 @@ export const translations: Record<Language, UIStrings> = {
     adminBookAuthor: "Автор",
     adminBookGenre: "Жанр",
     adminBookContent: "Текст",
+    adminChapterTitle: "Название главы",
+    adminCoverImage: "Обложка",
+    adminCoverHint: "Изображение будет автоматически оптимизировано (до 20 МБ).",
+    adminCoverProcessing: "Обработка изображения…",
+    adminRemoveCover: "Убрать обложку",
+    adminCoverError: "Не удалось обработать изображение. Выберите другое (до 20 МБ).",
+    adminImportPdf: "Импортировать текст из PDF",
+    adminPdfHint: "Приложение не ограничивает размер PDF. Текст будет вставлен во все языковые поля.",
+    adminPdfProcessing: "Извлекаем текст из PDF…",
+    adminPdfError: "Не удалось извлечь текст из PDF. Проверьте, что файл не повреждён.",
+    adminPdfTooLargeForServer: "Сервер отклонил запрос. Проверьте ограничения размера запроса в PHP или прокси.",
     adminCatalog: "Опубликовать в общем каталоге",
     adminPublished: "В каталоге",
     adminPrivate: "Личная",
     adminCreateBook: "Создать книгу",
-    adminConfirmDeleteBook: "Вы уверены, что хотите удалить эту книгу навсегда?",
+    adminConfirmDeleteBook: "Переместить эту книгу в корзину?",
     adminRequiredFields: "Заполните все обязательные поля.",
     adminLoadError: "Не удалось загрузить данные администратора. Попробуйте ещё раз.",
     adminActionError: "Не удалось выполнить действие. Попробуйте ещё раз.",
@@ -502,12 +544,12 @@ export const translations: Record<Language, UIStrings> = {
   },
   en: {
     brand: "KitapBilim",
-    tagline: "Read books and test your memory",
+    tagline: "Read books and discover new worlds",
     navLibrary: "Library",
     navStats: "My Records",
     navAddBook: "Add Custom Text",
-    heroTitle: "Read thoughtfully, recall deeply, test yourself",
-    heroSubtitle: "An interactive library of literary treasures with comprehension questionnaires testing memory of key plot points, quotes, and deeper themes.",
+    heroTitle: "Read and explore the world of literature",
+    heroSubtitle: "Explore masterpieces of world and Kazakh literature, and return to the books you love.",
     searchPlaceholder: "Search by book title or author...",
     allGenres: "All Genres",
     allLevels: "All Levels",
@@ -526,6 +568,7 @@ export const translations: Record<Language, UIStrings> = {
     nextChapter: "Next Chapter",
     prevChapter: "Previous Chapter",
     finishReadingAndQuiz: "Finish Reading & Take Quiz",
+    finishReading: "Finish reading",
     readingSettings: "Reader Settings",
     themeLight: "Light",
     themeSepia: "Sepia",
@@ -533,9 +576,6 @@ export const translations: Record<Language, UIStrings> = {
     fontSize: "Font Size",
     fontSerif: "Serif (Classic)",
     fontSans: "Sans (Modern)",
-    textToSpeechPlay: "Listen (Audio)",
-    textToSpeechStop: "Stop Audio",
-    ttsNotSupported: "Speech audio is not supported in this browser",
     backToLibrary: "Back to Library",
     backToReader: "Back to Book",
     quizTitle: "Reading Comprehension & Memory Quiz",
@@ -562,9 +602,9 @@ export const translations: Record<Language, UIStrings> = {
     readAgain: "Reread Book",
     printCertificate: "Download / Print Certificate",
     certificateTitle: "Certificate of Thoughtful Reading",
-    certificateSubtitle: "Awarded for exceptional text comprehension and literary retention",
+    certificateSubtitle: "Awarded for completing a book",
     certifiedThat: "This certificate proudly confirms that:",
-    completedBookAndPassed: "has completed reading the work and passed the comprehension questionnaire for:",
+    completedBookAndPassed: "has completed reading the work:",
     withScoreOf: "Achieved Score:",
     dateAwarded: "Date:",
     readerNamePrompt: "Name for your certificate:",
@@ -625,6 +665,11 @@ export const translations: Record<Language, UIStrings> = {
     adminReaders: "Reading activity",
     adminCategories: "Categories",
     adminBooks: "Books",
+    adminTrash: "Trash",
+    adminRestore: "Restore",
+    adminPermanentlyDelete: "Delete permanently",
+    adminDeletedAt: "In trash since",
+    adminConfirmPermanentDeleteBook: "Permanently delete this book and its cover? This action cannot be undone.",
     adminRefresh: "Refresh",
     adminSearch: "Search...",
     adminNoResults: "No results found.",
@@ -656,11 +701,22 @@ export const translations: Record<Language, UIStrings> = {
     adminBookAuthor: "Author",
     adminBookGenre: "Genre",
     adminBookContent: "Text",
+    adminChapterTitle: "Chapter title",
+    adminCoverImage: "Cover image",
+    adminCoverHint: "The image will be optimized automatically (up to 20 MB).",
+    adminCoverProcessing: "Processing image…",
+    adminRemoveCover: "Remove cover",
+    adminCoverError: "Could not process the image. Choose another one (up to 20 MB).",
+    adminImportPdf: "Import text from PDF",
+    adminPdfHint: "The application does not limit PDF size. Extracted text will be placed in all language fields.",
+    adminPdfProcessing: "Extracting text from PDF…",
+    adminPdfError: "Could not extract text from the PDF. Check that the file is not corrupted.",
+    adminPdfTooLargeForServer: "The server rejected the request. Check the request-size limits in PHP or the proxy.",
     adminCatalog: "Publish to public catalog",
     adminPublished: "In catalog",
     adminPrivate: "Private",
     adminCreateBook: "Create book",
-    adminConfirmDeleteBook: "Are you sure you want to permanently delete this book?",
+    adminConfirmDeleteBook: "Move this book to the trash?",
     adminRequiredFields: "Please fill in all required fields.",
     adminLoadError: "Could not load admin data. Please try again.",
     adminActionError: "The action failed. Please try again.",

@@ -13,12 +13,40 @@ use Illuminate\Support\Facades\Validator;
 
 class ReadingController extends Controller
 {
+    public function show(Book $book): JsonResponse
+    {
+        /** @var User $user */
+        $user = Auth::user();
+        if (! $book->isVisibleTo($user)) {
+            return response()->json(['message' => 'Forbidden'], 403);
+        }
+
+        $progress = ReadingProgress::query()
+            ->where('user_id', $user->id)
+            ->where('book_id', $book->id)
+            ->first();
+
+        if (! $progress) {
+            return response()->json(null);
+        }
+
+        return response()->json([
+            'bookId' => $book->slug,
+            'status' => $progress->status,
+            'chapterIndex' => $progress->chapter_index,
+            'scrollPercent' => $progress->scroll_percent,
+            'progressPercent' => $progress->progress_percent,
+            'lastReadAt' => $progress->last_read_at?->toIso8601String(),
+        ]);
+    }
+
     public function upsert(Request $request): JsonResponse
     {
         $validate = Validator::make($request->all(), [
             'bookId' => 'required|string',
             'status' => 'nullable|in:reading,completed',
             'chapterIndex' => 'nullable|integer|min:0',
+            'scrollPercent' => 'nullable|integer|min:0|max:100',
             'progressPercent' => 'nullable|integer|min:0|max:100',
         ]);
 
@@ -50,6 +78,7 @@ class ReadingController extends Controller
 
         $progress->status = $status;
         $progress->chapter_index = (int) $request->input('chapterIndex', $progress->chapter_index ?? 0);
+        $progress->scroll_percent = (int) $request->input('scrollPercent', $progress->scroll_percent ?? 0);
         $progress->progress_percent = (int) $request->input('progressPercent', $progress->progress_percent ?? 0);
         $progress->last_read_at = $now;
         $progress->completed_at = $status === 'completed' ? $now : null;
@@ -83,6 +112,7 @@ class ReadingController extends Controller
                     ],
                     'status' => $row->status,
                     'chapterIndex' => $row->chapter_index,
+                    'scrollPercent' => $row->scroll_percent,
                     'progressPercent' => $row->progress_percent,
                     'startedAt' => $row->started_at?->toIso8601String(),
                     'lastReadAt' => $row->last_read_at?->toIso8601String(),

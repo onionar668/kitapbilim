@@ -12,25 +12,25 @@ class UserSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'nazar@kitapbilim.kz'],
             [
-                'name' => 'Назар Қабылов',
+                'name' => 'Назар Миратович',
                 'role' => 'user',
                 'password' => 'password123',
             ]
         );
 
         User::updateOrCreate(
-            ['email' => 'aigerim@kitapbilim.kz'],
+            ['email' => 'ainel@kitapbilim.kz'],
             [
-                'name' => 'Айгерім Сәтбаева',
+                'name' => 'Айнель Кумаровна',
                 'role' => 'user',
                 'password' => 'password123',
             ]
         );
 
         User::updateOrCreate(
-            ['email' => 'daniyar@kitapbilim.kz'],
+            ['email' => 'adil@kitapbilim.kz'],
             [
-                'name' => 'Данияр Жұмабек',
+                'name' => 'Адиль Муратович',
                 'role' => 'user',
                 'password' => 'password123',
             ]
@@ -39,7 +39,7 @@ class UserSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'admin@kitapbilim.kz'],
             [
-                'name' => 'KitapBilim Admin',
+                'name' => 'Tемерлан Айдарович',
                 'role' => 'admin',
                 'password' => 'admin12345',
             ]

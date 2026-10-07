@@ -1,13 +1,13 @@
 import React from 'react';
-import { BookOpen, Award, PlusCircle, Globe, LogIn, Shield } from 'lucide-react';
+import { BookOpen, PlusCircle, Globe, LogIn, Shield } from 'lucide-react';
 import { Language, User } from '../types';
 import { translations } from '../utils/translations';
 
 interface HeaderProps {
   currentLang: Language;
   onSelectLang: (lang: Language) => void;
-  activeTab: 'library' | 'reader' | 'quiz' | 'stats' | 'add' | 'admin';
-  onSelectTab: (tab: 'library' | 'reader' | 'quiz' | 'stats' | 'add' | 'admin') => void;
+  activeTab: 'library' | 'reader' | 'certificate' | 'add' | 'admin';
+  onSelectTab: (tab: 'library' | 'reader' | 'certificate' | 'add' | 'admin') => void;
   hasActiveBook: boolean;
   currentUser: User | null;
   onOpenAuth: () => void;
@@ -82,18 +82,6 @@ export const Header: React.FC<HeaderProps> = ({
                 : 'Reader'}
             </button>
           )}
-
-          <button
-            onClick={() => onSelectTab('stats')}
-            className={`flex items-center gap-1.5 hover:text-stone-900 transition-colors py-1 cursor-pointer ${
-              activeTab === 'stats'
-                ? 'text-stone-950 font-semibold border-b-2 border-stone-900'
-                : ''
-            }`}
-          >
-            <Award className="w-4 h-4 text-stone-400" />
-            <span>{t.navStats}</span>
-          </button>
 
           <button
             onClick={() => onSelectTab('add')}
@@ -195,4 +183,3 @@ export const Header: React.FC<HeaderProps> = ({
     </header>
   );
 };
-

@@ -1,6 +1,7 @@
 import React from 'react';
 import { UserStats, Language, Book } from '../types';
 import { translations } from '../utils/translations';
+import { formatDuration } from '../utils/formatDuration';
 import { Award, BookOpen, Clock, CheckCircle2, RotateCcw, Trash2 } from 'lucide-react';
 
 interface StatsViewProps {
@@ -24,11 +25,12 @@ export const StatsView: React.FC<StatsViewProps> = ({
   const attempts = userStats.attempts;
 
   const totalQuizzes = attempts.length;
-  const avgScore = totalQuizzes > 0
-    ? Math.round(attempts.reduce((acc, cur) => acc + cur.percentage, 0) / totalQuizzes)
+  const validScores = attempts.map((attempt) => attempt.percentage).filter(Number.isFinite);
+  const avgScore = validScores.length > 0
+    ? Math.round(validScores.reduce((acc, score) => acc + score, 0) / validScores.length)
     : 0;
-  const bestScore = totalQuizzes > 0
-    ? Math.max(...attempts.map((a) => a.percentage))
+  const bestScore = validScores.length > 0
+    ? Math.max(...validScores)
     : 0;
 
   const completedBooksCount = userStats.completedBookIds.length;
@@ -134,7 +136,7 @@ export const StatsView: React.FC<StatsViewProps> = ({
                       <span>{att.date}</span>
                       <span aria-hidden="true">·</span>
                       <span>
-                        {Math.floor(att.timeSpentSeconds / 60)} {t.readTimeMin}
+                        {formatDuration(att.timeSpentSeconds, currentLang)}
                       </span>
                     </div>
 
@@ -152,7 +154,7 @@ export const StatsView: React.FC<StatsViewProps> = ({
                   <div className="flex items-center justify-between sm:justify-end gap-3 shrink-0 pt-2 sm:pt-0 border-t border-stone-100 sm:border-0">
                     <div className="text-left sm:text-right">
                       <span className="text-base sm:text-lg font-bold text-stone-900 tabular-nums">
-                        {att.percentage}%
+                        {Number.isFinite(att.percentage) ? att.percentage : 0}%
                       </span>
                       <span className="text-[11px] sm:text-xs text-stone-500 block">
                         ({att.score}/{att.total} {t.points})

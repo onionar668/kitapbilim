@@ -3,25 +3,24 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { api, setAuthToken } from './api/client';
 import { createBook, deleteBook, fetchBooks, syncReadingProgress } from './api/books';
-import { Book, Language, QuizAttempt, User, UserStats } from './types';
+import { Book, Language, User, UserStats } from './types';
 import { initialBooks } from './data/booksData';
 import { translations } from './utils/translations';
 import { getStoredStats, saveStoredStats } from './utils/storage';
 import { Header } from './components/Header';
 import { LibraryView } from './components/LibraryView';
 import { ReaderView } from './components/ReaderView';
-import { QuizView } from './components/QuizView';
-import { StatsView } from './components/StatsView';
+import { CertificateView } from './components/CertificateView';
 import { AddCustomBookView } from './components/AddCustomBookView';
 import { AuthModal } from './components/AuthModal';
 import { UserProfileModal } from './components/UserProfileModal';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { AdminView } from './components/AdminView';
 
-type AppTab = 'library' | 'reader' | 'quiz' | 'stats' | 'add' | 'admin';
+type AppTab = 'library' | 'reader' | 'certificate' | 'add' | 'admin';
 
 export default function App() {
   const [currentLang, setCurrentLang] = useState<Language>('kk');
@@ -43,10 +42,10 @@ export default function App() {
     const loadBooks = () =>
       fetchBooks()
         .then((loaded) => {
-          if (loaded.length > 0) {
-            setBooks(loaded);
-            setSelectedBook((prev) => prev ?? loaded[0]);
-          }
+          setBooks(loaded);
+          setSelectedBook((previous) =>
+            loaded.find((book) => book.id === previous?.id) ?? loaded[0] ?? null
+          );
         })
         .catch(() => {
           // Offline fallback to bundled catalog
@@ -87,19 +86,22 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleSelectBookForQuiz = (book: Book) => {
-    setSelectedBook(book);
-    setActiveTab('quiz');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const handleAdminBooksChanged = useCallback((updatedBooks: Book[]) => {
+    setBooks(updatedBooks);
+    setSelectedBook((previous) =>
+      updatedBooks.find((book) => book.id === previous?.id) ?? updatedBooks[0] ?? null
+    );
+  }, []);
 
-  const handleFinishReadingAndTakeQuiz = () => {
+  const handleFinishReading = (position: { chapterIndex: number; scrollPercent: number }) => {
     if (!selectedBook) return;
 
     if (currentUser) {
       syncReadingProgress({
         bookId: selectedBook.id,
         status: 'completed',
+        chapterIndex: position.chapterIndex,
+        scrollPercent: position.scrollPercent,
         progressPercent: 100,
       }).catch(() => undefined);
     }
@@ -116,20 +118,8 @@ export default function App() {
       return updated;
     });
 
-    setActiveTab('quiz');
+    setActiveTab('certificate');
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleSaveQuizAttempt = (attempt: QuizAttempt) => {
-    setUserStats((prev) => {
-      const updated: UserStats = {
-        ...prev,
-        attempts: [...prev.attempts, attempt],
-        readerName: currentUser ? currentUser.name : prev.readerName,
-      };
-      saveStoredStats(updated);
-      return updated;
-    });
   };
 
   const handleAddCustomBook = async (newBook: Book) => {
@@ -175,17 +165,6 @@ export default function App() {
     }
   };
 
-  const handleResetStats = () => {
-    const fresh: UserStats = {
-      readerName: currentUser ? currentUser.name : 'Оқырман / Читатель',
-      completedBookIds: [],
-      attempts: [],
-      totalReadingTimeMinutes: 0,
-    };
-    setUserStats(fresh);
-    saveStoredStats(fresh);
-  };
-
   const handleAuthSuccess = (user: User) => {
     setCurrentUser(user);
     setUserStats((prev) => {
@@ -198,9 +177,10 @@ export default function App() {
     });
     fetchBooks()
       .then((loaded) => {
-        if (loaded.length > 0) {
-          setBooks(loaded);
-        }
+        setBooks(loaded);
+        setSelectedBook((previous) =>
+          loaded.find((book) => book.id === previous?.id) ?? loaded[0] ?? null
+        );
       })
       .catch(() => undefined);
   };
@@ -249,7 +229,6 @@ export default function App() {
             currentLang={currentLang}
             currentUser={currentUser}
             onSelectBookForReading={handleSelectBookForReading}
-            onSelectBookForQuiz={handleSelectBookForQuiz}
             onOpenAuth={() => openAuthWithReason()}
             onNavigateToAddBook={() => {
               setActiveTab('add');
@@ -265,7 +244,16 @@ export default function App() {
             currentLang={currentLang}
             currentUser={currentUser}
             onBackToLibrary={() => setActiveTab('library')}
-            onFinishAndTakeQuiz={handleFinishReadingAndTakeQuiz}
+            onFinishReading={handleFinishReading}
+          />
+        )}
+
+        {activeTab === 'certificate' && selectedBook && (
+          <CertificateView
+            book={selectedBook}
+            currentLang={currentLang}
+            readerName={currentUser?.name || userStats.readerName}
+            onBackToLibrary={() => setActiveTab('library')}
           />
         )}
 
@@ -273,29 +261,7 @@ export default function App() {
           <AdminView
             currentLang={currentLang}
             currentUser={currentUser}
-            onBooksChanged={setBooks}
-          />
-        )}
-
-        {activeTab === 'quiz' && selectedBook && (
-          <QuizView
-            book={selectedBook}
-            currentLang={currentLang}
-            userStats={userStats}
-            onBackToLibrary={() => setActiveTab('library')}
-            onBackToReader={() => setActiveTab('reader')}
-            onSaveQuizAttempt={handleSaveQuizAttempt}
-          />
-        )}
-
-        {activeTab === 'stats' && (
-          <StatsView
-            userStats={userStats}
-            currentLang={currentLang}
-            books={allBooks}
-            onSelectBookForQuiz={handleSelectBookForQuiz}
-            onSelectBookForReading={handleSelectBookForReading}
-            onResetStats={handleResetStats}
+            onBooksChanged={handleAdminBooksChanged}
           />
         )}
 

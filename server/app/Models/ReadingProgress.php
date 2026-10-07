@@ -14,6 +14,7 @@ class ReadingProgress extends Model
         'book_id',
         'status',
         'chapter_index',
+        'scroll_percent',
         'progress_percent',
         'started_at',
         'last_read_at',
@@ -27,6 +28,7 @@ class ReadingProgress extends Model
             'last_read_at' => 'datetime',
             'completed_at' => 'datetime',
             'chapter_index' => 'integer',
+            'scroll_percent' => 'integer',
             'progress_percent' => 'integer',
         ];
     }

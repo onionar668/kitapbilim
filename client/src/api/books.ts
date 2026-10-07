@@ -7,12 +7,22 @@ export interface BookCategory {
   label: Record<Language, string>;
 }
 
+export interface ReadingPosition {
+  bookId: string;
+  status: 'reading' | 'completed';
+  chapterIndex: number;
+  scrollPercent: number;
+  progressPercent: number;
+  lastReadAt?: string;
+}
+
 export interface AdminReaderRow {
   id: number;
   user: { id: string; name: string; email: string };
   book: { id: string; title: Record<Language, string>; author: Record<Language, string> };
   status: string;
   chapterIndex: number;
+  scrollPercent: number;
   progressPercent: number;
   startedAt?: string;
   lastReadAt?: string;
@@ -34,6 +44,10 @@ export interface AdminUserRow {
     progressPercent: number;
     lastReadAt?: string;
   } | null;
+}
+
+export interface TrashedBook extends Book {
+  deletedAt: string | null;
 }
 
 const emptyGenre = { kk: '', ru: '', en: '' };
@@ -78,6 +92,15 @@ export async function createBook(payload: Record<string, unknown>): Promise<Book
   return normalizeBook(data as Partial<Book> & { id: string });
 }
 
+export async function extractPdfText(file: File): Promise<string> {
+  const formData = new FormData();
+  formData.append('pdf', file);
+  const { data } = await api.post<{ text: string }>('/admin/books/extract-pdf', formData, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+  });
+  return data.text;
+}
+
 export async function updateBook(bookId: string, payload: Record<string, unknown>): Promise<Book> {
   const { data } = await api.put<Partial<Book>>(`/books/${bookId}`, payload);
   return normalizeBook(data as Partial<Book> & { id: string });
@@ -87,13 +110,38 @@ export async function deleteBook(bookId: string): Promise<void> {
   await api.delete(`/books/${bookId}`);
 }
 
+export async function fetchAdminTrash(): Promise<TrashedBook[]> {
+  const { data } = await api.get<(Partial<Book> & { id: string; deletedAt: string | null })[]>(
+    '/admin/books/trash'
+  );
+  return data.map((item) => ({
+    ...normalizeBook(item),
+    deletedAt: item.deletedAt,
+  }));
+}
+
+export async function restoreTrashedBook(bookId: string): Promise<Book> {
+  const { data } = await api.post<Partial<Book>>(`/admin/books/trash/${bookId}/restore`);
+  return normalizeBook(data as Partial<Book> & { id: string });
+}
+
+export async function permanentlyDeleteTrashedBook(bookId: string): Promise<void> {
+  await api.delete(`/admin/books/trash/${bookId}`);
+}
+
 export async function syncReadingProgress(payload: {
   bookId: string;
   status?: 'reading' | 'completed';
   chapterIndex?: number;
+  scrollPercent?: number;
   progressPercent?: number;
 }): Promise<void> {
   await api.post('/readings', payload);
+}
+
+export async function fetchReadingProgress(bookId: string): Promise<ReadingPosition | null> {
+  const { data } = await api.get<ReadingPosition | null>(`/readings/${bookId}`);
+  return data;
 }
 
 export async function fetchCategories(): Promise<BookCategory[]> {

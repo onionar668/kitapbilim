@@ -1,0 +1,29 @@
+#!/bin/sh
+set -eu
+
+server_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+project_ini_dir="$server_dir/php/conf.d"
+scan_dirs=$(php --ini | sed -n 's/^Scan for additional .ini files in: //p')
+
+if [ -z "$scan_dirs" ] || [ "$scan_dirs" = "(none)" ]; then
+    scan_dirs=""
+fi
+
+unset HERD_PHP_81_INI_SCAN_DIR
+unset HERD_PHP_82_INI_SCAN_DIR
+unset HERD_PHP_83_INI_SCAN_DIR
+unset HERD_PHP_84_INI_SCAN_DIR
+unset HERD_PHP_85_INI_SCAN_DIR
+
+if [ -z "$scan_dirs" ]; then
+    export PHP_INI_SCAN_DIR="$project_ini_dir"
+else
+    export PHP_INI_SCAN_DIR="$scan_dirs:$project_ini_dir"
+fi
+
+host=${SERVER_HOST:-127.0.0.1}
+port=${SERVER_PORT:-8000}
+cd "$server_dir/public"
+
+exec php -S "$host:$port" \
+    "$server_dir/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php"

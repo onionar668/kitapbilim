@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Book, Language, QuizAttempt, UserStats } from '../types';
 import { translations } from '../utils/translations';
 import { evaluateOpenAnswer } from '../utils/storage';
+import { formatDuration } from '../utils/formatDuration';
 import confetti from 'canvas-confetti';
 import {
   ArrowLeft,
@@ -75,7 +76,9 @@ export const QuizView: React.FC<QuizViewProps> = ({
       }
     });
 
-    const percentage = Math.round((correctCount / questions.length) * 100);
+    const percentage = questions.length > 0
+      ? Math.round((correctCount / questions.length) * 100)
+      : 0;
 
     // Evaluate open question
     const keyThemes = openQuestion?.keyThemes[currentLang] || openQuestion?.keyThemes.ru || [];
@@ -131,7 +134,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
     : true;
 
   // Total steps = number of multiple choice questions + 1 for open reflection
-  const totalSteps = questions.length + (openQuestion ? 1 : 0);
+  const totalSteps = Math.max(1, questions.length + (openQuestion ? 1 : 0));
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-12 space-y-8">
@@ -328,7 +331,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 </span>
                 <span aria-hidden="true">·</span>
                 <span>
-                  {t.timeSpent}: {formatTime(attemptResult?.timeSpentSeconds || 0)}
+                  {t.timeSpent}: {formatDuration(attemptResult?.timeSpentSeconds ?? 0, currentLang)}
                 </span>
               </div>
             </div>
@@ -409,13 +412,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 <p className="text-xs text-stone-500 font-medium">{author}</p>
               </div>
 
-              <div className="pt-3 sm:pt-4 flex flex-row items-center justify-around gap-2 sm:gap-4 text-xs border-t border-stone-200">
-                <div>
-                  <span className="text-stone-400 block text-[11px] sm:text-xs">{t.withScoreOf}</span>
-                  <span className="font-bold text-stone-900 text-sm sm:text-base">
-                    {attemptResult?.percentage}% ({attemptResult?.score}/{attemptResult?.total})
-                  </span>
-                </div>
+              <div className="pt-3 sm:pt-4 flex flex-row items-center justify-center gap-2 sm:gap-4 text-xs border-t border-stone-200">
                 <div>
                   <span className="text-stone-400 block text-[11px] sm:text-xs">{t.dateAwarded}</span>
                   <span className="font-bold text-stone-900 text-sm sm:text-base">{attemptResult?.date}</span>
