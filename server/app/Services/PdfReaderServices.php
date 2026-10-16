@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use Illuminate\Support\Facades\Log;
 use Spatie\PdfToText\Pdf;
 use thiagoalessio\TesseractOCR\TesseractOCR;
 
@@ -9,15 +10,15 @@ class PdfReaderServices
 {
     public function readPdf(string $filePath): string
     {
-        // Try to extract text using Spatie\PdfToText
         try {
             $text = Pdf::getText($filePath);
             if (!empty($text)) {
                 return $text;
             }
         } catch (\Exception $e) {
-            // Log the exception or handle it as needed
+            Log::error($e);
         }
+
 
         return $this->extractWithOcr($filePath);
     }
@@ -26,7 +27,6 @@ class PdfReaderServices
     {
        $ocr = new TesseractOCR($filePath);
 
-        // Указываем поддерживаемые языки (русский, казахский, английский)
         $ocr->lang('rus', 'kaz', 'eng');
 
         return $ocr->run();
